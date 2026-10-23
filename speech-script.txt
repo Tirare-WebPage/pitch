@@ -1,0 +1,45 @@
+TIRARE — FIVE-MINUTE PITCH
+Anurag Mishra / Founder
+Target delivery: five minutes. Local animations are muted and narrated live; the MRII mechanism animation is embedded from YouTube and should be muted in its player.
+
+0:00–0:25 | THE WORKER
+[Start with the real worker footage. Let the first image breathe.]
+I once saw a cargo tricycle carrying goods with a broken pedal. The machine had a fault, but the work kept going. Stopping meant losing income. I’m Anurag Mishra, founder of Tirare. For two years, we’ve asked one question: can we electrify the vehicle that’s already earning—without asking its owner to replace it?
+
+0:25–0:55 | WHAT ALREADY EXISTS
+[Show the comparison: a purpose-built vehicle, a conversion kit, then Tirare.]
+Purpose-built cargo EVs can be well-integrated. One published cargo EV is around ₹2.13 lakh; a pedal-rickshaw conversion kit is listed at ₹5,800. These are different products, not like-for-like prices. One replaces the vehicle; the other supplies parts. We’re working on the space between them: retrofit the vehicle that already exists, and solve its drivetrain problem as part of the same design.
+
+0:55–1:20 | THE DRIVETRAIN CONSTRAINT
+[Play the existing-trike / freewheel animation.]
+On our reference tricycle, the driven sprocket is fixed to a solid axle. If a motor drives that axle, rotation can travel back through the chain and pedals. The problem isn’t adding power. It’s making rider input and powered rotation behave differently at the same axle.
+
+1:20–1:50 | FOUR CAD STAGES + INSTALLATION
+[Click Reality → First attempt → Constraint collision → Current platform; then play the short installation animation.]
+These models show the decisions that got us here. The installation clip puts MRII at the driven-sprocket interface. The axial-flux motor shown is a packaging concept; final motor and reduction sizing are still being resolved.
+
+1:50–2:35 | MRII + ONE-WAY ANIMATION
+[Play the embedded YouTube MRII animation, mute its player audio, and narrate live.]
+This is MRII: the Mechanical Rider Intent Interface. When the rider drives, the sprag clutch engages and sends torque toward the axle. The flexures twist slightly. A magnetic target moves relative to an encoder; that angle becomes the rider-effort signal. When the powered axle leads, the one-way element is designed to overrun rather than force the pedal-side structure to follow. One interface is designed to transmit torque, measure effort and separate rider input from powered rotation. Manual rideability without assistance is a goal we still need to verify.
+
+2:35–3:15 | THE ADVANTAGE
+Our intended 1:1 setting means one calibrated unit of rider torque requests one unit of motor assistance, within operating limits. This is torque assistance, not a speed command. Because the rider still contributes, the motor may be smaller; that could reduce battery capacity, system mass, energy demand, wiring and cost. MRII is designed to remove a separate rider-torque-sensor module and rider-assist controller layer—not the motor’s power stage or electrical safety protections. These gains must be measured on the integrated vehicle.
+
+3:15–3:45 | COST AND ACCESS
+Our current working target is around ₹10,000 for the retrofit package—not a verified deployed cost. The worker keeps the tricycle. A local workshop installs and services it. Our proposed battery pool and swapping service avoids an upfront battery purchase; recurring daily or weekly payments would align with cash flow. Battery and service economics still need to be tested.
+
+3:45–4:25 | TWO YEARS, IP AND PEOPLE
+Over two years we’ve worked through several CAD iterations and built and demonstrated the MRII physical subsystem. Tirare received a ₹1 lakh prototype-stage grant through IIIT Delhi’s E-Pitch Café, part of which is supporting professional intellectual-property fees. On 2 October, we filed a patent application for MRII. Professor Andy Ruina has provided technical guidance on our drivetrain decisions. Our patent counsel, an IIT graduate who later worked at IIT, has been impressed enough to offer to approach TVS on our behalf. That is outreach—not a partnership.
+
+4:25–5:00 | THE NEXT PROOF
+Next we need to validate torque transfer, calibration, one-way behaviour, mounting, failure modes and manual operation with assistance off. Then controlled trials can measure uptime, energy, payload, fatigue and willingness to pay. We’re not asking workers to abandon the vehicles that sustain them. We’re changing one critical interface so those vehicles can do more. The vehicle is already earning. Change the interface, not the livelihood. Thank you.
+
+PRESENTER NOTES
+• The price of a complete cargo EV and a conversion kit are examples with different scopes—not direct like-for-like comparisons.
+• Use ₹10,000 only as a working retrofit-package target, not a verified deployed cost. Battery fleet/service costs are separate.
+• Describe the intended 1:1 assist as a calibrated torque-assist ratio within limits, not a speed ratio or validated whole-vehicle result.
+• MRII is designed to remove a separate rider-torque-sensor module and rider-assist controller layer. Motor power electronics and electrical safety protections remain necessary.
+• Say “patent application filed”; keep the filing stage and sensitive details confidential unless counsel approves disclosure.
+• The axial-flux motor in the installation clip is a packaging concept; final motor/reduction sizing is still being resolved.
+• Andy Ruina provided technical guidance. Counsel’s offer to approach TVS is outreach, not a partnership.
+• Integrated performance, manual rideability with assist off, cost/mass reductions and livelihood outcomes remain to be validated.
