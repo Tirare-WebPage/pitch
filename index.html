@@ -355,6 +355,41 @@ p{font-family:var(--sans)}
 @media(max-width:900px){.story-film-layout{grid-template-columns:1fr}.parallel-cell{grid-template-columns:1fr}.story-photo-slot.media-slot{aspect-ratio:16/10}}
 @media(max-width:600px){.parallel-head{grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr);gap:8px;font-size:8px}.parallel-row{grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr);gap:8px;padding:16px 0}.parallel-cell{gap:10px;align-content:start}.story-photo-slot .slot-empty{padding:8px!important}.story-photo-slot .slot-empty .slot-title{font-size:10px!important}.story-photo-slot .slot-empty .slot-sub{font-size:9px!important}.parallel-copy h3{font-size:21px}.parallel-copy p{font-size:11px}.parallel-arrow{font-size:20px}}
 
+
+/* Image-first market comparison: fast to read from a stage. */
+.market-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:38px;align-items:stretch}
+.market-card{min-width:0;display:flex;flex-direction:column;border:1px solid #555b50;background:#181c16}
+.market-card-index{padding:14px 17px 12px;font:9px/1.4 var(--mono);letter-spacing:.08em;color:#b6bfb0;border-bottom:1px solid #444b41}
+.market-card-visual{position:relative;display:block;height:clamp(170px,19vw,235px);overflow:hidden;background:#e7e5dc;border-bottom:1px solid #555b50}
+.market-card-visual img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.market-card-visual:hover img{transform:scale(1.025)}
+.market-card-visual.kit-visual img,.market-card-visual.battery-visual img{object-fit:contain;padding:12px;background:#f0eee6}
+.market-card-visual.image-failed:after{content:'IMAGE NOT AVAILABLE';position:absolute;inset:0;display:grid;place-items:center;background:#252a23;color:#adb6a6;font:10px var(--mono);letter-spacing:.08em}
+.market-visual-label{position:absolute;left:10px;bottom:10px;padding:7px 9px;background:#171a15ed;color:#f2f0e8;font:9px var(--mono);letter-spacing:.06em}
+.market-card-body{padding:19px 18px 20px;display:flex;flex:1;flex-direction:column;align-items:flex-start}
+.market-card-kicker{font:9px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#b5beb0;margin:0 0 9px}
+.market-card-price{font:600 clamp(29px,3.1vw,42px)/1 var(--sans);letter-spacing:-.065em;color:#ef997a;margin:0 0 13px}
+.market-specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.market-specs span{border:1px solid #555b50;padding:6px 7px;color:#dde2d7;font:9px/1.3 var(--mono)}
+.market-card-body>p:not(.market-card-kicker){font-size:12px;line-height:1.6;color:#c5cabe;margin:0 0 16px;max-width:38em}
+.market-source{font:10px/1.5 var(--mono);color:#ef997a;text-underline-offset:3px;margin-top:auto}
+.market-image-credit{display:block;font:9px/1.4 var(--mono);color:#98a191;margin-top:9px}
+.tirare-target-line{display:grid;grid-template-columns:minmax(230px,.55fr) minmax(0,1fr);gap:22px;align-items:center;margin-top:18px;padding:20px 22px;border:1px solid #687644;background:#1b2116}
+.tirare-target-line>div span{display:block;font:9px var(--mono);letter-spacing:.08em;color:#c3d899;margin-bottom:7px}
+.tirare-target-line>div strong{display:block;font:600 clamp(28px,3.6vw,44px)/1 var(--sans);letter-spacing:-.06em;color:var(--accent)}
+.tirare-target-line p{margin:0;color:#c5cabe;font-size:12px;line-height:1.6;max-width:650px}
+.reaction-torque-layout{border-top:1px solid var(--line);padding-top:42px}
+.reaction-torque-layout .media-slot{min-height:290px}
+.reaction-torque-layout .media-slot .media-output video{object-fit:contain;background:#11140f}
+.reaction-torque-slot .slot-empty{min-height:290px!important;gap:18px}
+.reaction-diagram{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;width:100%;padding:22px 0 10px}
+.reaction-side{display:flex;min-width:0;flex-direction:column;align-items:center;gap:8px;color:#edf0e7}
+.reaction-side span{font:9px var(--mono);letter-spacing:.05em;text-align:center}
+.reaction-side strong{font:64px/1 var(--sans);font-weight:400;color:#ef997a}
+.reaction-link{font:8px var(--mono);letter-spacing:.08em;color:#aeb8a8;text-align:center}
+@media(max-width:900px){.market-showcase{grid-template-columns:1fr 1fr}.market-card:last-child{grid-column:1/-1}.market-card:last-child .market-card-visual{height:250px}.tirare-target-line{grid-template-columns:1fr}.reaction-torque-layout{grid-template-columns:1fr!important}}
+@media(max-width:600px){.market-showcase{grid-template-columns:1fr}.market-card:last-child{grid-column:auto}.market-card-visual{height:225px}.market-card:last-child .market-card-visual{height:225px}.market-card-body{padding:18px}.tirare-target-line{padding:18px}.reaction-diagram{padding:12px 0 6px}.reaction-side strong{font-size:52px}}
+
 </style>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
@@ -478,21 +513,59 @@ p{font-family:var(--sans)}
  <span class="section-number">02 / THE LANDSCAPE</span><div class="wrap">
   <p class="kicker">The market has two familiar answers.</p>
   <h2>New vehicle. Off-the-shelf kit. <em>Different problem.</em></h2>
-  <p class="lead">Purpose-built electric vehicles and conversion kits both make sense for particular users. We are not comparing unlike products as if they were the same. We are asking what works for someone who needs to keep the tricycle they already own.</p>
-  <div class="solution-table">
-   <div class="solution-row head"><div>Approach</div><div>What it does well</div><div>Where the fit can break</div></div>
-   <div class="solution-row"><div class="solution-name">Purpose-built cargo EV</div><div><p>Vehicle, motor, battery and drivetrain can be designed as one package.</p></div><div><p class="fit">The operator must acquire a different vehicle, with a different capital cost and service path.</p></div></div>
-   <div class="solution-row"><div class="solution-name">Complete e-rickshaw</div><div><p>Electric propulsion is already integrated and familiar as a product category.</p></div><div><p class="fit">It is a replacement route—not a way to retain the existing pedal cargo tricycle.</p></div></div>
-   <div class="solution-row"><div class="solution-name">Generic retrofit kit</div><div><p>Individual motors, controllers and conversion parts are already available.</p></div><div><p class="fit">A parts kit may not combine one-way drive behaviour and rider-effort sensing into one retrofit architecture.</p></div></div>
-   <div class="solution-row"><div class="solution-name">Two-wheeler conversion</div><div><p>Motor and battery kits can suit a particular donor wheel or frame.</p></div><div><p class="fit">Its packaging and controls are designed around a different vehicle and rider interface.</p></div></div>
-   <div class="solution-row tirare"><div class="solution-name">Tirare retrofit</div><div><p>Keep the existing tricycle. Integrate rider-intent sensing at the driven sprocket interface, then add assistance around the rider.</p></div><div><p class="fit">Built specifically around the retrofit constraints; full vehicle integration and field performance remain to be proven.</p></div></div>
+  <p class="lead">A whole electric vehicle, a parts kit, and a battery are three different things. Their prices tell us where the money goes—but not yet whether a system can handle a roughly 400 kg loaded tricycle through a full workday.</p>
+  <div class="market-showcase" aria-label="Visual comparison of a complete electric cargo vehicle, conversion kit, and battery">
+   <article class="market-card">
+    <div class="market-card-index">01 / REPLACE THE VEHICLE</div>
+    <a class="market-card-visual vehicle-visual" href="https://trucks.cardekho.com/en/news/detail/explore-these-5-crucial-highlights-of-the-bajaj-auto-riki-c4005-electric-kart-all-you-need-to-know-explained-3345.html" target="_blank" rel="noopener noreferrer" aria-label="Open source for the Bajaj Riki cargo EV image">
+     <img src="https://truckcdn.cardekho.com/news/ff9be463ee.jpg" alt="Bajaj Riki electric cargo three-wheeler on the road" loading="eager" referrerpolicy="no-referrer" onerror="this.closest('.market-card-visual').classList.add('image-failed');this.remove()">
+     <span class="market-visual-label">COMPLETE CARGO EV</span>
+    </a>
+    <div class="market-card-body">
+     <p class="market-card-kicker">A complete vehicle</p>
+     <div class="market-card-price">₹2,13,292</div>
+     <div class="market-specs"><span>5.4 kWh battery</span><span>164 km certified range</span></div>
+     <p>Designed and sold as one integrated vehicle. It means replacing the tricycle the worker already owns.</p>
+     <a class="market-source" href="https://www.bajajauto.com/three-wheelers/riki/riki-c40" target="_blank" rel="noopener noreferrer">Official price and specifications ↗</a>
+     <small class="market-image-credit">Photo: Trucks / CarDekho</small>
+    </div>
+   </article>
+   <article class="market-card">
+    <div class="market-card-index">02 / ADD A DRIVE KIT</div>
+    <a class="market-card-visual kit-visual" href="https://www.sagarelectrotech.com/product-page/pedal-rickshaw-conversion-kit" target="_blank" rel="noopener noreferrer" aria-label="Open the listed pedal-rickshaw conversion kit">
+     <img src="https://static.wixstatic.com/media/eecf3f_38c6262ecbb942edaf07b3f8e63f123c~mv2.png/v1/fill/w_980%2Ch_980%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/eecf3f_38c6262ecbb942edaf07b3f8e63f123c~mv2.png" alt="Sagar Electro Tech pedal-rickshaw conversion kit with 48 volt 800 watt motor and controller" loading="eager" referrerpolicy="no-referrer" onerror="this.closest('.market-card-visual').classList.add('image-failed');this.remove()">
+     <span class="market-visual-label">MOTOR + PARTS KIT</span>
+    </a>
+    <div class="market-card-body">
+     <p class="market-card-kicker">A listed conversion kit</p>
+     <div class="market-card-price">₹5,800</div>
+     <div class="market-specs"><span>48 V</span><span>800 W motor</span></div>
+     <p>A parts listing—not a demonstrated full-day solution for our loaded tricycle. Battery, mounting, fit and duty cycle still need checking.</p>
+     <a class="market-source" href="https://www.sagarelectrotech.com/product-page/pedal-rickshaw-conversion-kit" target="_blank" rel="noopener noreferrer">Supplier listing ↗</a>
+     <small class="market-image-credit">Photo: Sagar Electro Tech</small>
+    </div>
+   </article>
+   <article class="market-card">
+    <div class="market-card-index">03 / POWER IT THROUGH THE DAY</div>
+    <a class="market-card-visual battery-visual" href="https://www.livaah.com/3kWh-lfp-battery-pack.html" target="_blank" rel="noopener noreferrer" aria-label="Open an illustrative 3 kWh battery pack product page">
+     <img src="https://www.livaah.com/asset/images/LFP/3kwh-LFP-1.png" alt="Illustrative 3 kWh LFP battery pack" loading="eager" referrerpolicy="no-referrer" onerror="this.closest('.market-card-visual').classList.add('image-failed');this.remove()">
+     <span class="market-visual-label">ILLUSTRATIVE 3 kWh PACK</span>
+    </a>
+    <div class="market-card-body">
+     <p class="market-card-kicker">Separate supplier reference</p>
+     <div class="market-card-price">₹35,500</div>
+     <div class="market-specs"><span>≈3 kWh</span><span>20 kg listed weight</span></div>
+     <p>Our early estimate is around 3 kWh if the motor does all the propulsion. This price and weight come from a separate supplier listing—not the pictured pack.</p>
+     <a class="market-source" href="https://www.energeontech.com/lfp-battery-pack.html" target="_blank" rel="noopener noreferrer">Price and weight reference ↗</a>
+     <small class="market-image-credit">Illustrative battery photo: Livaah</small>
+    </div>
+   </article>
   </div>
-  <div class="price-strip" aria-label="Illustrative public price references">
-   <div class="price-compare"><div class="meta">A complete cargo EV / published price</div><div class="price">₹2,13,292</div><p>Bajaj Riki C40 official page lists a purpose-built vehicle with a 5.4 kWh battery and 164 km certified range. It is a whole-vehicle solution—not a retrofit quote.</p><a href="https://www.bajajauto.com/three-wheelers/riki/riki-c40" target="_blank" rel="noopener">View official specification ↗</a></div>
-   <div class="price-compare"><div class="meta">A pedal-rickshaw kit / supplier listing</div><div class="price">₹5,800</div><p>One listed 48 V, 800 W kit includes motor, controller and throttle-related components. Battery inclusion, installation and fit to a particular tricycle need checking.</p><a href="https://www.sagarelectrotech.com/product-page/pedal-rickshaw-conversion-kit" target="_blank" rel="noopener">View supplier listing ↗</a></div>
-   <div class="price-compare tirare-price"><div class="meta">Tirare / working target</div><div class="price">~₹10,000</div><p>Current design target for the retrofit package—not a verified deployed cost. Battery-fleet capital and service operations are separate. The final bill of materials and installation cost still need validation.</p><a href="#access">See the access model ↓</a></div>
+  <div class="tirare-target-line">
+   <div><span>OUR CURRENT WORKING TARGET</span><strong>~₹10,000</strong></div>
+   <p>For the retrofit package—not a verified final price. Installation, final hardware selection and battery-service costs still need validation.</p>
   </div>
-  <p class="price-note">Price references checked in October 2026. Different scopes, battery assumptions, installation costs and warranties mean these figures should not be read as direct like-for-like pricing.</p>
+  <p class="price-note">Public listing references checked in October 2026. These are different scopes: a complete vehicle, a parts kit and a separately listed battery. The images are illustrative product photos and are not all from the same supplier or proposed build.</p>
   <p class="small muted" style="margin-top:18px;max-width:900px">The question is not whether electrification already exists. It does. The question is whether it can reach the worker who cannot replace the asset, and whose existing drivetrain still has to work as a system.</p>
  </div>
 </section>
@@ -502,6 +575,27 @@ p{font-family:var(--sans)}
   <div class="section-head"><div><p class="kicker">What the first design taught us</p><h2>Before adding power, follow the torque.</h2></div><p>The reference tricycle already uses a ratchet/freewheel: it passes rider power to the wheel but allows the wheel to keep turning without forcing the pedals to follow. The design challenge is to integrate rider-effort sensing and motor assistance around that existing one-way behaviour.</p></div>
   <div class="force-path" aria-label="Baseline human torque path"><div class="force-node"><b>01</b><strong>Pedals + crank</strong><small>Rider applies force.</small></div><div class="force-node"><b>02</b><strong>Chain</strong><small>Carries rider input.</small></div><div class="force-node"><b>03</b><strong>Sprocket</strong><small>Turns the drive.</small></div><div class="force-node"><b>04</b><strong>Ratchet / freewheel</strong><small>Allows one-way overrun.</small></div><div class="force-node"><b>05</b><strong>Axle + wheels</strong><small>Vehicle moves.</small></div></div>
   <div class="grid2" style="margin-top:40px;align-items:center"><div><h3 class="display" style="font-size:34px">The freewheel is already there. What else must the system do?</h3><p>The tricycle already has a one-way mechanism. The harder design task is adding rider-effort sensing and motor assistance while keeping the one-way drive behaviour working as intended.</p><p class="small muted">MRII is designed to work with this existing idea—not to claim the freewheel itself as new.</p></div><div class="media-block"><div class="media-block-head"><h3>Existing drivetrain in motion</h3><span>CLIP 01 / Baseline drive</span></div><div class="media-slot light" data-media-slot="freewheel"><div class="slot-empty"><svg viewBox="0 0 520 280" fill="none" stroke="#244a3e" stroke-width="2"><circle cx="110" cy="143" r="47"/><circle cx="110" cy="143" r="7"/><path d="M110 143L216 143L287 83L361 143L110 143"/><circle cx="287" cy="83" r="20" stroke="#b8442c" stroke-width="3"/><path d="M287 83L287 55M275 55H299M361 143L402 111L422 111"/><rect x="404" y="71" width="74" height="62" stroke="#b8442c"/><path d="M415 84H467M415 98H467M415 112H467" stroke="#b8442c"/><path d="M45 225H475" stroke="#9e9a8e" stroke-dasharray="5 5"/><text x="80" y="213" fill="#244a3e" stroke="none" font-size="11" font-family="monospace">CRANK</text><text x="258" y="44" fill="#b8442c" stroke="none" font-size="11" font-family="monospace">FREEWHEEL / RATCHET</text><text x="404" y="151" fill="#b8442c" stroke="none" font-size="11" font-family="monospace">AXLE</text></svg><div><div class="slot-title">Load the existing-trike freewheel / movement animation</div><div class="slot-sub">Use the animation that shows how the current trike's drivetrain moves.</div></div></div></div><div class="media-controls"><span class="micro">Local media / not uploaded to a server</span><button class="load-button" data-open-media="freewheel">Add animation +</button></div></div></div>
+  <div class="grid2 reaction-torque-layout" style="margin-top:58px;align-items:center">
+   <div>
+    <p class="kicker">Newton’s third law / reaction torque</p>
+    <h3 class="display" style="font-size:clamp(32px,4vw,48px);line-height:1.02">The axle turns. The motor mount takes the reaction.</h3>
+    <p>When the motor applies torque to the axle, it applies an equal and opposite reaction torque to its housing. The mount has to carry that load into the frame.</p>
+    <p>These tricycles have spent years in rain, on rough roads and under heavy loads. Some have wooden frames. We cannot assume an old frame is a safe motor mount just because the wheel turns.</p>
+    <p class="small muted">The motor, mounting and frame need a deliberate force path—and testing on the real vehicle.</p>
+   </div>
+   <div class="media-block">
+    <div class="media-block-head"><h3>Motor / axle reaction torque</h3><span>CLIP 02 / FORCE PATH</span></div>
+    <div class="media-slot reaction-torque-slot" data-media-slot="reactionTorque">
+     <div class="slot-empty">
+      <div class="reaction-diagram" aria-hidden="true"><div class="reaction-side"><span>AXLE</span><strong>↻</strong></div><div class="reaction-link">TORQUE</div><div class="reaction-side"><span>MOTOR HOUSING</span><strong>↺</strong></div></div>
+      <div class="slot-title">Reaction torque animation</div>
+      <div class="slot-sub">assets/media/tirare_motor_axle_motion_v3.mp4</div>
+     </div>
+    </div>
+    <div class="media-controls"><span class="micro">Muted animation / narrate live</span><button class="load-button" type="button" data-open-media="reactionTorque">Add reaction-torque animation +</button></div>
+    <p class="small muted" style="margin:12px 0 0">Animation explains the force path; it is not a structural strength test.</p>
+   </div>
+  </div>
  </div>
 </section>
 
@@ -637,18 +731,19 @@ p{font-family:var(--sans)}
 </main>
 <footer><div class="footer-inner"><p><strong style="color:#f0eee5;letter-spacing:.15em">TIRARE</strong><br>Mobility technologies / Engineering in progress</p><div class="footer-links"><button id="mediaBtn2">Manage media</button><button id="speechBtn2">Five-minute speech</button><a href="mailto:anuragfromtirare@gmail.com">Contact</a></div><p>October 2026<br>Project presentation / claims subject to validation</p></div></footer>
 
-<div class="modal-backdrop" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="mediaTitle"><div class="modal"><div class="modal-header"><div><p class="kicker">Local media library</p><h2 id="mediaTitle">Use the real work, not a stock montage.</h2><p class="small muted" style="margin:10px 0 0">The Media picker is a local browser override; selected files are not uploaded by this page. For every visitor to see the new story media, commit the video and four photos to assets/media/ using the exact filenames shown in each slot. The MRII mechanism video is embedded from YouTube. For the four CAD stages, load a .glb model, a turntable render video, or a still. Large videos may use substantial browser storage.</p></div><button class="button" id="closeMedia">Close ×</button></div><div class="asset-list" id="assetList"></div><div class="modal-foot"><p>Run the media in this order: worker reality → Hamid story animation and photo parallel → existing trike movement → CAD evolution → MRII installation → embedded MRII mechanism video → one-way behaviour. Mute the YouTube player before narrating live. Load your four CAD .glb files or use the hosted interactive models.</p><button class="button" id="clearMedia">Clear saved media</button></div></div></div>
+<div class="modal-backdrop" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="mediaTitle"><div class="modal"><div class="modal-header"><div><p class="kicker">Local media library</p><h2 id="mediaTitle">Use the real work, not a stock montage.</h2><p class="small muted" style="margin:10px 0 0">The Media picker is a local browser override; selected files are not uploaded by this page. For every visitor to see the new story media, commit the video and four photos to assets/media/ using the exact filenames shown in each slot. The MRII mechanism video is embedded from YouTube. For the four CAD stages, load a .glb model, a turntable render video, or a still. Large videos may use substantial browser storage. For the reaction-torque clip, commit assets/media/tirare_motor_axle_motion_v3.mp4 so all visitors see it.</p></div><button class="button" id="closeMedia">Close ×</button></div><div class="asset-list" id="assetList"></div><div class="modal-foot"><p>Run the media in this order: worker reality → Hamid story animation and photo parallel → existing trike movement → reaction torque → CAD evolution → MRII installation → embedded MRII mechanism video → one-way behaviour. Mute video audio before narrating live. Load your four CAD .glb files or use the hosted interactive models.</p><button class="button" id="clearMedia">Clear saved media</button></div></div></div>
 
 <aside class="speech-drawer" id="speechDrawer" aria-label="Five-minute speaker notes"><div class="modal-header"><div><p class="kicker">Presenter notes</p><h2>Five minutes.<br>One argument.</h2><div class="speech-meta">Don't narrate the website. Explain the decision each visual reveals.</div></div><button class="button" id="closeSpeech">Close ×</button></div>
  <div class="speech-block"><div class="time">0:00–0:25 / The part</div><h3>Small part. Big question.</h3><p>[Hold up MRII; show the close-up.] This is MRII. It's small, and we've spent two years building it. Why did IIIT Delhi give us a ₹1 lakh grant? Why did our patent counsel reduce his fees by ₹30,000 and offer to approach TVS about testing? Let me show you the person behind the problem.</p></div>
  <div class="speech-block"><div class="time">0:25–0:55 / Worker reality</div><h3>The work did not stop.</h3><p>[Play the worker footage.] I once saw a cargo-tricycle worker carrying goods with a broken pedal. He kept working because he couldn't simply stop earning. We wanted to improve his working day without asking him to give up the vehicle that feeds his family.</p></div>
  <div class="speech-block"><div class="time">0:55–1:25 / Hamid's story</div><h3>The chimta and the new cargo EV.</h3><p>[Play the Hamid animation, then show the four-photo parallel: chimta → new cargo EV; grandmother's burned hands → worker working manually.] Many of us learned Hamid's story as children. He sees his grandmother burn her fingers and buys her a chimta. But when a family can't afford everything, food comes first—and the hands may keep burning. Today, a new electric cargo vehicle can be a better tool, too. But if the whole vehicle costs too much, the worker keeps using what he has. We wanted to find a way to make the upgrade easier to reach.</p></div>
- <div class="speech-block"><div class="time">1:25–1:55 / Existing solutions</div><h3>Why not just add a motor?</h3><p>[Show the complete EV and kit price references.] One published cargo EV is around ₹2.13 lakh. A conversion kit is listed at ₹5,800, but the two are different products. For the roughly 400 kg system we're sizing, our early work cycle estimate points to about a 3 kWh battery. One supplier example is ₹35,500 and 20 kg—for the battery alone. The motor and other parts come on top. What if the motor helped the rider instead of doing all the work?</p></div>
- <div class="speech-block"><div class="time">1:55–2:40 / MRII</div><h3>One small part. Three jobs.</h3><p>[Show CAD evolution; play the MRII animation muted and narrate live.] The tricycle already has a ratchet/freewheel, like a bicycle. MRII is designed to combine that one-way behaviour with a way to measure rider effort. When the rider pedals, a small clutch engages. Flexible parts twist slightly; a magnet moves past a sensor, measuring that movement. The signal tells the system how hard the rider is pushing. When the motor drives the axle, the one-way mechanism is designed to let it turn without forcing the pedals to follow.</p></div>
- <div class="speech-block"><div class="time">2:40–3:15 / The advantage</div><h3>Make the mechanism do more.</h3><p>Our intended 1:1 assist setting means the motor requests one unit of extra turning force for each unit measured from the rider, within operating limits. That could mean a smaller motor and battery, less weight, less energy use and lower cost. Because MRII measures rider effort at the mechanical interface, it is also designed to avoid a separate torque-sensor unit and simplify the extra assistance controls. The motor still needs power and safety electronics. We have to prove the savings on the full vehicle.</p></div>
- <div class="speech-block"><div class="time">3:15–3:40 / Access</div><h3>Affordable means reachable.</h3><p>Our working target is around ₹10,000 for the retrofit package, not a verified final cost. The worker keeps the tricycle. A local workshop installs and services it. Our proposed battery-swapping service would let the worker pay smaller daily or weekly amounts instead of buying the battery upfront. That payment model still needs testing.</p></div>
- <div class="speech-block"><div class="time">3:40–4:20 / Two years of work</div><h3>Support—and responsibility.</h3><p>We've spent two years building and changing our designs, and have built and demonstrated the MRII physical subsystem. IIIT Delhi awarded us a ₹1 lakh prototype grant. On 2 October, we filed a patent application. Our counsel reduced his fees by ₹30,000 and offered to approach TVS about testing. Professor Andy Ruina has also provided technical guidance. We're grateful for the support—but the complete vehicle still has to prove itself.</p></div>
- <div class="speech-block"><div class="time">4:20–5:00 / The next proof</div><h3>Change the part, not the livelihood.</h3><p>Next we need to make sure the mechanism reads rider effort correctly, works under load, and allows manual riding when assistance is off. Then we need to test it with workers and measure reliability, energy use, physical effort and running cost. We estimate around 13 lakh potential users; we haven't reached them yet. We must earn that opportunity by proving the technology. A worker shouldn't have to replace the vehicle that feeds their family just to make the work easier. The vehicle is already earning. Let's make it work better for the person who depends on it.</p></div>
+ <div class="speech-block"><div class="time">1:25–1:55 / Existing solutions</div><h3>Why not just add a motor?</h3><p>[Show the three image cards together: complete EV → kit → battery. Prices should be readable at a glance.] One published cargo EV is around ₹2.13 lakh. A conversion kit is listed at ₹5,800, but that is a parts kit—not proof of a full-day solution for a roughly 400 kg loaded tricycle. If the motor did all the propulsion, our early estimate is around 3 kWh. One supplier lists a battery at ₹35,500 and 20 kg. That is the battery alone.</p></div>
+ <div class="speech-block"><div class="time">1:55–2:15 / Reaction torque</div><h3>Where does the force go?</h3><p>[Play tirare_motor_axle_motion_v3.mp4. Point to the motor housing, axle and mounting.] Newton’s third law: when the motor turns the axle, the axle pushes back on the motor housing with equal and opposite torque. The mount has to carry that force into the frame. These tricycles have seen years of rain, rough roads and heavy loads. Some have wooden frames. We cannot just bolt on a motor and hope the frame can take it.</p></div>
+ <div class="speech-block"><div class="time">2:15–2:55 / MRII</div><h3>One small part. Three jobs.</h3><p>[Show CAD evolution; play the MRII animation muted and narrate live.] The tricycle already has a ratchet/freewheel, like a bicycle. MRII is designed to combine that one-way behaviour with a way to measure rider effort. When the rider pedals, a small clutch engages. Flexible parts twist slightly; a magnet moves past a sensor, measuring that movement. The signal tells the system how hard the rider is pushing. When the motor drives the axle, the one-way mechanism is designed to let it turn without forcing the pedals to follow.</p></div>
+ <div class="speech-block"><div class="time">2:55–3:25 / The advantage</div><h3>Make the mechanism do more.</h3><p>Our intended 1:1 assist setting means the motor requests one unit of extra turning force for each unit measured from the rider, within operating limits. That could mean a smaller motor and battery, less weight, less energy use and lower cost. Because MRII measures rider effort at the mechanical interface, it is also designed to avoid a separate torque-sensor unit and simplify the extra assistance controls. The motor still needs power and safety electronics. We have to prove the savings on the full vehicle.</p></div>
+ <div class="speech-block"><div class="time">3:25–3:50 / Access</div><h3>Affordable means reachable.</h3><p>Our working target is around ₹10,000 for the retrofit package, not a verified final cost. The worker keeps the tricycle. A local workshop installs and services it. Our proposed battery-swapping service would let the worker pay smaller daily or weekly amounts instead of buying the battery upfront. That payment model still needs testing.</p></div>
+ <div class="speech-block"><div class="time">3:50–4:25 / Two years of work</div><h3>Support—and responsibility.</h3><p>We've spent two years building and changing our designs, and have built and demonstrated the MRII physical subsystem. IIIT Delhi awarded us a ₹1 lakh prototype grant. On 2 October, we filed a patent application. Our counsel reduced his fees by ₹30,000 and offered to approach TVS about testing. Professor Andy Ruina has also provided technical guidance. We're grateful for the support—but the complete vehicle still has to prove itself.</p></div>
+ <div class="speech-block"><div class="time">4:25–5:00 / The next proof</div><h3>Change the part, not the livelihood.</h3><p>Next we need to make sure the mechanism reads rider effort correctly, works under load, and allows manual riding when assistance is off. Then we need to test it with workers and measure reliability, energy use, physical effort and running cost. We estimate around 13 lakh potential users; we haven't reached them yet. We must earn that opportunity by proving the technology. A worker shouldn't have to replace the vehicle that feeds their family just to make the work easier. The vehicle is already earning. Let's make it work better for the person who depends on it.</p></div>
  <div class="modal-foot"><button class="button solid" id="printSpeech">Print / Save notes</button><span class="micro">Animations muted / narrated live.</span></div></aside>
 <div class="route-hud" id="routeHud" aria-label="Pitch section navigation"><button type="button" id="routePrev">← BACK</button><span class="route-count" id="routeCount">PITCH / 01 OF 12</span><button type="button" id="routeNext">NEXT →</button></div>
 <div class="presenter-state" id="presenterState"><span>Pitch timer</span><strong id="stateTimer">05:00</strong><button id="stopPitch">Stop</button></div>
@@ -662,6 +757,7 @@ const assetDefs=[
  {id:'newCargoEv',title:'Photo — new electric cargo vehicle',desc:'A real example of a purpose-built cargo EV; avoid implying it is the same vehicle as Tirare.',accept:'image/*',src:'assets/media/new-cargo-ev.jpg',staticType:'image/jpeg'},
  {id:'manualWorker',title:'Photo — manual cargo work',desc:'Real worker using a manually powered cargo tricycle.',accept:'image/*',src:'assets/media/manual-cargo-worker.webp',staticType:'image/webp'},
  {id:'freewheel',title:'Existing tricycle / freewheel animation',desc:'How the current tricycle drivetrain moves and how its ratchet/freewheel behaves.',accept:'video/*,image/*',src:'assets/media/existing-drivetrain.mp4',staticType:'video/mp4'},
+ {id:'reactionTorque',title:'Reaction torque — motor / axle / frame',desc:'Newton’s third-law animation showing reaction torque at the motor housing and mounting. Upload as tirare_motor_axle_motion_v3.mp4.',accept:'video/*,image/*',src:'assets/media/tirare_motor_axle_motion_v3.mp4',staticType:'video/mp4'},
  {id:'cad1',title:'CAD 01 — Reality',desc:'Actual reference cargo tricycle .glb model, orbiting render video, or still image.',accept:'.glb,model/gltf-binary,video/*,image/*'},
  {id:'cad2',title:'CAD 02 — First attempt',desc:'First power-delivery concept: .glb model, orbiting render video, or still image.',accept:'.glb,model/gltf-binary,video/*,image/*'},
  {id:'cad3',title:'CAD 03 — Constraint collision',desc:'Design conflict that forced an architecture change: .glb model, video, or still.',accept:'.glb,model/gltf-binary,video/*,image/*'},
