@@ -415,6 +415,29 @@ p{font-family:var(--sans)}
 @media(max-width:900px){.interface-showcase{grid-template-columns:1fr}.interface-visual .media-slot{height:clamp(280px,65vw,430px)}.interface-visual-head{padding:14px}.interface-takeaway{padding:18px}}
 @media(max-width:600px){.interface-showcase{gap:12px;margin-bottom:28px}.interface-visual-head{align-items:flex-start;flex-direction:column;gap:6px}.interface-visual-head strong{text-align:left;font-size:17px}.interface-visual .media-slot{height:280px;min-height:280px}.interface-visual .media-slot .slot-empty{min-height:280px!important;padding:17px!important}.interface-visual .media-slot .media-output,.interface-visual .media-slot .media-output img,.interface-visual .media-slot .media-output model-viewer{min-height:280px}.interface-visual-foot{align-items:flex-start;flex-direction:column}.interface-visual-foot strong{text-align:left}.interface-takeaway{grid-template-columns:1fr;gap:8px}}
 
+
+/* V4 / pitch-stage visuals: quick reads, progressive reveals, no dense cost tables. */
+.market-price-mass{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:10px;width:100%;padding:5px 0 14px;border-bottom:1px solid #4b5248;margin-bottom:13px}
+.market-price-mass>div{min-width:0}.market-price-mass>div+div{border-left:1px solid #4b5248;padding-left:12px}
+.market-price-mass span{display:block;font:9px var(--mono);color:#aeb8a8;letter-spacing:.08em;margin-bottom:8px}
+.market-price-mass strong{display:block;font:clamp(22px,2.6vw,34px)/1 var(--serif);color:#f0eee5;letter-spacing:-.035em;white-space:nowrap}
+.market-price-mass>div:last-child strong{font-size:clamp(19px,2.1vw,27px);color:var(--accent)}
+.kit-parts{display:flex;flex-wrap:wrap;gap:5px;margin:-2px 0 13px}.kit-parts span{font:9px var(--mono);padding:5px 7px;color:#f0eee5;background:#30372e;border:1px solid #4f594b}
+.battery-build-row{display:grid;grid-template-columns:minmax(260px,.82fr) minmax(0,1.18fr);gap:clamp(25px,5vw,70px);align-items:center;margin:45px 0 12px;padding:26px 0;border-top:1px solid #596054;border-bottom:1px solid #596054}
+.battery-build-copy h3{font:clamp(32px,4vw,52px)/.98 var(--serif);letter-spacing:-.04em;margin-bottom:14px}.battery-build-copy h3 em{color:#ef997a}.battery-build-copy>p:not(.kicker){font-size:13px;color:#c5cabe;line-height:1.7}
+.battery-build-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:20px 0}.battery-build-stats div{border-top:1px solid #596054;padding-top:9px}.battery-build-stats span{display:block;font:8px var(--mono);color:#aeb8a8;margin-bottom:6px}.battery-build-stats strong{font:clamp(16px,1.7vw,23px)/1 var(--serif);color:#f1eee5}
+.battery-build-visual{min-width:0}.battery-build-visual .media-slot{height:clamp(230px,27vw,360px);min-height:230px;aspect-ratio:16/9;background:#e5e2d8}.battery-build-visual .media-output,.battery-build-visual .media-output video,.battery-build-visual .media-output img{min-height:230px;height:100%;background:#e5e2d8;object-fit:contain}.battery-build-placeholder{padding:0!important;background:#e5e2d8!important;display:block!important;position:relative}.battery-build-placeholder img{width:100%;height:100%;max-height:350px;object-fit:contain;padding:22px}.battery-placeholder-label{position:absolute;left:0;right:0;bottom:0;padding:14px 17px;background:linear-gradient(0deg,rgba(22,26,21,.92),rgba(22,26,21,.72));color:#f4f1e8}.battery-placeholder-label strong,.battery-placeholder-label small{display:block}.battery-placeholder-label strong{font:10px var(--mono);letter-spacing:.08em}.battery-placeholder-label small{font:10px var(--mono);color:#c4cbbd;margin-top:5px}
+.light-load{color:#171b16;border-color:#777d70}.light-load:hover{color:var(--accent);border-color:var(--accent)}
+.frame-comparison{margin-top:62px;padding-top:36px;border-top:1px solid var(--line)}.frame-comparison-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.75fr);gap:30px;align-items:end;margin-bottom:25px}.frame-comparison-head h3{font:clamp(32px,4vw,50px)/1 var(--serif);letter-spacing:-.04em;margin:0}.frame-comparison-head h3 em{color:var(--accent)}.frame-comparison-head>p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.frame-cad-grid{display:grid;grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr);gap:15px;align-items:center}.frame-cad-card{min-width:0}.frame-cad-label{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:10px}.frame-cad-label span{font:9px var(--mono);color:var(--accent);letter-spacing:.08em}.frame-cad-label strong{font:23px var(--serif);font-weight:400}.frame-cad-slot{height:clamp(230px,25vw,340px);min-height:230px;background:#d8d4c9!important}.frame-cad-slot .media-output,.frame-cad-slot .media-output model-viewer{height:100%;min-height:230px;background:#d8d4c9!important;--poster-color:#d8d4c9}.frame-default{display:block!important;padding:0!important;position:relative;background:#d8d4c9!important;min-height:230px!important;height:100%}.frame-default img{width:100%;height:100%;min-height:230px;object-fit:contain;padding:12px;background:#d8d4c9}.frame-default-caption{position:absolute;left:0;right:0;bottom:0;padding:11px 13px;background:linear-gradient(0deg,rgba(23,27,23,.9),rgba(23,27,23,.55));color:#fff}.frame-default-caption strong,.frame-default-caption small{display:block}.frame-default-caption strong{font:10px var(--mono);letter-spacing:.08em}.frame-default-caption small{font:9px var(--mono);color:#d8dfd2;margin-top:3px}.frame-change-arrow{display:grid;place-items:center;color:var(--accent);font:35px var(--serif)}.frame-source-note{font:9px/1.6 var(--mono);color:var(--muted);margin-top:12px}
+.build-sequence{margin-top:62px;padding:clamp(20px,3vw,34px);background:#171b17;color:#f0eee5;border:1px solid #474e43}.build-sequence-head{display:flex;justify-content:space-between;gap:25px;align-items:start;border-bottom:1px solid #4b5248;padding-bottom:22px}.build-sequence-head h3{font:clamp(32px,4vw,50px)/.98 var(--serif);margin-bottom:8px}.build-sequence-head p:not(.kicker){font-size:12px;color:#bac2b5;margin:0}.build-progress{text-align:right;min-width:130px}.build-progress span,.build-progress small{display:block;font:9px var(--mono);letter-spacing:.06em;color:#adb7a7}.build-progress strong{display:block;font:clamp(30px,4vw,47px)/1 var(--serif);color:#ef997a;margin:8px 0}.build-items{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:23px 0}.build-item{min-width:0;opacity:.24;filter:grayscale(1);transform:translateY(8px);transition:opacity .28s ease,filter .28s ease,transform .28s ease;border-top:2px solid #50574c;padding-top:10px}.build-item.is-revealed{opacity:1;filter:none;transform:translateY(0);border-color:#ef997a}.build-item img{width:100%;height:105px;object-fit:contain;background:#e7e5dc;padding:7px;display:block;margin-bottom:12px}.build-item>div:not(.other-cost-icon){display:flex;flex-direction:column;gap:5px}.build-item span{font:8px var(--mono);color:#ef997a;letter-spacing:.055em}.build-item strong{font:18px/1.15 var(--serif);font-weight:400;color:#f1eee5;min-height:41px}.build-item b{font:22px var(--sans);font-weight:500;color:#f4a18a}.build-item small{font:9px/1.5 var(--mono);color:#aeb8a8}.build-item-other{display:flex;flex-direction:column}.other-cost-icon{height:105px;display:grid;place-items:center;background:#2a3028;color:#ef997a;font:72px var(--sans);margin-bottom:12px}.build-sequence-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #4b5248;padding-top:20px}.build-total{text-align:right;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease}.build-total.is-visible{opacity:1;transform:none}.build-total span,.build-total small{display:block;font:9px var(--mono);color:#b9c2b3}.build-total strong{display:block;font:clamp(42px,6vw,72px)/.95 var(--serif);color:var(--accent);margin:5px 0}.build-caveat{font:9px/1.65 var(--mono);color:#9fa99b;margin:18px 0 0;max-width:900px}
+.sensor-price-problem{display:grid;grid-template-columns:minmax(140px,.55fr) minmax(0,1.05fr) minmax(170px,.7fr);gap:22px;align-items:center;margin:35px 0 45px;padding:20px 0;border-top:1px solid #4b5248;border-bottom:1px solid #4b5248}.sensor-photo{background:#f0eee6;padding:10px}.sensor-photo img{display:block;width:100%;height:145px;object-fit:contain}.sensor-photo small{display:block;font:8px/1.45 var(--mono);color:#656c5e;margin-top:6px}.sensor-price-copy h3{font:clamp(27px,3.4vw,43px)/1 var(--serif);font-weight:400;letter-spacing:-.035em}.sensor-price-copy h3 em{color:#ef997a}.sensor-price-copy>p:not(.kicker){font-size:12px;color:#c5cabe;margin-bottom:9px}.sensor-price-sources{display:flex;flex-wrap:wrap;gap:14px}.sensor-price-sources a{font:9px var(--mono);color:#ef997a}.sensor-vs-mark{border-left:1px solid #4b5248;padding-left:20px}.sensor-vs-mark span,.sensor-vs-mark small{display:block;font:8px/1.5 var(--mono);letter-spacing:.05em;color:#aeb8a8}.sensor-vs-mark strong{display:block;font:clamp(37px,4.8vw,62px)/1 var(--serif);color:var(--accent);margin:8px 0}.mrii-reveal-heading{margin:42px 0 18px;max-width:850px}.mrii-reveal-heading h3{font:clamp(33px,4.5vw,56px)/.98 var(--serif);font-weight:400;letter-spacing:-.04em}.mrii-reveal-heading h3 em{color:#ef997a}.mrii-reveal-heading p:last-child{font-size:13px;color:#c5cabe}
+.system-downsize{margin:45px 0;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.system-downsize-head{display:flex;justify-content:space-between;gap:25px;align-items:center;margin-bottom:24px}.system-downsize-head h3{font:clamp(31px,3.8vw,48px)/.98 var(--serif);font-weight:400;margin-bottom:9px}.system-downsize-head h3 em{color:var(--accent)}.system-downsize-head p:not(.kicker){font-size:12px;color:var(--muted);margin:0}.system-downsize-badge{border:1px solid var(--accent);padding:13px 16px;text-align:center;min-width:130px}.system-downsize-badge strong{display:block;font:clamp(30px,4vw,46px)/1 var(--serif);color:var(--accent)}.system-downsize-badge span{font:8px var(--mono);color:var(--muted)}.system-compare{display:grid;grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr);gap:14px;align-items:center}.system-case{border:1px solid var(--line);padding:16px;min-width:0}.system-case-new{border-color:var(--accent)}.system-case-tag{font:8px var(--mono);letter-spacing:.07em;color:var(--muted)}.system-case h4{font:clamp(21px,2.5vw,30px)/1.1 var(--serif);font-weight:400;margin:8px 0 12px}.system-case-image{height:130px;background:#e3dfd4;display:grid;place-items:center;margin-bottom:12px}.system-case-image img{width:100%;height:100%;object-fit:contain;padding:9px}.system-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.system-stats div{border-top:1px solid var(--line);padding-top:7px}.system-stats span{display:block;font:8px var(--mono);color:var(--muted);margin-bottom:5px}.system-stats strong{font:19px var(--serif);font-weight:400;color:var(--ink)}.system-arrow{font:32px var(--serif);color:var(--accent);text-align:center}.system-source-note{font:9px/1.65 var(--mono);color:var(--muted);margin:14px 0 0;max-width:1100px}.system-source-note a{color:var(--accent)}
+.torque-classroom{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;align-items:center;margin:40px 0;padding:24px;background:#171b17;color:#f2efe7}.torque-classroom-copy h3{font:clamp(28px,3.5vw,42px)/1 var(--serif);font-weight:400;letter-spacing:-.035em}.torque-classroom-copy h3 em{color:#ef997a}.torque-classroom-copy p:not(.kicker){font-size:12px;color:#c5cabe}.torque-classroom-equation{display:grid;grid-template-columns:1fr 40px 1fr;gap:9px;align-items:center}.torque-contribution{padding:17px 12px;border:1px solid #596054;text-align:center;transition:border-color .25s,background .25s}.torque-contribution span{display:block;font:9px var(--mono);color:#b6c0b1;letter-spacing:.1em}.torque-contribution strong{display:block;font:clamp(34px,5vw,64px)/1 var(--serif);color:#f2efe7;margin-top:9px}.torque-contribution strong small{font:12px var(--mono);color:#ef997a}.motor-torque strong{color:#ef997a}.torque-plus{text-align:center;color:#ef997a;font:32px var(--serif)}.torque-total{grid-column:1/-1;text-align:center;border-top:1px solid #555d50;margin-top:6px;padding-top:13px;animation:torquePop .35s ease both}.torque-total span{font:8px var(--mono);color:#b4beae;letter-spacing:.08em}.torque-total strong{display:block;font:clamp(30px,4vw,46px) var(--serif);color:var(--accent);margin-top:4px}.torque-classroom-note{grid-column:1/-1;font:9px/1.6 var(--mono);color:#aeb8a8;margin:0;max-width:900px}@keyframes torquePop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.retrofit-economics{margin:42px 0;padding:26px;background:var(--paper2);border-top:2px solid var(--accent)}.retrofit-economics-head{display:grid;grid-template-columns:1fr .75fr;gap:25px;align-items:end}.retrofit-economics-head h3{font:clamp(31px,4vw,48px)/.98 var(--serif);font-weight:400;margin:0}.retrofit-economics-head>p{font-size:12px;color:var(--muted);margin:0}.retrofit-economics-grid{display:grid;grid-template-columns:1fr 45px 1fr;gap:15px;align-items:center;margin:25px 0 16px}.economics-case{padding:20px;background:#242a22;color:#f0eee5;min-height:145px}.economics-case span,.economics-case small{display:block;font:8px/1.55 var(--mono);color:#bdc6b8;letter-spacing:.06em}.economics-case strong{display:block;font:clamp(34px,4.5vw,58px)/1 var(--serif);color:#ef997a;margin:11px 0}.economics-current{background:#25483d}.economics-current strong{color:#f2efe7}.economics-arrow{text-align:center;font:30px var(--serif);color:var(--accent)}.mass-comparison{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #bdb7aa;border-bottom:1px solid #bdb7aa}.mass-comparison>div{padding:14px 15px 14px 0}.mass-comparison>div+div{border-left:1px solid #bdb7aa;padding-left:16px}.mass-comparison span,.mass-comparison small{display:block;font:8px/1.5 var(--mono);color:var(--muted)}.mass-comparison strong{display:block;font:34px/1 var(--serif);color:var(--ink);margin:5px 0}
+@media(max-width:900px){.battery-build-row,.frame-comparison-head,.sensor-price-problem,.system-downsize-head,.retrofit-economics-head{grid-template-columns:1fr}.sensor-price-problem{grid-template-columns:150px 1fr}.sensor-vs-mark{grid-column:1/-1;border-left:0;border-top:1px solid #4b5248;padding:15px 0 0}.build-items{grid-template-columns:1fr 1fr}.build-sequence-head{flex-direction:column}.build-progress{text-align:left}.build-sequence-bottom{align-items:flex-start;flex-direction:column}.build-total{text-align:left}.system-compare,.retrofit-economics-grid{grid-template-columns:1fr}.system-arrow,.economics-arrow{transform:rotate(90deg)}.torque-classroom{grid-template-columns:1fr}}
+@media(max-width:600px){.market-price-mass strong{font-size:25px}.battery-build-stats{grid-template-columns:1fr 1fr}.frame-cad-grid{grid-template-columns:1fr}.frame-change-arrow{transform:rotate(90deg)}.frame-cad-label{align-items:flex-start;flex-direction:column;gap:4px}.build-items{grid-template-columns:1fr}.build-item{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:start}.build-item img,.other-cost-icon{height:100px;margin:0}.build-item strong{min-height:0}.sensor-price-problem{grid-template-columns:1fr}.sensor-photo img{height:155px}.torque-classroom{padding:18px}.torque-classroom-equation{grid-template-columns:1fr 25px 1fr}.torque-contribution{padding:13px 7px}.torque-contribution strong{font-size:34px}.system-stats strong{font-size:16px}.retrofit-economics{padding:18px}.mass-comparison{grid-template-columns:1fr}.mass-comparison>div+div{border-left:0;border-top:1px solid #bdb7aa;padding-left:0}}
+
 </style>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
@@ -548,11 +571,15 @@ p{font-family:var(--sans)}
     </a>
     <div class="market-card-body">
      <p class="market-card-kicker">A complete vehicle</p>
-     <div class="market-card-price">₹2,13,292</div>
-     <div class="market-specs"><span>5.4 kWh battery</span><span>164 km certified range</span></div>
-     <p>Designed and sold as one integrated vehicle. It means replacing the tricycle the worker already owns.</p>
+     <div class="market-price-mass">
+      <div><span>PRICE</span><strong>₹2,13,292</strong></div>
+      <div><span>KERB MASS*</span><strong>580 kg</strong></div>
+     </div>
+     <div class="market-specs"><span>5.4 kWh battery</span><span>164 km certified range</span><span>300 kg payload*</span></div>
+     <p>A complete, integrated vehicle. This means replacing the tricycle the worker already owns.</p>
      <a class="market-source" href="https://www.bajajauto.com/three-wheelers/riki/riki-c40" target="_blank" rel="noopener noreferrer">Official price and specifications ↗</a>
-     <small class="market-image-credit">Photo: Trucks / CarDekho</small>
+     <a class="market-source" href="https://nexxgro.com/form-factors/riki-c4005" target="_blank" rel="noopener noreferrer">*Kerb mass / payload: third-party listing ↗</a>
+     <small class="market-image-credit">Photo: Trucks / CarDekho. Confirm mass with dealer.</small>
     </div>
    </article>
    <article class="market-card">
@@ -563,11 +590,15 @@ p{font-family:var(--sans)}
     </a>
     <div class="market-card-body">
      <p class="market-card-kicker">A listed conversion kit</p>
-     <div class="market-card-price">₹5,800</div>
+     <div class="market-price-mass">
+      <div><span>PRICE</span><strong>₹5,800</strong></div>
+      <div><span>KIT MASS</span><strong>Not listed</strong></div>
+     </div>
      <div class="market-specs"><span>48 V</span><span>800 W motor</span></div>
-     <p>A parts listing—not a demonstrated full-day solution for our loaded tricycle. Battery, mounting, fit and duty cycle still need checking.</p>
+     <div class="kit-parts" aria-label="Parts shown in the supplier listing"><span>Motor</span><span>Controller</span><span>Throttle</span><span>Junction box</span><span>Bearings</span><span>Chain</span></div>
+     <p>The supplier lists these drive parts. It does not list a battery or a complete mounting solution for our particular tricycle.</p>
      <a class="market-source" href="https://www.sagarelectrotech.com/product-page/pedal-rickshaw-conversion-kit" target="_blank" rel="noopener noreferrer">Supplier listing ↗</a>
-     <small class="market-image-credit">Photo: Sagar Electro Tech</small>
+     <small class="market-image-credit">Photo: Sagar Electro Tech. Kit mass not published.</small>
     </div>
    </article>
    <article class="market-card">
@@ -578,19 +609,41 @@ p{font-family:var(--sans)}
     </a>
     <div class="market-card-body">
      <p class="market-card-kicker">Separate supplier reference</p>
-     <div class="market-card-price">₹35,500</div>
-     <div class="market-specs"><span>≈3 kWh</span><span>20 kg listed weight</span></div>
-     <p>Our early estimate is around 3 kWh if the motor does all the propulsion. This price and weight come from a separate supplier listing—not the pictured pack.</p>
+     <div class="market-price-mass">
+      <div><span>PRICE</span><strong>₹35,500</strong></div>
+      <div><span>BATTERY MASS</span><strong>20 kg</strong></div>
+     </div>
+     <div class="market-specs"><span>3.07 kWh</span><span>51.2 V / 60 Ah</span></div>
+     <p>One supplier's 3.07 kWh battery reference. This is a separate price-and-weight listing, not the pictured pack.</p>
      <a class="market-source" href="https://www.energeontech.com/lfp-battery-pack.html" target="_blank" rel="noopener noreferrer">Price and weight reference ↗</a>
      <small class="market-image-credit">Illustrative battery photo: Livaah</small>
     </div>
    </article>
   </div>
-  <div class="tirare-target-line">
-   <div><span>OUR CURRENT WORKING TARGET</span><strong>~₹10,000</strong></div>
-   <p>For the retrofit package—not a verified final price. Installation, final hardware selection and battery-service costs still need validation.</p>
+  <div class="battery-build-row">
+   <div class="battery-build-copy">
+    <p class="kicker">Now add what the kit leaves out</p>
+    <h3>Motor first. <em>Battery next.</em></h3>
+    <p>The ₹5,800 listing gives us a motor and drive components. It does not include the battery shown here. Watch the pack being added to the vehicle—and notice what it adds in both money and mass.</p>
+    <div class="battery-build-stats"><div><span>BATTERY PRICE</span><strong>₹35,500</strong></div><div><span>BATTERY MASS</span><strong>20 kg</strong></div><div><span>CAPACITY</span><strong>3.07 kWh</strong></div></div>
+    <button class="load-button light-load" type="button" data-open-media="batteryBuild">Add / replace battery animation +</button>
+   </div>
+   <div class="battery-build-visual">
+    <div class="media-block-head"><h3>Adding the battery</h3><span>ANIMATION / FIRST BUILD</span></div>
+    <div class="media-slot light battery-build-slot" data-media-slot="batteryBuild" data-autoplay="true">
+     <div class="slot-empty battery-build-placeholder">
+      <img src="https://www.livaah.com/asset/images/LFP/3kwh-LFP-1.png" alt="Illustrative 3 kWh battery pack" loading="lazy" referrerpolicy="no-referrer">
+      <div class="battery-placeholder-label"><strong>BATTERY GOES ON THE TRIKE</strong><small>Upload your battery-fitting animation to assets/media/battery-being-added.mp4</small></div>
+     </div>
+    </div>
+    <div class="media-controls"><span class="micro">Muted / loops while presenting</span><button class="load-button" type="button" data-open-media="batteryBuild">Load animation +</button></div>
+   </div>
   </div>
-  <p class="price-note">Public listing references checked in October 2026. These are different scopes: a complete vehicle, a parts kit and a separately listed battery. The images are illustrative product photos and are not all from the same supplier or proposed build.</p>
+  <div class="tirare-target-line">
+   <div><span>PROJECTED INSTALLED RETROFIT / BATTERY EXCLUDED</span><strong>₹13,000</strong></div>
+   <p>Our current projected deployment cost. Battery purchase or battery-service costs are separate; final supplier quotes and field economics still need validation.</p>
+  </div>
+  <p class="price-note">Listing references checked in October 2026. The EV kerb mass is from a third-party listing, not the manufacturer's page; the kit mass is not published. The ₹35,500 / 20 kg battery specification comes from a separate supplier listing. These are comparison references, not a single matched build.</p>
   <p class="small muted" style="margin-top:18px;max-width:900px">The question is not whether electrification already exists. It does. The question is whether it can reach the worker who cannot replace the asset, and whose existing drivetrain still has to work as a system.</p>
  </div>
 </section>
@@ -621,6 +674,38 @@ p{font-family:var(--sans)}
     <p class="small muted" style="margin:12px 0 0">Animation explains the force path; it is not a structural strength test.</p>
    </div>
   </div>
+  <div class="frame-comparison">
+   <div class="frame-comparison-head"><div><p class="kicker">The first structural decision</p><h3>Wooden frame out. <em>Steel-frame replacement in.</em></h3></div><p>These are reference photos until you upload your own CAD. The comparison is about the structure that would have to carry the motor-mount reaction—not a claim that every cargo tricycle has the same frame.</p></div>
+   <div class="frame-cad-grid">
+    <article class="frame-cad-card">
+     <div class="frame-cad-label"><span>01 / EXISTING STRUCTURE</span><strong>Older wooden cargo trike</strong></div>
+     <div class="media-slot light frame-cad-slot" data-media-slot="woodenTrikeCad">
+      <div class="slot-empty frame-default"><img src="https://urbananthropologylab.wordpress.com/wp-content/uploads/2021/08/thela-photo-1.jpg?w=1024" alt="Wooden cargo tricycle reference photograph from Old Delhi" loading="lazy" referrerpolicy="no-referrer"><div class="frame-default-caption"><strong>WOODEN CARGO TRIKE</strong><small>Reference photo / replace with your CAD</small></div></div>
+     </div>
+     <div class="media-controls"><span class="micro">Your wooden-trike CAD goes here</span><button class="load-button" type="button" data-open-media="woodenTrikeCad">Load wooden CAD +</button></div>
+    </article>
+    <div class="frame-change-arrow" aria-hidden="true">→</div>
+    <article class="frame-cad-card">
+     <div class="frame-cad-label"><span>02 / FIRST APPROACH</span><strong>Steel-frame cargo trike</strong></div>
+     <div class="media-slot light frame-cad-slot" data-media-slot="metalTrikeCad">
+      <div class="slot-empty frame-default"><img src="https://cpimg.tistatic.com/10680298/b/4/Durable-Rear-Loading-Rickshaw..jpg" alt="Steel-frame cargo rickshaw reference photograph" loading="lazy" referrerpolicy="no-referrer"><div class="frame-default-caption"><strong>STEEL-FRAME CARGO TRIKE</strong><small>Reference photo / replace with your CAD</small></div></div>
+     </div>
+     <div class="media-controls"><span class="micro">Your steel-trike CAD goes here</span><button class="load-button" type="button" data-open-media="metalTrikeCad">Load steel CAD +</button></div>
+    </article>
+   </div>
+   <p class="frame-source-note">Reference photos: Urban Anthropology Lab (wooden cargo trike) and Batra's Group (steel-frame rear-loading rickshaw). Your CAD models should replace these references before the pitch.</p>
+  </div>
+  <div class="build-sequence" id="firstBuild">
+   <div class="build-sequence-head"><div><p class="kicker">Build the first solution</p><h3>Let's put every part on the cart.</h3><p>Click once for each item as you explain it. The total builds in front of the audience.</p></div><div class="build-progress"><span id="buildProgress">0 / 4 PARTS</span><strong id="buildSubtotal">₹0</strong><small id="buildSubLabel">START THE BUILD</small></div></div>
+   <div class="build-items">
+    <article class="build-item" data-build-cost="16000"><img src="https://cpimg.tistatic.com/10680298/b/4/Durable-Rear-Loading-Rickshaw..jpg" alt="Illustrative steel cargo frame" loading="lazy" referrerpolicy="no-referrer"><div><span>01 / REPLACEMENT VEHICLE</span><strong>Steel-frame cargo trike</strong><b>₹16,000</b><small>Budget estimate for the replacement trike; frame load rating still needs a supplier quotation.</small></div></article>
+    <article class="build-item" data-build-cost="5800"><img src="https://static.wixstatic.com/media/eecf3f_38c6262ecbb942edaf07b3f8e63f123c~mv2.png/v1/fill/w_980%2Ch_980%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/eecf3f_38c6262ecbb942edaf07b3f8e63f123c~mv2.png" alt="48 volt 800 watt conversion kit" loading="lazy" referrerpolicy="no-referrer"><div><span>02 / DRIVE KIT</span><strong>800 W motor kit</strong><b>₹5,800</b><small>Motor, controller, throttle and listed drive components.</small></div></article>
+    <article class="build-item" data-build-cost="35500"><img src="https://www.livaah.com/asset/images/LFP/3kwh-LFP-1.png" alt="Illustrative 3 kWh battery pack" loading="lazy" referrerpolicy="no-referrer"><div><span>03 / BATTERY</span><strong>3.07 kWh pack</strong><b>₹35,500 · 20 kg</b><small>Separate supplier reference for price and mass.</small></div></article>
+    <article class="build-item build-item-other" data-build-cost="6000"><div class="other-cost-icon" aria-hidden="true">＋</div><div><span>04 / WHAT ELSE IT NEEDS</span><strong>Mount, drive, safety and fitting</strong><b>₹6,000</b><small>₹2,000 mount/fabrication + ₹1,500 drive hardware + ₹800 electrical safety + ₹1,700 installation/testing.</small></div></article>
+   </div>
+   <div class="build-sequence-bottom"><button class="button solid" id="buildNext" type="button">ADD THE REPLACEMENT TRIKE +</button><div class="build-total" id="buildTotal" aria-live="polite"><span>FIRST BUILD / ESTIMATED TOTAL</span><strong>₹63,300</strong><small>Approx. 55 kg of replaced or added mass in this configuration.</small></div></div>
+   <p class="build-caveat">These are the estimates used in the pitch scenario. The mass is a rough estimate including the replacement structure, motor, battery and extra hardware—not a weighed prototype. A steel frame still needs to be rated and tested for the intended loads.</p>
+  </div>
  </div>
 </section>
 
@@ -647,6 +732,32 @@ p{font-family:var(--sans)}
   <p class="kicker">Mechanical Rider Intent Interface</p><h2 id="mrii-heading">One interface. <em>Three jobs.</em></h2>
   <p class="lead">MRII is designed to replace the driven sprocket with a mechanical interface that transmits rider torque, reads rider effort through a tiny controlled movement, and separates the rider side from powered rotation.</p><p class="micro" style="color:var(--accent)">Stage cue: mute the source audio; narrate the mechanism as it moves. The site is the presentation, not a video playlist. The MRII mechanism clip is embedded from YouTube; pause/mute it before presenting your live narration.</p>
   <div class="interaction-note"><p><strong>What changes physically:</strong> MRII is designed to replace the existing driven sprocket at this interface. The complete retrofit still adds its motor, mounting, drive components, battery and necessary electrical protection. The innovation is the interface—not a claim that a sprocket alone electrifies the vehicle.</p></div>
+
+  <div class="sensor-price-problem">
+   <div class="sensor-photo"><img src="https://www.forsensor.com/photo/pl33161785-shaft_to_shaft_rotating_torque_speed_sensor_for_motor_torque_measurement.jpg" alt="Illustrative industrial rotary torque transducer" loading="lazy" referrerpolicy="no-referrer"><small>Illustrative sensor photo; not the exact quoted model.</small></div>
+   <div class="sensor-price-copy"><p class="kicker">The separate sensor problem</p><h3>Measure rotating torque. <em>₹90,000.</em></h3><p>We found an industrial rotary torque transducer listed at ₹90,000. That is a sensor reference—not a whole drive system.</p><div class="sensor-price-sources"><a href="https://www.sreeka.in/products/rotary-torque-transducer-non-contact-type" target="_blank" rel="noopener noreferrer">₹90,000 rotary transducer listing ↗</a><a href="https://www.forsensor.com/sale-8832610-shaft-type-rotary-torque-sensor-motor-torque-measurement-transducer.html" target="_blank" rel="noopener noreferrer">Illustrative photo source ↗</a></div></div>
+   <div class="sensor-vs-mark"><span>OUR PRELIMINARY IN-HOUSE TARGET</span><strong>₹700</strong><small>MRII mechanism only / not the full retrofit</small></div>
+  </div>
+
+  <div class="mrii-reveal-heading"><p class="kicker">The mechanism we built</p><h3>Not a sensor bolted on the side. <em>The sprocket is replaced.</em></h3><p>MRII sits in the driven-sprocket position. The rider's turning force passes through the mechanism, and the same mechanism measures the small movement created by that torque.</p></div>
+  <div class="interface-showcase" aria-label="MRII CAD and installed tricycle view">
+   <article class="interface-visual">
+    <div class="interface-visual-head"><span>01 / INTERACTIVE CAD</span><strong>MRII replaces the driven sprocket</strong></div>
+    <div class="media-slot interface-cad-slot" data-media-slot="interfaceDetail">
+     <div class="slot-empty"><div class="slot-title">Rotate the MRII interface CAD</div><div class="slot-sub">Inspect the part that takes the driven sprocket’s place. Drag to rotate once the model loads.</div><button class="load-button" type="button" data-open-media="interfaceDetail">Load MRII CAD +</button></div>
+    </div>
+    <div class="interface-visual-foot"><span>PART / MRII INTERFACE DETAIL</span><strong>Torque passes through the mechanism.</strong></div>
+   </article>
+   <article class="interface-visual">
+    <div class="interface-visual-head"><span>02 / ON THE VEHICLE</span><strong>The same part, mounted on a tricycle</strong></div>
+    <div class="media-slot light interface-installed-slot" data-media-slot="mountedMrii">
+     <div class="slot-empty"><div class="slot-title">MRII installed on the tricycle</div><div class="slot-sub">Real installation view. The goal is to change the drivetrain interface—not replace the whole vehicle.</div><button class="load-button" type="button" data-open-media="mountedMrii">Load installation photo +</button></div>
+    </div>
+    <div class="interface-visual-foot"><span>INTEGRATION / EXISTING TRICYCLE</span><strong>Keep the vehicle. Change the interface.</strong></div>
+   </article>
+  </div>
+  <div class="interface-takeaway"><span class="arrow">THE KEY CHANGE →</span><div><strong>MRII takes the driven sprocket’s place.</strong><p>The rider’s turning force passes through MRII. That is how the mechanism can both transmit torque and measure the rider’s effort—without treating MRII as just another bolt-on sensor.</p></div></div>
+
   <div class="media-grid">
    <div class="media-block"><div class="media-block-head"><h3>Inside MRII</h3><span>VIDEO / MRII mechanism</span></div><div class="youtube-embed-frame"><iframe src="https://www.youtube-nocookie.com/embed/4IOVUIjke8k?rel=0" title="Tirare MRII mechanism video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="media-controls"><span class="micro">Embedded from YouTube / narrate live</span><a class="load-button" href="https://youtu.be/4IOVUIjke8k" target="_blank" rel="noopener noreferrer">Open on YouTube ↗</a></div></div>
    <div class="media-block"><div class="media-block-head"><h3>One-way behaviour</h3><span>CLIP 04 / One-way behaviour</span></div><div class="media-slot" data-media-slot="oneway"><div class="slot-empty"><svg viewBox="0 0 460 350" fill="none" stroke="#d8ded2" stroke-width="1.7"><circle cx="230" cy="175" r="92" stroke-dasharray="5 6" opacity=".45"/><circle cx="230" cy="175" r="61"/><circle cx="230" cy="175" r="30" stroke="#ef997a" stroke-width="3"/><path d="M230 84V48M219 59L230 48L241 59M322 175H360M349 164L360 175L349 186" stroke="#ef997a" stroke-width="2.5"/><path d="M230 266V300M219 289L230 300L241 289M138 175H100M111 164L100 175L111 186" stroke="#a8b5a7"/><text x="248" y="54" font-size="9" fill="#ef997a" stroke="none" font-family="monospace">RIDER INPUT</text><text x="288" y="164" font-size="9" fill="#ef997a" stroke="none" font-family="monospace">ENGAGE</text><text x="248" y="311" font-size="9" fill="#a8b5a7" stroke="none" font-family="monospace">AXLE LEADS</text><text x="40" y="164" font-size="9" fill="#a8b5a7" stroke="none" font-family="monospace">OVERRUN</text></svg><div><div class="slot-title">Load the MRII one-way animation</div><div class="slot-sub">Show pedals driving MRII, then the motor driving the axle without forcing the pedal-side structure to rotate.</div></div></div></div><div class="media-controls"><span class="micro">Engage in one direction / overrun in the other</span><button class="load-button" data-open-media="oneway">Add animation +</button></div></div>
@@ -682,23 +793,6 @@ p{font-family:var(--sans)}
 <section class="section" id="benefits">
  <span class="section-number">06 / WHAT CHANGES</span><div class="wrap">
   <div class="section-head"><div><p class="kicker">What MRII changes</p><h2>The clever part is what it lets us <em>remove.</em></h2></div><p>MRII is not a bigger motor or another dashboard. It changes the interface between the rider and powered axle—so rider effort can become the assistance reference mechanically.</p></div>
-  <div class="interface-showcase" aria-label="MRII CAD and installed tricycle view">
-   <article class="interface-visual">
-    <div class="interface-visual-head"><span>01 / INTERACTIVE CAD</span><strong>MRII replaces the driven sprocket</strong></div>
-    <div class="media-slot interface-cad-slot" data-media-slot="interfaceDetail">
-     <div class="slot-empty"><div class="slot-title">Rotate the MRII interface CAD</div><div class="slot-sub">Inspect the part that takes the driven sprocket’s place. Drag to rotate once the model loads.</div><button class="load-button" type="button" data-open-media="interfaceDetail">Load MRII CAD +</button></div>
-    </div>
-    <div class="interface-visual-foot"><span>PART / MRII INTERFACE DETAIL</span><strong>Torque passes through the mechanism.</strong></div>
-   </article>
-   <article class="interface-visual">
-    <div class="interface-visual-head"><span>02 / ON THE VEHICLE</span><strong>The same part, mounted on a tricycle</strong></div>
-    <div class="media-slot light interface-installed-slot" data-media-slot="mountedMrii">
-     <div class="slot-empty"><div class="slot-title">MRII installed on the tricycle</div><div class="slot-sub">Real installation view. The goal is to change the drivetrain interface—not replace the whole vehicle.</div><button class="load-button" type="button" data-open-media="mountedMrii">Load installation photo +</button></div>
-    </div>
-    <div class="interface-visual-foot"><span>INTEGRATION / EXISTING TRICYCLE</span><strong>Keep the vehicle. Change the interface.</strong></div>
-   </article>
-  </div>
-  <div class="interface-takeaway"><span class="arrow">THE KEY CHANGE →</span><div><strong>MRII takes the driven sprocket’s place.</strong><p>The rider’s turning force passes through MRII. That is how the mechanism can both transmit torque and measure the rider’s effort—without treating MRII as just another bolt-on sensor.</p></div></div>
   <div class="three-jobs" aria-label="MRII combines three drivetrain functions"><div><span>01 / TRANSMIT</span><strong>Carry the rider's torque.</strong></div><div><span>02 / SENSE</span><strong>Read rider effort from controlled flexure.</strong></div><div><span>03 / SEPARATE</span><strong>Allow powered rotation to overrun the rider side.</strong></div></div>
   <div class="benefit-grid">
    <div class="benefit"><span class="bnum">01 / SIZING</span><h3>Size for assistance</h3><p>The motor is intended to supplement the rider—not replace all human propulsion. Final sizing depends on load, grade and duty cycle.</p></div>
@@ -706,15 +800,40 @@ p{font-family:var(--sans)}
    <div class="benefit"><span class="bnum">03 / HARDWARE</span><h3>No separate rider-assist controller</h3><p>MRII is designed to remove the separate rider-torque-sensor module and rider-assist controller layer: the mechanism itself produces the rider-intent signal. The motor still requires its power stage, current limiting and electrical safety protection.</p></div>
    <div class="benefit"><span class="bnum">04 / FIT</span><h3>Keep the vehicle intact</h3><p>MRII is designed to replace the driven sprocket—not the chassis, cargo bed, wheels or entire vehicle. The full retrofit still requires a motor package and mounting.</p></div>
   </div>
+  <div class="system-downsize">
+   <div class="system-downsize-head"><div><p class="kicker">A different job for the motor</p><h3>From doing the work. <em>To helping the rider.</em></h3><p>These are proposed pilot targets—not validated vehicle results.</p></div><div class="system-downsize-badge"><strong>−53%</strong><span>BATTERY CAPACITY TARGET</span></div></div>
+   <div class="system-compare">
+    <article class="system-case system-case-old"><div class="system-case-tag">FIRST / FULL-PROPULSION SCENARIO</div><h4>800 W kit + large battery</h4><div class="system-case-image"><img src="https://www.livaah.com/asset/images/LFP/3kwh-LFP-1.png" alt="Illustrative larger battery pack" loading="lazy" referrerpolicy="no-referrer"></div><div class="system-stats"><div><span>MOTOR REFERENCE</span><strong>800 W</strong></div><div><span>BATTERY</span><strong>3.07 kWh</strong></div><div><span>BATTERY MASS</span><strong>20 kg</strong></div><div><span>BATTERY PRICE</span><strong>₹35,500</strong></div></div></article>
+    <div class="system-arrow" aria-hidden="true">→</div>
+    <article class="system-case system-case-new"><div class="system-case-tag">TIRARE / PILOT TARGET TO TEST</div><h4>500 W assist + smaller battery</h4><div class="system-case-image"><img src="https://image.made-in-china.com/202f0j00ShGbkNcLkHod/48V-30ah-50ah-100ah-Electric-Vehicle-Bike-Lithium-Ion-Battery.webp" alt="Illustrative 48V 30Ah 1.44 kWh battery" loading="lazy" referrerpolicy="no-referrer"></div><div class="system-stats"><div><span>MOTOR TARGET</span><strong>500 W</strong></div><div><span>BATTERY TARGET</span><strong>1.44 kWh</strong></div><div><span>LISTED MASS*</span><strong>9.75 kg</strong></div><div><span>PRICE REFERENCES*</span><strong>₹9.5k–₹17.3k</strong></div></div></article>
+   </div>
+   <p class="system-source-note">*The 9.75 kg weight is from a 48V / 30Ah supplier listing. The ₹9,500–₹17,300 range comes from other 48V / 30Ah listings and bulk pricing; these are different supplier references, not one matched battery quotation. Final chemistry, discharge rating, BMS, price and mass must be checked against the motor and duty cycle. <a href="https://voltalithiumhub.in/product/48v-30ah-lithium-ion-battery/" target="_blank" rel="noopener noreferrer">9.75 kg reference ↗</a> · <a href="https://www.msktrading.in/batteries.html" target="_blank" rel="noopener noreferrer">₹9,500 reference ↗</a> · <a href="https://voltinomotors.com/voltino-extra/catalogue.php?category=battery" target="_blank" rel="noopener noreferrer">₹17,300 bulk slab ↗</a>.</p>
+  </div>
+
   <div class="control-comparison" aria-label="Intended simplification of the rider-assist control architecture">
    <div class="control-side conventional"><span class="micro">CONVENTIONAL RIDER-INTENT LAYER</span><p>Separate torque sensor <b>→</b> signal wiring <b>→</b> dedicated assist logic / level selection</p></div>
    <div class="control-switch" aria-hidden="true">→</div>
    <div class="control-side mrii-side"><span class="micro">MRII / INTENDED ARCHITECTURE</span><p>Compliant flexure <b>→</b> magnetic angle signal <b>→</b> assist request</p></div>
    <small>The motor power stage, current limiting, disconnects and electrical safety functions still remain necessary.</small>
   </div>
-  <div class="numberline"><div class="metric"><div class="value">1:1</div><div class="label">Intended 1:1 torque-assist ratio</div></div><div class="metric"><div class="value">~₹10k</div><div class="label">Current working retrofit-cost target</div></div><div class="metric"><div class="value">1 interface</div><div class="label">Sprocket is the core mechanical change</div></div></div>
+  <div class="numberline"><div class="metric"><div class="value">1:1</div><div class="label">Intended 1:1 torque-assist ratio</div></div><div class="metric"><div class="value">₹13k</div><div class="label">Projected installed retrofit / battery excluded</div></div><div class="metric"><div class="value">1 interface</div><div class="label">MRII replaces the driven sprocket</div></div></div>
+  <div class="torque-classroom" id="torqueClassroom">
+   <div class="torque-classroom-copy"><p class="kicker">Ask the room</p><h3>Rider applies <em>10 N·m.</em><br>How much should the motor add?</h3><p>At our intended 1:1 setting, the motor request matches the rider's torque at the relevant drive interface.</p><button class="button solid" type="button" id="revealTorque" aria-expanded="false">REVEAL THE ANSWER</button></div>
+   <div class="torque-classroom-equation"><div class="torque-contribution"><span>RIDER</span><strong>10 <small>N·m</small></strong></div><div class="torque-plus">+</div><div class="torque-contribution motor-torque"><span>MOTOR</span><strong id="motorTorqueAnswer">? <small>N·m</small></strong></div><div class="torque-total" id="torqueTotal" hidden><span>INTENDED COMBINED CONTRIBUTION</span><strong>20 N·m</strong></div></div>
+   <p class="torque-classroom-note">Idealised teaching example at the same reference interface, before drivetrain losses. The 1:1 assist behaviour still needs to be validated on the integrated tricycle.</p>
+  </div>
   <div class="grid2"><div><p class="kicker">The 1:1 principle</p><h3 class="display" style="font-size:34px">1:1 torque assistance is the intended starting point.</h3><p>At the intended 1:1 setting, the calibrated rider-torque signal requests matching motor-assist torque, within operating limits. That is a torque-assist ratio—not a claim that we have already demonstrated the complete vehicle at that setting.</p></div><div><p class="kicker">The controller distinction</p><h3 class="display" style="font-size:34px">Simplify the assist layer.</h3><p>MRII is designed to remove the separate conventional rider-torque sensor and dedicated assist-level control layer: rider effort is encoded mechanically at the interface. This does not remove the motor power controller, current limiting, emergency disconnect or other electrical safety requirements.</p></div></div>
-  <div class="claim-note"><b>Engineering status</b><p>MRII’s physical subsystem has been demonstrated. The cost, mass, motor/battery downsizing, 1:1 assistance behaviour and simplified control architecture still need quantitative validation after drivetrain integration. The ~₹10,000 number is a working target, not a verified deployed price; battery-fleet capital and service operations are separate.</p></div>
+  <div class="retrofit-economics">
+   <div class="retrofit-economics-head"><div><p class="kicker">Compare the two builds</p><h3>Keep the cart. Reduce what gets replaced.</h3></div><p>Our current projected retrofit cost is ₹13,000 installed, excluding the battery. Add the smaller battery at the separate supplier-reference prices shown above.</p></div>
+   <div class="retrofit-economics-grid">
+    <div class="economics-case economics-first"><span>FIRST BUILD / REPLACE STRUCTURE</span><strong>₹63,300</strong><small>Approx. 55 kg of replaced or added mass</small></div>
+    <div class="economics-arrow">→</div>
+    <div class="economics-case economics-current"><span>RETROFIT / KEEP ORIGINAL TRIKE</span><strong>₹22,500–₹30,300</strong><small>₹13,000 projected retrofit + ₹9,500–₹17,300 battery references</small></div>
+   </div>
+   <div class="mass-comparison"><div><span>FIRST CONFIGURATION</span><strong>≈55 kg</strong><small>Replacement structure + motor + battery + hardware</small></div><div><span>RETROFIT ESTIMATE</span><strong>≈19–27 kg</strong><small>Added retrofit hardware; original trike not included</small></div></div>
+   <p class="system-source-note">These are preliminary estimates, not measured prototype outcomes. The two mass figures use different boundaries: the first includes a replacement vehicle structure; the second is added retrofit mass on the existing trike. Do not read them as a direct like-for-like vehicle weighing result.</p>
+  </div>
+  <div class="claim-note"><b>Engineering status</b><p>MRII’s physical subsystem has been demonstrated. The cost, mass, motor/battery downsizing, 1:1 assistance behaviour and simplified control architecture still need quantitative validation after drivetrain integration. The ₹13,000 installed retrofit estimate excludes the battery and is not a verified deployed price; battery-fleet capital and service operations are separate.</p></div>
  </div>
 </section>
 
@@ -745,7 +864,8 @@ p{font-family:var(--sans)}
     <div class="time-item"><div class="date">IIIT Delhi</div><div><strong>₹1 lakh prototype-stage grant</strong><p>E-Pitch Café Proof-of-Concept track. The grant is supporting continued prototyping, including professional IP fees.</p></div></div>
     <div class="time-item"><div class="date">2 October 2026</div><div><strong>Patent application filed</strong><p>MRII IP process underway; detailed technical disclosures are being kept confidential.</p></div></div>
     <div class="time-item"><div class="date">Technical guidance</div><div><strong>Professor Andy Ruina</strong><p>Guidance on drivetrain and human-powered mobility decisions. No formal university partnership is implied.</p></div></div>
-    <div class="time-item"><div class="date">IP support</div><div><strong>Patent counsel</strong><p>Professional legal support through the filing process. Counsel has offered to approach TVS on Tirare's behalf; this is an outreach effort, not a confirmed partnership.</p></div></div>
+    <div class="time-item"><div class="date">IP support</div><div><strong>Patent counsel / IIT Kharagpur alumnus, former TVS professional</strong><p>Counsel reduced professional fees by ₹30,000 and offered to approach TVS on Tirare's behalf to explore testing. This is an outreach effort, not a confirmed partnership.</p></div></div>
+    <div class="time-item"><div class="date">Challenge</div><div><strong>Selected for the Conrad Challenge</strong><p>Recognition for the team's work on MRII; selection is not a technical validation of the full vehicle.</p></div></div>
    </div>
   </div>
 <div class="founder-strip"><span>FOUNDER / SELECTED RECORD</span><p>National finalist — World Robot Olympiad, Future Engineers <i>·</i> Team lead — F1 in Schools Nationals <i>·</i> Bronze — Queen’s Commonwealth Essay Competition</p></div>
@@ -773,7 +893,7 @@ p{font-family:var(--sans)}
 </main>
 <footer><div class="footer-inner"><p><strong style="color:#f0eee5;letter-spacing:.15em">TIRARE</strong><br>Mobility technologies / Engineering in progress</p><div class="footer-links"><button id="mediaBtn2">Manage media</button><button id="speechBtn2">Five-minute speech</button><a href="mailto:anuragfromtirare@gmail.com">Contact</a></div><p>October 2026<br>Project presentation / claims subject to validation</p></div></footer>
 
-<div class="modal-backdrop" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="mediaTitle"><div class="modal"><div class="modal-header"><div><p class="kicker">Local media library</p><h2 id="mediaTitle">Use the real work, not a stock montage.</h2><p class="small muted" style="margin:10px 0 0">The Media picker is a local browser override; selected files are not uploaded by this page. For every visitor to see the new story media, commit the video and four photos to assets/media/ using the exact filenames shown in each slot. The MRII mechanism video is embedded from YouTube. For the four CAD stages, load a .glb model, a turntable render video, or a still. Large videos may use substantial browser storage. For the reaction-torque clip, commit assets/media/tirare_motor_axle_motion_v3.mp4. The benefits section also loads assets/cad/mrii-interface-detail.glb and assets/media/Untitled - October 27, 2026 at 12.58.24.png so every visitor sees the CAD beside the installed part.</p></div><button class="button" id="closeMedia">Close ×</button></div><div class="asset-list" id="assetList"></div><div class="modal-foot"><p>Run the media in this order: worker reality → Hamid story animation and photo parallel → existing trike movement → reaction torque → CAD evolution → MRII installation → embedded MRII mechanism video → one-way behaviour → MRII CAD and installed photo in the benefits section. Mute video audio before narrating live. Load your four CAD .glb files or use the hosted interactive models.</p><button class="button" id="clearMedia">Clear saved media</button></div></div></div>
+<div class="modal-backdrop" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="mediaTitle"><div class="modal"><div class="modal-header"><div><p class="kicker">Local media library</p><h2 id="mediaTitle">Use the real work, not a stock montage.</h2><p class="small muted" style="margin:10px 0 0">The Media picker is a local browser override; selected files are not uploaded by this page. For every visitor to see the new story media, commit the video and four photos to assets/media/ using the exact filenames shown in each slot. The MRII mechanism video is embedded from YouTube. For the four CAD stages, load a .glb model, a turntable render video, or a still. Large videos may use substantial browser storage. For the reaction-torque clip, commit assets/media/tirare_motor_axle_motion_v3.mp4. The MRII reveal loads assets/cad/mrii-interface-detail.glb and assets/media/Untitled - October 27, 2026 at 12.58.24.png. Add the battery-fit animation as assets/media/battery-being-added.mp4. Add the frame models as assets/cad/wooden-trike.glb and assets/cad/metal-trike.glb. The reaction animation is assets/media/tirare_motor_axle_motion_v3.mp4.</p></div><button class="button" id="closeMedia">Close ×</button></div><div class="asset-list" id="assetList"></div><div class="modal-foot"><p>Run the media in this order: worker reality → Hamid story animation and photo parallel → existing trike movement → reaction torque → wooden / steel trike CAD comparison → battery-being-added animation → four CAD stages → MRII installation → torque-transducer comparison → MRII CAD and installed photo → mechanism video → one-way behaviour. Mute video audio before narrating live. Load your four CAD .glb files or use the hosted interactive models.</p><button class="button" id="clearMedia">Clear saved media</button></div></div></div>
 
 <aside class="speech-drawer" id="speechDrawer" aria-label="Five-minute speaker notes"><div class="modal-header"><div><p class="kicker">Presenter notes</p><h2>Five minutes.<br>One argument.</h2><div class="speech-meta">Don't narrate the website. Explain the decision each visual reveals.</div></div><button class="button" id="closeSpeech">Close ×</button></div>
  <div class="speech-block"><div class="time">0:00–0:25 / The part</div><h3>Small part. Big question.</h3><p>[Hold up MRII; show the close-up.] This is MRII. It's small, and we've spent two years building it. Why did IIIT Delhi give us a ₹1 lakh grant? Why did our patent counsel reduce his fees by ₹30,000 and offer to approach TVS about testing? Let me show you the person behind the problem.</p></div>
@@ -800,6 +920,9 @@ const assetDefs=[
  {id:'manualWorker',title:'Photo — manual cargo work',desc:'Real worker using a manually powered cargo tricycle.',accept:'image/*',src:'assets/media/manual-cargo-worker.webp',staticType:'image/webp'},
  {id:'freewheel',title:'Existing tricycle / freewheel animation',desc:'How the current tricycle drivetrain moves and how its ratchet/freewheel behaves.',accept:'video/*,image/*',src:'assets/media/existing-drivetrain.mp4',staticType:'video/mp4'},
  {id:'reactionTorque',title:'Reaction torque — motor / axle / frame',desc:'Newton’s third-law animation showing reaction torque at the motor housing and mounting. Upload as tirare_motor_axle_motion_v3.mp4.',accept:'video/*,image/*',src:'assets/media/tirare_motor_axle_motion_v3.mp4',staticType:'video/mp4'},
+ {id:'batteryBuild',title:'Battery being added to the first trike build',desc:'Muted loop of the battery being fitted to the tricycle. Upload to assets/media/battery-being-added.mp4.',accept:'video/*,image/*',src:'assets/media/battery-being-added.mp4',staticType:'video/mp4'},
+ {id:'woodenTrikeCad',title:'Wooden cargo tricycle CAD',desc:'Your wooden-trike CAD model. Upload a .glb or turntable render. Public path: assets/cad/wooden-trike.glb.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/wooden-trike.glb',staticType:'model/gltf-binary'},
+ {id:'metalTrikeCad',title:'Steel-frame cargo tricycle CAD',desc:'Your metal/steel-trike CAD model. Upload a .glb or turntable render. Public path: assets/cad/metal-trike.glb.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/metal-trike.glb',staticType:'model/gltf-binary'},
  {id:'interfaceDetail',title:'MRII interface CAD',desc:'Interactive CAD model for the benefits-section visual. Public path: assets/cad/mrii-interface-detail.glb.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/mrii-interface-detail.glb',staticType:'model/gltf-binary'},
  {id:'mountedMrii',title:'MRII mounted on the tricycle',desc:'Photo showing MRII installed on the tricycle. Public path: assets/media/Untitled - October 27, 2026 at 12.58.24.png.',accept:'image/*',src:'assets/media/Untitled%20-%20October%2027,%202026%20at%2012.58.24.png',staticType:'image/png'},
  {id:'cad1',title:'CAD 01 — Reality',desc:'Actual reference cargo tricycle .glb model, orbiting render video, or still image.',accept:'.glb,model/gltf-binary,video/*,image/*'},
@@ -830,6 +953,27 @@ assetList.addEventListener('change',async e=>{const input=e.target.closest('[dat
 assetList.addEventListener('click',async e=>{const btn=e.target.closest('[data-remove]');if(!btn)return;await dbDelete(btn.dataset.remove);clearSlot(btn.dataset.remove)});
 document.getElementById('clearMedia').addEventListener('click',async()=>{if(!confirm('Remove all saved local media from this browser?'))return;assetDefs.forEach(d=>clearSlot(d.id));const db=await dbPromise;if(db){const tx=db.transaction('files','readwrite');tx.objectStore('files').clear()} });
 restoreAssets();
+// Progressive build-up: reveal the first replacement-vehicle solution item by item.
+const buildItems=[...document.querySelectorAll('.build-item')];
+const buildNext=document.getElementById('buildNext');
+if(buildNext&&buildItems.length){
+ let buildCount=0,total=0;
+ const buildLabels=['ADD THE REPLACEMENT TRIKE +','ADD THE 800 W MOTOR KIT +','ADD THE BATTERY +','ADD MOUNTING, DRIVE & INSTALLATION +'];
+ const buildFmt=n=>'₹'+n.toLocaleString('en-IN');
+ buildNext.addEventListener('click',()=>{
+  if(buildCount>=buildItems.length){buildItems.forEach(x=>x.classList.remove('is-revealed'));buildCount=0;total=0;document.getElementById('buildTotal').classList.remove('is-visible');buildNext.textContent=buildLabels[0];document.getElementById('buildProgress').textContent='0 / 4 PARTS';document.getElementById('buildSubtotal').textContent='₹0';document.getElementById('buildSubLabel').textContent='START THE BUILD';return;}
+  const item=buildItems[buildCount];item.classList.add('is-revealed');total+=Number(item.dataset.buildCost||0);buildCount++;
+  document.getElementById('buildProgress').textContent=buildCount+' / 4 PARTS';
+  document.getElementById('buildSubtotal').textContent=buildFmt(total);
+  document.getElementById('buildSubLabel').textContent=buildCount===4?'ALL PARTS ADDED':'RUNNING TOTAL';
+  if(buildCount<4){buildNext.textContent=buildLabels[buildCount];}
+  else{document.getElementById('buildTotal').classList.add('is-visible');buildNext.textContent='RESET THE BUILD ↺';}
+ });
+}
+// Audience check: reveal the intended one-to-one motor-assist request.
+const torqueReveal=document.getElementById('revealTorque');
+if(torqueReveal){torqueReveal.addEventListener('click',()=>{const open=torqueReveal.getAttribute('aria-expanded')==='true';torqueReveal.setAttribute('aria-expanded',String(!open));torqueReveal.textContent=open?'REVEAL THE ANSWER':'HIDE THE ANSWER';document.getElementById('motorTorqueAnswer').innerHTML=open?'? <small>N·m</small>':'10 <small>N·m</small>';document.getElementById('torqueTotal').hidden=open;document.querySelector('.motor-torque')?.classList.toggle('is-revealed',!open);});}
+
 // MRII state selector: live interactive explanation of the intended torque paths.
 const mriiStates={
  rider:{label:'STATE 01 / ENGAGE',title:'When the rider drives, the one-way element engages.',description:'Human torque travels from the pedals through MRII toward the axle. The small flexure movement is measured as the rider-effort signal.'},
