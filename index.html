@@ -496,6 +496,36 @@ p{font-family:var(--sans)}
 .archived-note-caption{font-size:10px;line-height:1.5;color:var(--muted);margin:12px 0}
 .archived-speech-list{border-top:1px solid var(--line)}
 
+/* Cart-return transition: a clear visual bridge from the expensive first build to the retrofit. */
+.cart-return-transition{margin:34px 0 30px;padding:clamp(18px,2.6vw,30px);background:#171b17;color:#f1eee5;border:1px solid #454c41}
+.cart-return-transition-head{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(20px,4vw,48px);align-items:end;margin-bottom:20px}
+.cart-return-transition-head .kicker{color:#ec8d72;margin-bottom:12px}
+.cart-return-transition-head h4{font:clamp(28px,3.7vw,46px)/.98 var(--serif);font-weight:400;letter-spacing:-.035em;margin:0 0 11px}
+.cart-return-transition-head h4 em{color:#ec8d72}
+.cart-return-transition-head p:not(.kicker){font-size:12px;line-height:1.65;color:#c6cbbf;margin:0;max-width:520px}
+.cart-return-switch{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);gap:10px;align-items:center;border-top:1px solid #4b5248;border-bottom:1px solid #4b5248;padding:13px 0}
+.cart-return-switch>div{min-width:0}
+.cart-return-switch span,.cart-return-switch small{display:block;font:8px/1.5 var(--mono);color:#aeb8a8;letter-spacing:.08em}
+.cart-return-switch strong{display:block;font:clamp(15px,1.8vw,22px)/1.15 var(--serif);font-weight:400;color:#f1eee5;margin-top:5px}
+.cart-return-switch>b{font:26px var(--serif);color:#ec8d72;text-align:center}
+.cart-return-video-wrap{border-top:1px solid #4b5248;padding-top:15px}
+.cart-return-slot{height:clamp(250px,37vw,480px);min-height:250px;background:#e5e2d8;border:1px solid #596054}
+.cart-return-slot .media-output,.cart-return-slot .media-output video,.cart-return-slot .media-output img{width:100%;height:100%;min-height:250px;background:#e5e2d8;object-fit:contain;display:block}
+.cart-return-placeholder{height:100%;min-height:250px!important;display:flex!important;justify-content:center!important;align-items:stretch!important;gap:18px!important;background:#e5e2d8!important;color:#191c19!important;padding:clamp(18px,3vw,34px)!important}
+.cart-return-placeholder .slot-title{color:#191c19!important;font:10px var(--mono)!important;letter-spacing:.1em!important;text-transform:uppercase}
+.cart-return-placeholder .slot-sub{color:#62685c!important;max-width:850px;font:10px/1.55 var(--mono)!important}
+.cart-return-placeholder code{color:#b8442c;white-space:normal}
+.cart-return-visual-steps{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);gap:16px;align-items:center;flex:1}
+.cart-return-visual-steps>div{height:100%;min-height:150px;padding:20px;background:#f2efe7;border:1px solid #c7c2b5;display:flex;flex-direction:column;justify-content:center}
+.cart-return-visual-steps span{font:9px var(--mono);letter-spacing:.1em;color:#b8442c}
+.cart-return-visual-steps strong{font:clamp(22px,3vw,38px)/1.02 var(--serif);font-weight:400;color:#191c19;margin:10px 0}
+.cart-return-visual-steps small{font:10px/1.5 var(--mono);color:#656a60}
+.cart-return-visual-steps>b{font:32px var(--serif);color:#b8442c;text-align:center}
+.cart-return-video-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:12px}
+.cart-return-video-foot>span{font:9px var(--mono);color:#aeb8a8;letter-spacing:.08em}
+.cart-return-video-foot .button{font-size:9px;padding:9px 12px}
+@media(max-width:900px){.cart-return-transition-head{grid-template-columns:1fr}.cart-return-switch{max-width:650px}}
+@media(max-width:600px){.cart-return-transition{padding:16px}.cart-return-visual-steps{grid-template-columns:1fr;gap:9px}.cart-return-visual-steps>b{transform:rotate(90deg)}.cart-return-visual-steps>div{min-height:105px}.cart-return-video-foot{align-items:flex-start;flex-direction:column}.cart-return-slot{height:300px}}
 </style>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
@@ -860,7 +890,38 @@ p{font-family:var(--sans)}
   </div>
   <div class="system-downsize" id="systemDownsizeAnchor">
    <div class="system-downsize-head"><div><p class="kicker">A different job for the motor</p><h3>From doing the work. <em>To helping the rider.</em></h3><p>These are proposed pilot targets—not validated vehicle results.</p></div><div class="system-downsize-badge"><strong>−53%</strong><span>BATTERY CAPACITY TARGET</span></div></div>
-   <div class="system-compare">
+   <div class="cart-return-transition" id="affordabilityTransitionAnchor">
+    <div class="cart-return-transition-head">
+     <div>
+      <p class="kicker">WHAT CAN THEY AFFORD?</p>
+      <h4>Take the replacement cart out. <em>Keep the original.</em></h4>
+      <p>After seeing the first build reach ₹63,300, we went back to the question that started this: can we keep the worker's own tricycle and add only the assistance he needs?</p>
+     </div>
+     <div class="cart-return-switch" aria-label="Change from the first build to the retrofit direction">
+      <div><span>FIRST BUILD</span><strong>Steel cart + 3.07 kWh</strong></div>
+      <b aria-hidden="true">→</b>
+      <div><span>NEW DIRECTION</span><strong>Original cart + 1.44 kWh target</strong></div>
+     </div>
+    </div>
+    <div class="cart-return-video-wrap">
+     <div class="media-slot cart-return-slot" data-media-slot="cartReturn" data-controls="true">
+      <div class="slot-empty cart-return-placeholder">
+       <div class="cart-return-visual-steps">
+        <div><span>REMOVE</span><strong>Replacement steel cart</strong><small>Large full-propulsion battery</small></div>
+        <b aria-hidden="true">→</b>
+        <div><span>KEEP</span><strong>Worker's original wooden cart</strong><small>Smaller assist-battery target</small></div>
+       </div>
+       <div class="slot-title">THE FIRST BUILD, REVERSED</div>
+       <div class="slot-sub">Add <code>assets/media/new animation v1.mp4</code> to show the metal cart and large battery being removed, then the original cart and smaller battery returning.</div>
+      </div>
+     </div>
+     <div class="cart-return-video-foot">
+      <span>SHORT TRANSITION / MUTED</span>
+      <button class="button solid" type="button" id="playCartReturn">PLAY THE CHANGE ↗</button>
+     </div>
+    </div>
+   </div>
+   <div class="system-compare" id="systemCompareAnchor">
     <article class="system-case system-case-old"><div class="system-case-tag">FIRST / FULL-PROPULSION SCENARIO</div><h4>800 W kit + large battery</h4><div class="system-case-image"><img src="https://www.livaah.com/asset/images/LFP/3kwh-LFP-1.png" alt="Illustrative larger battery pack" loading="lazy" referrerpolicy="no-referrer"></div><div class="system-stats"><div><span>MOTOR REFERENCE</span><strong>800 W</strong></div><div><span>BATTERY CAPACITY</span><strong>3.07 kWh</strong></div><div class="system-stat-feature"><span>BATTERY MASS</span><strong>20 kg</strong></div><div class="system-stat-feature"><span>BATTERY PRICE</span><strong>₹35,500</strong></div></div></article>
     <div class="system-arrow" aria-hidden="true">→</div>
     <article class="system-case system-case-new"><div class="system-case-tag">TIRARE / PILOT TARGET TO TEST</div><h4>500 W assist + smaller battery</h4><div class="system-case-image"><img src="https://image.made-in-china.com/202f0j00ShGbkNcLkHod/48V-30ah-50ah-100ah-Electric-Vehicle-Bike-Lithium-Ion-Battery.webp" alt="Illustrative 48V 30Ah 1.44 kWh battery" loading="lazy" referrerpolicy="no-referrer"></div><div class="system-stats"><div><span>MOTOR TARGET</span><strong>500 W</strong></div><div><span>BATTERY TARGET</span><strong>1.44 kWh</strong></div><div class="system-stat-feature"><span>WEIGHT REFERENCE*</span><strong>9.75 kg</strong></div><div class="system-stat-feature"><span>50+ UNIT BULK PRICE**</span><strong>₹9,500</strong></div></div></article>
@@ -952,7 +1013,7 @@ p{font-family:var(--sans)}
 </main>
 <footer><div class="footer-inner"><p><strong style="color:#f0eee5;letter-spacing:.15em">TIRARE</strong><br>Mobility technologies / Engineering in progress</p><div class="footer-links"><button id="mediaBtn2">Manage media</button><button id="speechBtn2">Scroll map</button><a href="mailto:anuragfromtirare@gmail.com">Contact</a></div><p>October 2026<br>Project presentation / claims subject to validation</p></div></footer>
 
-<div class="modal-backdrop" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="mediaTitle"><div class="modal"><div class="modal-header"><div><p class="kicker">Local media library</p><h2 id="mediaTitle">Use the real work, not a stock montage.</h2><p class="small muted" style="margin:10px 0 0">The Media picker is a local browser override; selected files are not uploaded by this page. For every visitor to see the new story media, commit the video and four photos to assets/media/ using the exact filenames shown in each slot. The MRII mechanism video is embedded from YouTube. For the four CAD stages, load a .glb model, a turntable render video, or a still. Large videos may use substantial browser storage. For the reaction-torque clip, commit assets/media/tirare_motor_axle_motion_v3.mp4. The MRII reveal loads assets/cad/mrii-interface-detail.glb and assets/media/Untitled - October 27, 2026 at 12.58.24.png. Add the battery-fit animation as assets/media/battery-being-added.mp4. Add the frame models as assets/cad/wooden-trike.glb and assets/cad/metal-trike.glb. The reaction animation is assets/media/tirare_motor_axle_motion_v3.mp4.</p></div><button class="button" id="closeMedia">Close ×</button></div><div class="asset-list" id="assetList"></div><div class="modal-foot"><p>Run the media in this order: worker reality → Hamid story animation and photo parallel → existing trike movement → reaction torque → wooden / steel trike CAD comparison → battery-being-added animation → four CAD stages → MRII installation → torque-transducer comparison → MRII CAD and installed photo → mechanism video → one-way behaviour. Mute video audio before narrating live. Load your four CAD .glb files or use the hosted interactive models.</p><button class="button" id="clearMedia">Clear saved media</button></div></div></div>
+<div class="modal-backdrop" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="mediaTitle"><div class="modal"><div class="modal-header"><div><p class="kicker">Local media library</p><h2 id="mediaTitle">Use the real work, not a stock montage.</h2><p class="small muted" style="margin:10px 0 0">The Media picker is a local browser override; selected files are not uploaded by this page. For every visitor to see the new story media, commit the video and four photos to assets/media/ using the exact filenames shown in each slot. The MRII mechanism video is embedded from YouTube. For the four CAD stages, load a .glb model, a turntable render video, or a still. Large videos may use substantial browser storage. For the reaction-torque clip, commit assets/media/tirare_motor_axle_motion_v3.mp4. The MRII reveal loads assets/cad/mrii-interface-detail.glb and assets/media/Untitled - October 27, 2026 at 12.58.24.png. Add the battery-fit animation as assets/media/battery-being-added.mp4. Add the frame models as assets/cad/wooden-trike.glb and assets/cad/metal-trike.glb. Add the quick return-to-original-cart transition as assets/media/new animation v1.mp4. The reaction animation is assets/media/tirare_motor_axle_motion_v3.mp4.</p></div><button class="button" id="closeMedia">Close ×</button></div><div class="asset-list" id="assetList"></div><div class="modal-foot"><p>Run the media in this order: worker reality → Hamid story animation and photo parallel → existing trike movement → reaction torque → wooden / steel trike CAD comparison → first-build cost reveal → new animation v1 (remove steel cart and large battery; restore original wooden cart and smaller battery) → 500 W / 1.44 kWh pilot comparison → four CAD stages → MRII installation → torque-transducer comparison → MRII CAD and installed photo → mechanism video → one-way behaviour. Mute video audio before narrating live. Load your four CAD .glb files or use the hosted interactive models.</p><button class="button" id="clearMedia">Clear saved media</button></div></div></div>
 
 <aside class="speech-drawer" id="speechDrawer" aria-label="Pitch scroll map"><div class="modal-header"><div><p class="kicker">Presenter navigation</p><h2>Scroll the pitch.<br>Follow the speaker.</h2><div class="speech-meta">Use this map with your latest script. The spoken wording is not stored or changed here.</div></div><button class="button" id="closeSpeech">Close ×</button></div>
  <div class="pitch-map-intro"><strong>How to use it</strong><p>Start the pitch timer, then use the bottom-right Back / Next controls. You can also scroll normally; the route indicator follows your position. The numbered stops below jump directly to each visual.</p></div>
@@ -972,7 +1033,7 @@ p{font-family:var(--sans)}
 <div class="speech-block"><div class="time">4:25–5:00 / The next proof</div><h3>Change the part, not the livelihood.</h3><p>Next we need to make sure the mechanism reads rider effort correctly, works under load, and allows manual riding when assistance is off. Then we need to test it with workers and measure reliability, energy use, physical effort and running cost. We estimate around 13 lakh potential users; we haven't reached them yet. We must earn that opportunity by proving the technology. A worker shouldn't have to replace the vehicle that feeds their family just to make the work easier. The vehicle is already earning. Let's make it work better for the person who depends on it.</p></div></div>
  </details>
  <div class="modal-foot"><button class="button solid" id="printSpeech">Print / Save scroll map</button><span class="micro">Vansh's sections are marked clearly.</span></div></aside>
-<div class="route-hud" id="routeHud" aria-label="Pitch section navigation"><button type="button" id="routePrev">← BACK</button><span class="route-count" id="routeCount"><small>ANURAG</small><strong>01 / 19 · OPENING</strong></span><button type="button" id="routeNext">NEXT →</button></div>
+<div class="route-hud" id="routeHud" aria-label="Pitch section navigation"><button type="button" id="routePrev">← BACK</button><span class="route-count" id="routeCount"><small>ANURAG</small><strong>01 / 20 · OPENING</strong></span><button type="button" id="routeNext">NEXT →</button></div>
 <div class="presenter-state" id="presenterState"><span>Pitch timer</span><strong id="stateTimer">05:00</strong><button id="stopPitch">Stop</button></div>
 
 <script>
@@ -986,6 +1047,7 @@ const assetDefs=[
  {id:'freewheel',title:'Existing tricycle / freewheel animation',desc:'How the current tricycle drivetrain moves and how its ratchet/freewheel behaves.',accept:'video/*,image/*',src:'assets/media/existing-drivetrain.mp4',staticType:'video/mp4'},
  {id:'reactionTorque',title:'Reaction torque — motor / axle / frame',desc:'Newton’s third-law animation showing reaction torque at the motor housing and mounting. Upload as tirare_motor_axle_motion_v3.mp4.',accept:'video/*,image/*',src:'assets/media/tirare_motor_axle_motion_v3.mp4',staticType:'video/mp4'},
  {id:'batteryBuild',title:'Battery being added to the first trike build',desc:'Muted loop of the battery being fitted to the tricycle. Upload to assets/media/battery-being-added.mp4.',accept:'video/*,image/*',src:'assets/media/battery-being-added.mp4',staticType:'video/mp4'},
+ {id:'cartReturn',title:'Return to original wooden cart + smaller battery',desc:'Quick muted transition: remove the steel replacement cart and large battery; bring back the original wooden trike and smaller assist-battery target. Repository path: assets/media/new animation v1.mp4.',accept:'video/*,image/*',src:'assets/media/new%20animation%20v1.mp4',staticType:'video/mp4'},
  {id:'woodenTrikeCad',title:'Wooden cargo tricycle CAD',desc:'Your wooden-trike CAD model. Upload a .glb or turntable render. Public path: assets/cad/wooden-trike.glb.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/wooden-trike.glb',staticType:'model/gltf-binary'},
  {id:'metalTrikeCad',title:'Steel-frame cargo tricycle CAD',desc:'Your metal/steel-trike CAD model. Upload a .glb or turntable render. Public path: assets/cad/metal-trike.glb.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/metal-trike.glb',staticType:'model/gltf-binary'},
  {id:'interfaceDetail',title:'MRII interface CAD',desc:'Interactive CAD model for the benefits-section visual. Public path: assets/cad/mrii-interface-detail.glb.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/mrii-interface-detail.glb',staticType:'model/gltf-binary'},
@@ -1014,6 +1076,7 @@ assetList.innerHTML=assetDefs.map(d=>`<div class="asset-row"><div><strong>${d.ti
 function openMedia(id){modal.classList.add('open');document.body.style.overflow='hidden';if(id){const input=document.getElementById('file-'+id);if(input)input.click()}}
 function closeMedia(){modal.classList.remove('open');document.body.style.overflow=''}
 document.getElementById('mediaBtn').addEventListener('click',()=>openMedia());document.getElementById('mediaBtn2').addEventListener('click',()=>openMedia());document.getElementById('closeMedia').addEventListener('click',closeMedia);modal.addEventListener('click',e=>{if(e.target===modal)closeMedia()});document.querySelectorAll('[data-open-media]').forEach(b=>b.addEventListener('click',()=>openMedia(b.dataset.openMedia)));
+const playCartReturn=document.getElementById('playCartReturn');if(playCartReturn){playCartReturn.addEventListener('click',()=>{const video=document.querySelector('[data-media-slot="cartReturn"] video');if(video){video.muted=true;video.currentTime=0;video.play().catch(()=>{video.controls=true;});}else{openMedia('cartReturn');}});}
 assetList.addEventListener('change',async e=>{const input=e.target.closest('[data-file-id]');if(!input||!input.files[0])return;const id=input.dataset.fileId;const file=input.files[0];try{await dbPut(id,file);setSlot(id,{blob:file,name:file.name,type:file.type});input.value=''}catch(err){setSlot(id,{blob:file,name:file.name,type:file.type});alert('Media loaded for this session, but browser storage was unavailable. Keep the page open during your pitch.')}});
 assetList.addEventListener('click',async e=>{const btn=e.target.closest('[data-remove]');if(!btn)return;await dbDelete(btn.dataset.remove);clearSlot(btn.dataset.remove)});
 document.getElementById('clearMedia').addEventListener('click',async()=>{if(!confirm('Remove all saved local media from this browser?'))return;assetDefs.forEach(d=>clearSlot(d.id));const db=await dbPromise;if(db){const tx=db.transaction('files','readwrite');tx.objectStore('files').clear()} });
@@ -1104,7 +1167,8 @@ const pitchRoute=[
  {id:'mriiRevealAnchor',speaker:'ANURAG',label:'MRII reveal / replaces the sprocket'},
  {id:'mriiMechanismAnchor',speaker:'ANURAG',label:'MRII mechanism / one-way operation'},
  {id:'threeJobsAnchor',speaker:'ANURAG',label:'Three jobs at one interface'},
- {id:'systemDownsizeAnchor',speaker:'ANURAG',label:'Smaller motor + battery targets'},
+ {id:'affordabilityTransitionAnchor',speaker:'ANURAG',label:'Remove steel cart + large battery / restore original cart'},
+ {id:'systemCompareAnchor',speaker:'ANURAG',label:'500 W motor + 1.44 kWh battery targets'},
  {id:'torqueClassroom',speaker:'ANURAG',label:'10 N·m audience question'},
  {id:'retrofitEconomicsAnchor',speaker:'ANURAG',label:'₹7,250 retrofit + battery total'},
  {id:'access',speaker:'VANSH',label:'Worker access / battery swapping'},
