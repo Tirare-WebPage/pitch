@@ -327,6 +327,53 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
 #toast.show{display:block}
 #help{position:fixed;right:13px;top:13px;color:#ccc7bd;font:500 9px var(--mono);z-index:30;letter-spacing:.03em;opacity:.65}
 @media(max-width:760px){#chrome{bottom:7px;gap:1px;padding:4px 5px}#chrome button{padding:6px 7px}#chrome .wide-only{display:none}#help{display:none}.overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.asset-list{grid-template-columns:1fr}.panel{padding:16px}}
+
+/* VISIBILITY PASS — give the media the visual weight it needs on a 16:9 stage. */
+/* Images and videos default to full-frame contain; only documentary stills use cover crop. */
+.media-frame.cover .media-output img{object-fit:cover}
+.media-frame.cover .media-output video{object-fit:contain}
+.media-output img,.media-output video{max-width:100%;max-height:100%}
+.media-output model-viewer{min-width:100%;min-height:100%}
+
+/* Market references: actual illustrative images, separated from Tirare prototype assets. */
+#s03 .grid-3{align-items:stretch;gap:1.05cqw}
+#s03 .price-card{padding:1.0cqw 1.1cqw;gap:.48cqw}
+.reference-figure{display:flex;flex-direction:column;gap:.28cqw;margin:0;min-height:0;flex:0 0 auto}
+.reference-image{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:clamp(104px,17.2cqh,150px);overflow:hidden;background:#fbfaf6;border:1px solid #ddd8ce;text-decoration:none}
+.reference-image img{display:block;width:100%;height:100%;object-fit:contain;padding:.35cqw}
+.reference-image .image-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;font:500 clamp(8px,.82cqw,13px)/1.4 var(--mono);letter-spacing:.07em;color:#77736c}
+.reference-image.image-failed .image-fallback{display:flex}
+.reference-figure figcaption{display:flex;align-items:center;justify-content:space-between;gap:.5cqw;font:500 clamp(6px,.57cqw,9px)/1.2 var(--mono);letter-spacing:.03em;color:var(--muted)}
+.reference-figure figcaption a{color:var(--accent);text-decoration:none;white-space:nowrap}
+.reference-figure figcaption a:hover{text-decoration:underline}
+#s03 .price-card .price{font-size:clamp(23px,3.1cqw,52px);margin-top:.12cqw}
+#s03 .price-card strong{font-size:clamp(9px,.98cqw,16px)}
+#s03 .price-card p{font-size:clamp(7px,.78cqw,12px);line-height:1.32}
+
+/* The worker / vehicle images and CAD should not be trapped in narrow Gamma placeholders. */
+#s01 .cover-grid{grid-template-columns:.90fr 1.10fr;gap:2.6cqw}
+#s02 .field-grid{grid-template-columns:.86fr 1.14fr;gap:1.5cqw}
+#s02 .field-media-grid{grid-template-rows:1.08fr .92fr;gap:.7cqw}
+#s04 .build-grid{grid-template-columns:.68fr 1.32fr;gap:1.25cqw}
+#s04 .build-visuals{grid-template-rows:1.12fr .88fr;gap:.65cqw}
+#s04 .build-visual-row{grid-template-columns:1.12fr .88fr;gap:.65cqw}
+#s05 .reaction-grid{grid-template-columns:.78fr 1.22fr;gap:1.25cqw}
+#s05 .reaction-grid>.media-frame{min-height:0}
+#s07 .drivetrain-grid{grid-template-columns:.76fr 1.24fr;gap:1.25cqw}
+#s07 .drivetrain-visuals{grid-template-columns:1.12fr .88fr;grid-template-rows:1fr;gap:.75cqw}
+#s07 .drivetrain-visuals>div:first-child{height:100%;min-height:0}
+#s07 .drivetrain-visuals .media-frame{min-height:0;height:100%}
+#s07 .drivetrain-visuals .media-frame model-viewer{min-height:100%}
+#s08 .mrii-grid{grid-template-columns:1.16fr .84fr;gap:1.15cqw}
+#s08 .mrii-side>[data-media-slot="oneway"]{height:42%!important;flex:0 0 42%}
+#s08 .mrii-side .job-list{flex:1;min-height:0}
+#s10 .power-grid{flex:0 0 55%;gap:1.05cqw}
+#s10 .power-panel{padding:1.1cqw 1.25cqw}
+#s10 .power-bottom{height:auto;flex:1;min-height:0;gap:1.05cqw}
+#s10 .power-bottom .media-frame{min-height:0}
+#s18 .progress-grid{grid-template-columns:.84fr 1.16fr;gap:1.15cqw}
+#s19 .close-grid{grid-template-columns:.9fr 1.1fr;gap:1.5cqw}
+
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
 @media print{
  html,body{overflow:visible;background:white;height:auto}#stage{position:static;transform:none;width:100%;height:auto;box-shadow:none;overflow:visible}.slide{display:flex!important;position:relative;width:100%;height:auto;aspect-ratio:16/9;page-break-after:always;opacity:1}.slide:last-child{page-break-after:auto}#chrome,#overview,#mediaModal,#help,#progressTrack,#toast{display:none!important}
@@ -379,12 +426,48 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
  <h2 class="slide-title">Three price tags. Three different scopes.</h2>
  <p class="slide-subtitle">Different products and supplier references, not like-for-like quotations.</p>
  <div class="grid-3" style="flex:1;min-height:0">
-  <article class="price-card"><span class="micro">COMPLETE VEHICLE</span><div class="price">₹2.13 lakh</div><strong>Published electric cargo vehicle reference</strong><p>₹2,13,000 for a complete electric cargo vehicle.</p></article>
-  <article class="price-card"><span class="micro">CONVERSION KIT</span><div class="price">₹5,800</div><strong>48 V / 800 W pedal-rickshaw kit</strong><p>Conversion kit only; not a complete vehicle-specific installation.</p></article>
-  <article class="price-card"><span class="micro">BATTERY EXAMPLE</span><div class="price">₹35,500</div><strong>Separate approximately 3.07 kWh battery</strong><p>Separate example; 20 kg listed mass.</p></article>
+  <article class="price-card">
+   <span class="micro">COMPLETE VEHICLE</span>
+   <figure class="reference-figure">
+    <a class="reference-image" href="https://lntsufin.com/product/badshah-berl04-electric-rickshaw-loader/17436-3650" target="_blank" rel="noopener noreferrer" aria-label="Open Badshah electric cargo loader reference">
+     <img src="https://lntsufin.com/storage/mediafiles/catalog/live/17436-3650/original/17436-3650_image_0.jpg" alt="Electric three-wheeled cargo loader, shown as a market reference" loading="eager" onerror="this.closest('.reference-image').classList.add('image-failed');this.remove()">
+     <span class="image-fallback">ELECTRIC CARGO LOADER<br>REFERENCE IMAGE</span>
+    </a>
+    <figcaption><span>ILLUSTRATIVE PRODUCT IMAGE</span><a href="https://lntsufin.com/product/badshah-berl04-electric-rickshaw-loader/17436-3650" target="_blank" rel="noopener noreferrer">L&amp;T SUFIN ↗</a></figcaption>
+   </figure>
+   <div class="price">₹2.13 lakh</div>
+   <strong>Published electric cargo vehicle reference</strong>
+   <p>₹2,13,000 for a complete electric cargo vehicle.</p>
+  </article>
+  <article class="price-card">
+   <span class="micro">CONVERSION KIT</span>
+   <figure class="reference-figure">
+    <a class="reference-image" href="https://www.desertcart.in/products/382658497-48v-800w-electric-brushless-dc-motor-kit-brushless-motor-controller" target="_blank" rel="noopener noreferrer" aria-label="Open 48 volt 800 watt conversion kit reference">
+     <img src="https://m.media-amazon.com/images/I/61OJOUXHamL._AC_SL3840_.jpg" alt="48 volt 800 watt motor conversion kit with controller, chain and accessories" loading="eager" onerror="this.closest('.reference-image').classList.add('image-failed');this.remove()">
+     <span class="image-fallback">48 V / 800 W<br>CONVERSION KIT</span>
+    </a>
+    <figcaption><span>ILLUSTRATIVE PRODUCT IMAGE</span><a href="https://www.desertcart.in/products/382658497-48v-800w-electric-brushless-dc-motor-kit-brushless-motor-controller" target="_blank" rel="noopener noreferrer">DESERTCART ↗</a></figcaption>
+   </figure>
+   <div class="price">₹5,800</div>
+   <strong>48 V / 800 W pedal-rickshaw kit</strong>
+   <p>Conversion kit only; not a complete vehicle-specific installation.</p>
+  </article>
+  <article class="price-card">
+   <span class="micro">BATTERY EXAMPLE</span>
+   <figure class="reference-figure">
+    <a class="reference-image" href="https://aqueouss.in/products/48v80ah/" target="_blank" rel="noopener noreferrer" aria-label="Open 48 volt lithium battery reference">
+     <img src="https://aqueouss.in/wp-content/uploads/Electric-Rikshaw-Battery-2.jpg" alt="48 volt LiFePO4 electric-rickshaw battery pack, shown as a reference" loading="eager" onerror="this.closest('.reference-image').classList.add('image-failed');this.remove()">
+     <span class="image-fallback">LITHIUM BATTERY<br>REFERENCE</span>
+    </a>
+    <figcaption><span>ILLUSTRATIVE PRODUCT IMAGE</span><a href="https://aqueouss.in/products/48v80ah/" target="_blank" rel="noopener noreferrer">AQUEOUSS ↗</a></figcaption>
+   </figure>
+   <div class="price">₹35,500</div>
+   <strong>Separate approximately 3.07 kWh battery</strong>
+   <p>Separate example; 20 kg listed mass. Image is an illustrative battery pack, not the exact priced listing.</p>
+  </article>
  </div>
  <div class="proposal-band"><b>TIRARE'S PROPOSAL</b><span>Keep the cart; replace its driven-sprocket interface with MRII to sense effort and request proportional assist, with local installation and proposed battery access.</span></div>
- <p class="small-copy">Alternatives include custom local conversion or continuing manually. Superiority and cost advantage remain unvalidated.</p>
+ <p class="small-copy">Alternatives include custom local conversion or continuing manually. Superiority and cost advantage remain unvalidated. Images are illustrative market references, not Tirare prototype assets or necessarily the exact priced listings.</p>
  <div class="slide-footer"><span>MARKET SCOPE · INDICATIVE REFERENCES</span><span>03 / 22</span></div>
 </section>
 
@@ -469,7 +552,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
      <button type="button" data-cad-select="cad3">03 CONSTRAINT</button>
      <button type="button" data-cad-select="cad4" class="active">04 CURRENT</button>
     </div>
-    <div class="media-frame" data-media-slot="cad4" style="flex:1;min-height:0"><div class="slot-empty"><span class="slot-topline">CURRENT PLATFORM CAD</span><strong class="slot-title">The current drivetrain interface.</strong><span class="slot-desc">Select a CAD stage above to inspect the design evolution.</span><span class="slot-action">Drag to orbit when the model loads ↗</span></div></div>
+    <div class="media-frame cad-hero-frame" data-media-slot="cad4" style="flex:1;min-height:0"><div class="slot-empty"><span class="slot-topline">CURRENT PLATFORM CAD</span><strong class="slot-title">The current drivetrain interface.</strong><span class="slot-desc">Select a CAD stage above to inspect the design evolution.</span><span class="slot-action">Drag to orbit when the model loads ↗</span></div></div>
    </div>
    <div class="media-frame cover" data-media-slot="mountedMrii"><div class="slot-empty"><span class="slot-topline">USER ASSET 02 / MRII MOUNTED ON TRICYCLE</span><strong class="slot-title">Installed prototype view</strong><span class="slot-desc">Photograph showing compact integration on the intermediate hub shaft.</span><span class="slot-action">Load installed MRII photo ↗</span></div><div class="media-caption">MRII / INSTALLED VIEW</div></div>
   </div>
@@ -482,7 +565,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
  <p class="slide-kicker">MRII / TRANSMIT · SENSE · OVERRUN</p>
  <h2 class="slide-title tight">The part that carries the force also measures the effort.</h2>
  <div class="mrii-grid">
-  <div class="media-frame" data-media-slot="interfaceDetail"><div class="slot-empty"><span class="slot-topline">MRII EXPLODED CAD</span><strong class="slot-title">Inspect the mechanical interface.</strong><span class="slot-desc">Rotate the CAD model to examine the compliant coupling and one-way element.</span><span class="slot-action">Load MRII interface CAD ↗</span></div></div>
+  <div class="media-frame mrii-hero-frame" data-media-slot="interfaceDetail"><div class="slot-empty"><span class="slot-topline">MRII EXPLODED CAD</span><strong class="slot-title">Inspect the mechanical interface.</strong><span class="slot-desc">Rotate the CAD model to examine the compliant coupling and one-way element.</span><span class="slot-action">Load MRII interface CAD ↗</span></div></div>
   <div class="mrii-side">
    <div class="media-frame dark-frame" data-media-slot="oneway" style="height:34%;min-height:0"><div class="slot-empty"><span class="slot-topline">VIDEO / ONE-WAY BEHAVIOUR</span><strong class="slot-title">Rider drives. Motor overruns.</strong><span class="slot-desc">The powered side should rotate without forcing the pedals to follow.</span><span class="slot-action">Load one-way animation ↗</span></div></div>
    <div class="job-list">
