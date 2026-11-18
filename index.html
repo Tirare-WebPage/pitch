@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#17191b">
-<meta name="description" content="Tirare — Mechanical Rider Intent Interface and torque-isolated human input sensing system.">
+<meta name="description" content="Tirare — A small mechanical interface designed to make electric assistance work with existing cargo tricycles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
-<title>Tirare — Engineering & Pilot Pitch</title>
+<title>Tirare — National Pitch</title>
 <style>
 :root{
  --paper:#F2EFE8;--ink:#17191B;--muted:#5C5B56;--soft:#E8E4DC;--soft2:#E5E2DB;
@@ -378,285 +378,408 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
 @media print{
  html,body{overflow:visible;background:white;height:auto}#stage{position:static;transform:none;width:100%;height:auto;box-shadow:none;overflow:visible}.slide{display:flex!important;position:relative;width:100%;height:auto;aspect-ratio:16/9;page-break-after:always;opacity:1}.slide:last-child{page-break-after:auto}#chrome,#overview,#mediaModal,#help,#progressTrack,#toast{display:none!important}
 }
+
+/* NATIONAL PITCH EDITION · clearer speaking screens and media-first moments */
+.opening-proof{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.7cqw;margin-top:1.2cqw;padding-top:.9cqw;border-top:1px solid var(--line);flex:0 0 auto}
+.opening-proof>div{display:flex;flex-direction:column;gap:.22cqw;min-width:0}
+.opening-proof strong{font:400 clamp(17px,2.05cqw,35px)/1 var(--display);letter-spacing:-.035em;color:var(--accent)}
+.opening-proof span{font:500 clamp(6px,.66cqw,11px)/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.opening-support{margin-top:.45cqw;font:500 clamp(6px,.64cqw,10px)/1.3 var(--mono);letter-spacing:.025em;text-transform:uppercase;color:var(--muted)}
+#s01 .cover-grid{flex:1;min-height:0;grid-template-columns:1.03fr .97fr;gap:2.5cqw}
+#s01 .cover-title{font-size:clamp(36px,4.65cqw,80px);line-height:.97}
+#s01 .cover-media{min-height:0}
+.story-grid{grid-template-columns:.9fr 1.1fr;align-items:center}
+.story-quote{border-left:3px solid var(--accent);padding:.7cqw 0 .7cqw 1cqw;font:400 clamp(17px,1.8cqw,31px)/1.18 var(--display);max-width:28ch}
+.story-quote b{font-weight:400;color:var(--accent)}
+.story-video{min-height:0;aspect-ratio:16/10}
+#s03 .price-card{padding:1.0cqw 1.05cqw;gap:.48cqw}
+#s03 .reference-image{height:clamp(108px,18cqh,158px)}
+#s03 .price-card .price{font-size:clamp(25px,3.2cqw,55px)}
+#s04 .build-grid{grid-template-columns:.8fr 1.2fr;gap:1.25cqw}
+#s04 .build-amount{gap:.8cqw}
+.design-turning-point{margin-top:.6cqw;padding:.7cqw .85cqw;border-left:3px solid var(--accent);background:#eee4df;font:400 clamp(13px,1.25cqw,21px)/1.2 var(--display);color:var(--ink)}
+#s05 .reaction-grid{grid-template-columns:.82fr 1.18fr}
+#s05 .reaction-copy{gap:.8cqw}
+#s05 .reaction-statement{max-width:30ch}
+#s06 .compare-cols{flex:0 0 39%;min-height:0}
+#s06 .compare-panel{gap:.7cqw;padding:1.15cqw 1.4cqw}
+#s06 .compare-panel h3{font-size:clamp(16px,1.8cqw,31px)}
+#s06 .compare-panel p{font-size:clamp(8px,.88cqw,14px)}
+.existing-drive-demo{display:grid;grid-template-columns:1.12fr .88fr;gap:1.1cqw;flex:1;min-height:0;margin-top:1cqw}
+.existing-drive-demo .media-frame{min-height:0;aspect-ratio:16/6}
+.existing-drive-note{display:flex;flex-direction:column;justify-content:center;background:var(--soft);padding:1.3cqw;gap:.45cqw}
+.existing-drive-note strong{font:400 clamp(17px,2cqw,33px)/1.12 var(--display)}
+.existing-drive-note span{font-size:clamp(9px,.95cqw,15px);line-height:1.4;color:var(--muted)}
+#s07 .drivetrain-grid{grid-template-columns:.78fr 1.22fr;gap:1.3cqw}
+#s07 .drivetrain-visuals{grid-template-columns:1.1fr .9fr;grid-template-rows:1fr}
+#s07 .drivetrain-visuals>div:first-child{height:100%;min-height:0}
+#s07 .drivetrain-visuals .media-frame{min-height:0;height:100%}
+#s08 .mrii-grid{grid-template-columns:1.15fr .85fr;gap:1.2cqw}
+#s08 .mrii-video-column{display:flex;flex-direction:column;gap:.6cqw;min-height:0}
+#s08 .mrii-video-column .youtube-embed-frame{min-height:0;flex:1}
+#s08 .mrii-video-column .small-copy{max-width:none}
+#s08 .mrii-side{gap:.55cqw}
+#s08 .mrii-detail-frame{height:27%;min-height:0;flex:0 0 27%}
+#s08 .mrii-side .job-list{flex:1;min-height:0}
+#s08 .job-item{padding:.38cqw 0;grid-template-columns:6.7cqw 1fr}
+#s08 .job-item strong{font-size:clamp(8px,.9cqw,14px)}
+#s08 .job-item span{font-size:clamp(7px,.73cqw,12px)}
+#s08 .mrii-bottom-note{margin-top:.5cqw}
+#s09 .assist-explainer{display:flex;align-items:center;gap:1cqw;background:var(--soft);padding:.8cqw 1.2cqw;margin-top:.7cqw}
+#s09 .assist-explainer strong{font:400 clamp(16px,1.7cqw,28px)/1.1 var(--display);color:var(--accent);white-space:nowrap}
+#s09 .assist-explainer span{font-size:clamp(8px,.9cqw,14px);line-height:1.4;color:var(--muted)}
+#s10 .power-grid{flex:0 0 56%;gap:1.05cqw}
+#s10 .power-panel{padding:1.1cqw 1.2cqw}
+#s10 .power-bottom{height:auto;flex:1;min-height:0}
+#s10 .power-reductions{justify-content:space-around}
+#s10 .power-reductions strong{font-size:clamp(19px,2.3cqw,39px)}
+#s12 .pricing-main{padding:1.35cqw}
+#s12 .pricing-options{gap:.9cqw}
+#s18 .progress-grid{grid-template-columns:.95fr 1.05fr;gap:1.25cqw}
+.validation-checks{margin-top:auto;padding:.7cqw .85cqw;background:var(--soft);display:flex;flex-direction:column;gap:.35cqw}
+.validation-checks b{font:500 clamp(7px,.7cqw,11px)/1.2 var(--mono);letter-spacing:.05em;color:var(--accent)}
+.validation-checks span{font-size:clamp(8px,.88cqw,14px);line-height:1.4}
+#s11 .opportunity-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2cqw;flex:1;align-items:center}
+.opportunity-number{background:var(--soft);padding:2cqw 2.2cqw;min-height:0}
+.opportunity-value{font:400 clamp(64px,10cqw,170px)/.88 var(--display);letter-spacing:-.06em;color:var(--accent);margin:.55cqw 0}
+.opportunity-number p{font-size:clamp(10px,1.05cqw,17px);line-height:1.4;max-width:35ch;margin:0}
+.opportunity-copy{display:flex;flex-direction:column;justify-content:center;gap:.9cqw}
+.opportunity-copy .slide-title{font-size:clamp(28px,3.45cqw,59px);margin:0}
+.opportunity-copy .body-copy{max-width:40ch}
+.opportunity-next{border-top:1px solid var(--line);padding-top:.8cqw;display:flex;flex-direction:column;gap:.28cqw}
+.opportunity-next strong{font:500 clamp(7px,.72cqw,12px)/1.2 var(--mono);color:var(--accent);text-transform:uppercase}
+.opportunity-next span{font-size:clamp(10px,1.05cqw,17px);font-weight:600}
+#s17 .funding-grid{grid-template-columns:.85fr 1.15fr;gap:1.2cqw}
+#s17 .funding-ask{padding:1.45cqw}
+#s17 .funding-ask .big-number{font-size:clamp(55px,7.8cqw,130px)}
+#s17 .funding-detail{padding:1.2cqw 1.35cqw}
+.pilot-deliverables{display:flex;flex-direction:column;gap:.8cqw}
+.pilot-deliverable{display:grid;grid-template-columns:2.2cqw 1fr;gap:.6cqw;padding:.7cqw 0;border-bottom:1px solid var(--line)}
+.pilot-deliverable>b{font:500 clamp(9px,1cqw,16px)/1.2 var(--mono);color:var(--accent)}
+.pilot-deliverable strong{display:block;font-size:clamp(10px,1.05cqw,17px);margin-bottom:.2cqw}
+.pilot-deliverable span{display:block;font-size:clamp(8px,.8cqw,13px);line-height:1.35;color:var(--muted)}
+#s19 .close-title{font-size:clamp(40px,5.2cqw,88px)}
+#s19 .close-ask{font:400 clamp(18px,2.2cqw,37px)/1.12 var(--display)}
+@media(max-width:760px){.opening-proof{grid-template-columns:repeat(2,1fr)}.existing-drive-demo{grid-template-columns:1fr}.opportunity-grid{grid-template-columns:1fr!important}}
+
 </style>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
 <div id="progressTrack"><div id="progressFill"></div></div>
 <div id="help">← → NAVIGATE &nbsp; O OVERVIEW &nbsp; M MEDIA &nbsp; F FULLSCREEN</div>
-<main id="stage" aria-label="Tirare presentation">
-
-<!-- 01 / COVER -->
-<section class="slide active" id="s01" data-title="The vehicle is already earning" data-section="Opening">
+<main id="stage" aria-label="Tirare national pitch presentation">
+<section class="slide active" id="s01" data-title="A broken pedal should be a small problem" data-section="Opening">
  <div class="cover-grid">
   <div class="cover-copy">
-   <div class="cover-eyebrow">TIRARE MOBILITY TECHNOLOGIES · ENGINEERING DECK</div>
-   <h1 class="cover-title">The vehicle is<br>already earning.</h1>
-   <p class="cover-lead">Electrification should not require replacing it.</p>
+   <div class="cover-eyebrow">TIRARE MOBILITY TECHNOLOGIES · NATIONAL PITCH</div>
+   <h1 class="cover-title">A broken pedal<br>should be a <em>small problem.</em></h1>
+   <p class="cover-lead">Until your income depends on the vehicle.</p>
    <span class="cover-tag">MRII / MECHANICAL RIDER INTENT INTERFACE</span>
   </div>
-  <div class="media-frame cover cover-media" data-media-slot="worker" data-autoplay="true">
-   <div class="slot-empty"><span class="slot-topline">USER ASSET / REAL WORKER PHOTO OR VIDEO</span><strong class="slot-title">The work is already happening.</strong><span class="slot-desc">Reserved for field footage: operator hauling on an active commercial route.</span><span class="slot-action">Load worker footage in Media ↗</span></div>
+  <div class="media-frame cover cover-media" data-media-slot="mountedMrii">
+   <div class="slot-empty"><span class="slot-topline">THE MECHANISM / PHYSICAL SUBSYSTEM</span><strong class="slot-title">A small part. A much bigger problem.</strong><span class="slot-desc">The actual MRII prototype, shown in the installed view.</span><span class="slot-action">Loading prototype photograph ↗</span></div>
   </div>
  </div>
- <div class="slide-footer"><span class="foot-mark"><i class="t-mark">T</i> TIRARE MOBILITY TECHNOLOGIES</span><span>MRII · ENGINEERING PITCH</span></div>
+ <div class="opening-proof">
+  <div><strong>2 years</strong><span>of development</span></div>
+  <div><strong>₹1 lakh</strong><span>IIIT Delhi prototype grant</span></div>
+  <div><strong>Patent filed</strong><span>2 October 2026</span></div>
+  <div><strong>Selected</strong><span>Conrad Challenge</span></div>
+  <div><strong>High-school</strong><span>founder-led team</span></div>
+ </div>
+ <div class="opening-support">PATENT COUNSEL SUPPORT · IIT KHARAGPUR GRADUATE / TVS EXPERIENCE · ₹30,000 FEE REDUCTION · OFFER TO EXPLORE TVS TESTING</div>
+ <div class="slide-footer"><span class="foot-mark"><i class="t-mark">T</i> TIRARE MOBILITY TECHNOLOGIES</span><span>ANURAG MISHRA · FOUNDER</span></div>
 </section>
-
-<!-- 02 / FIELD OBSERVATION -->
-<section class="slide" id="s02" data-title="The cart is an asset" data-section="Field observation">
- <p class="slide-kicker">FIELD OBSERVATION</p>
- <h2 class="slide-title">The cart is an asset.<br>Not a purchase waiting to happen.</h2>
- <div class="field-grid">
+<section class="slide" id="s02" data-title="A broken pedal can cost a day's income" data-section="The worker">
+ <p class="slide-kicker">THE PROBLEM · THE PERSON BEHIND THE VEHICLE</p>
+ <h2 class="slide-title">A broken pedal can cost a day's income.</h2>
+ <div class="field-grid story-grid">
   <div class="field-copy">
-   <p class="body-copy">A worker continued hauling with a broken pedal; stopping could mean lost income.</p>
-   <p class="body-copy">Already owned, earning and repaired locally, the cart is an asset. Replacement can mean financial strain and downtime.</p>
-   <div class="field-brief">DESIGN BRIEF · Improve the vehicle without taking it away from the person who depends on it.</div>
+   <p class="body-copy">We saw a cargo-tricycle worker keep hauling goods even with a broken pedal.</p>
+   <p class="body-copy">For most of us, a broken pedal means stop and repair it. For someone who earns with that vehicle, stopping can mean losing a day's income.</p>
+   <div class="story-quote">These tricycles are not just old machines. <b>They are how people earn a living.</b></div>
+   <div class="field-brief">OUR QUESTION · Can we make the vehicle easier to work with without asking its owner to replace it?</div>
   </div>
-  <div class="field-media-grid">
-   <div class="media-frame cover" data-media-slot="manualWorker" data-autoplay="false"><div class="slot-empty"><span class="slot-topline">USER ASSET 01 / REAL WORKER PHOTO OR VIDEO</span><strong class="slot-title">Field evidence</strong><span class="slot-desc">Hauling payload under manual drive with improvised repairs.</span><span class="slot-action">Load manual worker image ↗</span></div></div>
-   <div class="media-frame" data-media-slot="cad1"><div class="slot-empty"><span class="slot-topline">USER ASSET 02 / EXISTING WOODEN TRICYCLE</span><strong class="slot-title">Structural baseline</strong><span class="slot-desc">Standard timber-deck cargo trike chassis and axle layout.</span><span class="slot-action">CAD 01 / Reality model ↗</span></div></div>
+  <div class="media-frame cover story-video" data-media-slot="worker" data-autoplay="true">
+   <div class="slot-empty"><span class="slot-topline">REAL WORKER FOOTAGE</span><strong class="slot-title">The work is already happening.</strong><span class="slot-desc">Use the original worker footage. Keep its audio muted while presenting.</span><span class="slot-action">Loading worker video ↗</span></div>
+   <div class="media-caption">FIELD FOOTAGE · CARGO-TRICYCLE WORK</div>
   </div>
  </div>
- <div class="slide-footer"><span>FIELD NOTE · THE VEHICLE ALREADY EXISTS</span><span>02 / 22</span></div>
+ <div class="slide-footer"><span>THE VEHICLE ALREADY EXISTS</span><span>02 / 15</span></div>
 </section>
-
-<!-- 03 / MARKET SCOPE -->
-<section class="slide" id="s03" data-title="Three price tags, three scopes" data-section="Market scope">
- <p class="slide-kicker">MARKET SCOPE ANALYSIS</p>
- <h2 class="slide-title">Three price tags. Three different scopes.</h2>
- <p class="slide-subtitle">Different products and supplier references, not like-for-like quotations.</p>
- <div class="grid-3" style="flex:1;min-height:0">
+<section class="slide" id="s03" data-title="A motor kit is not a complete solution" data-section="Why not just add a motor">
+ <p class="slide-kicker">THE OBVIOUS FIRST IDEA</p>
+ <h2 class="slide-title">A motor kit is not a complete solution.</h2>
+ <p class="slide-subtitle">Three market references. Three different things.</p>
+ <div class="grid-3 market-reference-grid" style="flex:1;min-height:0">
   <article class="price-card">
-   <span class="micro">COMPLETE VEHICLE</span>
+   <span class="micro">COMPLETE ELECTRIC VEHICLE</span>
    <figure class="reference-figure">
-    <a class="reference-image" href="https://lntsufin.com/product/badshah-berl04-electric-rickshaw-loader/17436-3650" target="_blank" rel="noopener noreferrer" aria-label="Open Badshah electric cargo loader reference">
-     <img src="https://lntsufin.com/storage/mediafiles/catalog/live/17436-3650/original/17436-3650_image_0.jpg" alt="Electric three-wheeled cargo loader, shown as a market reference" loading="eager" onerror="this.closest('.reference-image').classList.add('image-failed');this.remove()">
-     <span class="image-fallback">ELECTRIC CARGO LOADER<br>REFERENCE IMAGE</span>
+    <a class="reference-image" href="https://lntsufin.com/product/badshah-berl04-electric-rickshaw-loader/17436-3650" target="_blank" rel="noopener noreferrer" aria-label="Open complete electric cargo vehicle market reference">
+     <img src="https://lntsufin.com/storage/mediafiles/catalog/live/17436-3650/original/17436-3650_image_0.jpg" alt="Badshah electric cargo vehicle market reference" loading="eager" onerror="this.src='assets/media/new-cargo-ev.jpg';this.onerror=null">
+     <span class="image-fallback">COMPLETE ELECTRIC<br>CARGO VEHICLE</span>
     </a>
-    <figcaption><span>ILLUSTRATIVE PRODUCT IMAGE</span><a href="https://lntsufin.com/product/badshah-berl04-electric-rickshaw-loader/17436-3650" target="_blank" rel="noopener noreferrer">L&amp;T SUFIN ↗</a></figcaption>
+    <figcaption><span>MARKET REFERENCE</span><a href="https://lntsufin.com/product/badshah-berl04-electric-rickshaw-loader/17436-3650" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></figcaption>
    </figure>
    <div class="price">₹2.13 lakh</div>
-   <strong>Published electric cargo vehicle reference</strong>
-   <p>₹2,13,000 for a complete electric cargo vehicle.</p>
+   <strong>A complete vehicle</strong>
+   <p>Replacing the tricycle can mean a large upfront cost.</p>
   </article>
   <article class="price-card">
-   <span class="micro">CONVERSION KIT</span>
+   <span class="micro">MOTOR CONVERSION KIT</span>
    <figure class="reference-figure">
     <a class="reference-image" href="https://www.desertcart.in/products/382658497-48v-800w-electric-brushless-dc-motor-kit-brushless-motor-controller" target="_blank" rel="noopener noreferrer" aria-label="Open 48 volt 800 watt conversion kit reference">
-     <img src="https://m.media-amazon.com/images/I/61OJOUXHamL._AC_SL3840_.jpg" alt="48 volt 800 watt motor conversion kit with controller, chain and accessories" loading="eager" onerror="this.closest('.reference-image').classList.add('image-failed');this.remove()">
-     <span class="image-fallback">48 V / 800 W<br>CONVERSION KIT</span>
+     <img src="https://m.media-amazon.com/images/I/61OJOUXHamL._AC_SL3840_.jpg" alt="48 volt 800 watt motor conversion kit" loading="eager" onerror="this.closest('.reference-image').classList.add('image-failed');this.remove()">
+     <span class="image-fallback">48 V / 800 W<br>MOTOR KIT</span>
     </a>
-    <figcaption><span>ILLUSTRATIVE PRODUCT IMAGE</span><a href="https://www.desertcart.in/products/382658497-48v-800w-electric-brushless-dc-motor-kit-brushless-motor-controller" target="_blank" rel="noopener noreferrer">DESERTCART ↗</a></figcaption>
+    <figcaption><span>ILLUSTRATIVE KIT IMAGE</span><a href="https://www.desertcart.in/products/382658497-48v-800w-electric-brushless-dc-motor-kit-brushless-motor-controller" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></figcaption>
    </figure>
    <div class="price">₹5,800</div>
-   <strong>48 V / 800 W pedal-rickshaw kit</strong>
-   <p>Conversion kit only; not a complete vehicle-specific installation.</p>
+   <strong>A motor kit</strong>
+   <p>A kit is only one part of a complete conversion.</p>
   </article>
   <article class="price-card">
-   <span class="micro">BATTERY EXAMPLE</span>
+   <span class="micro">BATTERY REFERENCE</span>
    <figure class="reference-figure">
-    <a class="reference-image" href="https://aqueouss.in/products/48v80ah/" target="_blank" rel="noopener noreferrer" aria-label="Open 48 volt lithium battery reference">
-     <img src="https://aqueouss.in/wp-content/uploads/Electric-Rikshaw-Battery-2.jpg" alt="48 volt LiFePO4 electric-rickshaw battery pack, shown as a reference" loading="eager" onerror="this.closest('.reference-image').classList.add('image-failed');this.remove()">
+    <a class="reference-image" href="https://www.lemaxenergy.com/product-category/motive-power-battery/" target="_blank" rel="noopener noreferrer" aria-label="Open illustrative 48 volt lithium iron phosphate battery reference">
+     <img src="https://img.yfisher.com/m5140/1706511824f13fd1.jpg" alt="48 volt LiFePO4 motive battery pack, illustrative reference" loading="eager" onerror="this.closest('.reference-image').classList.add('image-failed');this.remove()">
      <span class="image-fallback">LITHIUM BATTERY<br>REFERENCE</span>
     </a>
-    <figcaption><span>ILLUSTRATIVE PRODUCT IMAGE</span><a href="https://aqueouss.in/products/48v80ah/" target="_blank" rel="noopener noreferrer">AQUEOUSS ↗</a></figcaption>
+    <figcaption><span>ILLUSTRATIVE 48V LFP PACK</span><a href="https://www.lemaxenergy.com/product-category/motive-power-battery/" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></figcaption>
    </figure>
    <div class="price">₹35,500</div>
-   <strong>Separate approximately 3.07 kWh battery</strong>
-   <p>Separate example; 20 kg listed mass. Image is an illustrative battery pack, not the exact priced listing.</p>
+   <strong>3.07 kWh reference</strong>
+   <p>One listed battery example: 20 kg. Not the exact pictured pack.</p>
   </article>
  </div>
- <div class="proposal-band"><b>TIRARE'S PROPOSAL</b><span>Keep the cart; replace its driven-sprocket interface with MRII to sense effort and request proportional assist, with local installation and proposed battery access.</span></div>
- <p class="small-copy">Alternatives include custom local conversion or continuing manually. Superiority and cost advantage remain unvalidated. Images are illustrative market references, not Tirare prototype assets or necessarily the exact priced listings.</p>
- <div class="slide-footer"><span>MARKET SCOPE · INDICATIVE REFERENCES</span><span>03 / 22</span></div>
+ <div class="proposal-band"><b>THE GAP</b><span>We still need a battery, a way to drive the wheel, and a way for the motor to know when the rider is pedalling and how hard.</span></div>
+ <p class="small-copy">Market listings are indicative references, not like-for-like quotations. Images are illustrative and do not necessarily show the exact priced product.</p>
+ <div class="slide-footer"><span>MARKET REFERENCES · NOT A COMPLETE SYSTEM COMPARISON</span><span>03 / 15</span></div>
 </section>
-
-<!-- 04 / EARLY DESIGN -->
-<section class="slide" id="s04" data-title="Our first solution reached ₹63,300" data-section="Early design scenario">
- <p class="slide-kicker">EARLY DESIGN SCENARIO</p>
- <h2 class="slide-title">Our first solution reached ₹63,300.</h2>
+<section class="slide" id="s05" data-title="The motor pushes back on the frame" data-section="The mounting problem">
+ <p class="slide-kicker">THE MECHANICAL PROBLEM</p>
+ <h2 class="slide-title">The motor pushes back on the frame.</h2>
+ <div class="reaction-grid">
+  <div class="reaction-copy">
+   <p class="body-copy">The motor turns the axle.</p>
+   <p class="body-copy">The axle pushes back on the motor with the same turning force in the opposite direction.</p>
+   <p class="body-copy">That push travels through the motor mount and into the frame.</p>
+   <div class="reaction-statement">We have to design for the tricycle that is already there.</div>
+   <div class="force-equation"><span>MOTOR TURNS AXLE</span><b>↔</b><span>AXLE PUSHES BACK</span></div>
+   <p class="small-copy">Frames differ in material, condition and past repairs. The mount and frame still need engineering review and testing.</p>
+  </div>
+  <div class="media-frame dark-frame" data-media-slot="reactionTorque" data-autoplay="true">
+   <div class="slot-empty"><span class="slot-topline">REACTION-TORQUE ANIMATION</span><strong class="slot-title">Follow the force.</strong><span class="slot-desc">Watch the axle, motor housing, mount and frame.</span><span class="slot-action">Loading reaction-torque clip ↗</span></div>
+  </div>
+ </div>
+ <div class="slide-footer"><span>STRUCTURAL LOAD PATH · TESTING REQUIRED</span><span>04 / 15</span></div>
+</section>
+<section class="slide" id="s04" data-title="Our first build reached ₹63,300" data-section="The first design">
+ <p class="slide-kicker">THE FIRST DESIGN · A LESSON</p>
+ <h2 class="slide-title">Our first build reached ₹63,300.</h2>
  <div class="build-grid">
   <div class="build-amount">
-   <div><span class="micro">FIRST BUILD SCENARIO</span><div class="build-total">₹63,300</div><p class="body-copy">A replacement steel tricycle with conversion components formed the first build scenario.</p></div>
+   <div><span class="micro">REPLACEMENT-VEHICLE BUILD SCENARIO</span><div class="build-total">₹63,300</div><p class="body-copy">We had priced a replacement tricycle, a motor kit, a large battery and the parts to fit them.</p></div>
    <div class="build-lines">
-    <div class="build-line"><span>Replacement trike</span><strong>₹16,000 · Steel frame</strong></div>
-    <div class="build-line"><span>48 V / 800 W kit</span><strong>₹5,800 · Conversion kit</strong></div>
-    <div class="build-line"><span>Battery pack</span><strong>₹35,500 · 3.07 kWh LFP</strong></div>
-    <div class="build-line"><span>Mount & hardware</span><strong>₹6,000 · Drive, safety and installation assumptions</strong></div>
+    <div class="build-line"><span>Replacement tricycle</span><strong>₹16,000</strong></div>
+    <div class="build-line"><span>48 V / 800 W motor kit</span><strong>₹5,800</strong></div>
+    <div class="build-line"><span>Battery reference</span><strong>₹35,500</strong></div>
+    <div class="build-line"><span>Mounting and hardware</span><strong>₹6,000</strong></div>
    </div>
+   <div class="design-turning-point">We were replacing too much of the vehicle we wanted to preserve.</div>
   </div>
   <div class="build-visuals">
    <div class="build-visual-row">
-    <div class="media-frame" data-media-slot="cad2"><div class="slot-empty"><span class="slot-topline">USER ASSET 01 / FIRST CONVERSION CAD</span><strong class="slot-title">Early powertrain packaging</strong><span class="slot-desc">Rear motor bracket and battery tray.</span><span class="slot-action">CAD 02 / First attempt ↗</span></div></div>
-    <div class="media-frame" data-media-slot="metalTrikeCad"><div class="slot-empty"><span class="slot-topline">USER ASSET 02 / METAL FRAME CAD</span><strong class="slot-title">Replacement tubular steel chassis</strong><span class="slot-desc">Structural drawing considered in the initial model.</span><span class="slot-action">Load steel-trike CAD ↗</span></div></div>
+    <div class="media-frame" data-media-slot="cad2"><div class="slot-empty"><span class="slot-topline">EARLY DESIGN</span><strong class="slot-title">First powertrain layout</strong><span class="slot-desc">Load the first-attempt CAD model.</span><span class="slot-action">CAD 02 ↗</span></div></div>
+    <div class="media-frame" data-media-slot="metalTrikeCad"><div class="slot-empty"><span class="slot-topline">REPLACEMENT FRAME</span><strong class="slot-title">Steel tricycle model</strong><span class="slot-desc">The replacement-vehicle approach.</span><span class="slot-action">Load steel-trike CAD ↗</span></div></div>
    </div>
-   <div class="media-frame dark-frame" data-media-slot="batteryBuild"><div class="slot-empty"><span class="slot-topline">BUILD SEQUENCE / OPTIONAL ANIMATION</span><strong class="slot-title">The first conversion build</strong><span class="slot-desc">Use the battery-fit animation if available in the site media folder.</span><span class="slot-action">Load battery-build video ↗</span></div></div>
+   <div class="media-frame dark-frame" data-media-slot="batteryBuild" data-autoplay="true"><div class="slot-empty"><span class="slot-topline">FIRST BUILD SEQUENCE</span><strong class="slot-title">Battery and hardware being added</strong><span class="slot-desc">The original battery-fit animation.</span><span class="slot-action">Loading build animation ↗</span></div></div>
   </div>
  </div>
- <div class="slide-footer"><span>EARLY DESIGN · REPLACEMENT-VEHICLE SCENARIO</span><span>04 / 22</span></div>
+ <div class="slide-footer"><span>EARLY DESIGN · WORKING COST SCENARIO</span><span>05 / 15</span></div>
 </section>
-
-<!-- 05 / REACTION TORQUE -->
-<section class="slide" id="s05" data-title="A motor pushes back" data-section="Structural dynamics">
- <p class="slide-kicker">STRUCTURAL DYNAMICS</p>
- <h2 class="slide-title">A motor pushes back.<br>The frame must take it.</h2>
- <div class="reaction-grid">
-  <div class="reaction-copy">
-   <p class="body-copy">Motor torque acts on the axle. An equal and opposite reaction passes through the motor housing and mount into the frame.</p>
-   <p class="body-copy">Old frames vary in construction, condition and repairs. The mount and frame need engineering review and testing.</p>
-   <div class="reaction-statement">Proportional assistance does not eliminate reaction loads.</div>
-   <div class="force-equation"><span>AXLE DRIVE</span><b>↔</b><span>MOTOR-HOUSING REACTION</span></div>
-  </div>
-  <div class="media-frame dark-frame" data-media-slot="reactionTorque"><div class="slot-empty"><span class="slot-topline">USER ASSET / REACTION TORQUE ANIMATION</span><strong class="slot-title">Follow the force through the drivetrain.</strong><span class="slot-desc">Free-body diagram or kinematic animation: drive torque at the axle versus counter-torque on the chassis stay.</span><span class="slot-action">Load reaction-torque video ↗</span></div></div>
- </div>
- <div class="slide-footer"><span>STRUCTURAL LOAD PATH · REVIEW AND TESTING REQUIRED</span><span>05 / 22</span></div>
-</section>
-
-<!-- 06 / ARCHITECTURAL SHIFT -->
-<section class="slide" id="s06" data-title="What if the motor did not do all the work?" data-section="Architectural shift">
- <p class="slide-kicker">ARCHITECTURAL SHIFT</p>
- <h2 class="slide-title tight">What if the motor did not have to do all the work?</h2>
+<section class="slide" id="s06" data-title="The tricycle already has a one-way mechanism" data-section="Understand the existing drivetrain">
+ <p class="slide-kicker">START WITH HOW THE TRICYCLE ALREADY WORKS</p>
+ <h2 class="slide-title">The tricycle already has a one-way mechanism.</h2>
  <div class="compare-cols">
   <article class="compare-panel">
-   <span class="panel-label">FULL PROPULSION</span>
-   <h3>The motor supplies propulsion.</h3>
-   <div class="compare-equation">Motor <span class="accent-text">→</span> propulsion</div>
-   <p>The motor provides the driving work.</p>
+   <span class="panel-label">WHEN YOU PEDAL</span>
+   <h3>The pedals drive the wheel.</h3>
+   <div class="compare-equation">Pedals <span class="accent-text">→</span> wheel</div>
+   <p>The chain turns the sprocket and drives the rear axle.</p>
   </article>
   <article class="compare-panel active">
-   <span class="panel-label">PROPORTIONAL ASSISTANCE · TIRARE MRII</span>
-   <h3>The rider contributes. The motor assists.</h3>
-   <div class="compare-equation">Rider + motor <span>→</span> propulsion</div>
-   <p>The rider provides effort; the motor adds assistance in proportion to that effort.</p>
+   <span class="panel-label">WHEN THE WHEEL MOVES FASTER</span>
+   <h3>The wheel can keep turning.</h3>
+   <div class="compare-equation">Wheel <span>→</span> keeps rolling</div>
+   <p>Like a bicycle freewheel, it does not have to force the pedals to turn.</p>
   </article>
  </div>
- <div class="slide-footer"><span>ARCHITECTURE · PEDAL INPUT + MOTOR ASSIST</span><span>06 / 22</span></div>
+ <div class="existing-drive-demo">
+  <div class="media-frame dark-frame" data-media-slot="freewheel" data-autoplay="true"><div class="slot-empty"><span class="slot-topline">EXISTING DRIVETRAIN ANIMATION</span><strong class="slot-title">See the one-way movement.</strong><span class="slot-desc">The tricycle's existing ratchet/freewheel behaviour.</span><span class="slot-action">Loading drivetrain clip ↗</span></div></div>
+  <div class="existing-drive-note"><strong>We needed to keep this behaviour.</strong><span>The motor should be able to turn the axle without dragging the pedals around.</span></div>
+ </div>
+ <div class="slide-footer"><span>EXISTING RATCHET / FREEWHEEL BEHAVIOUR</span><span>06 / 15</span></div>
 </section>
-
-<!-- 07 / DRIVETRAIN INNOVATION -->
-<section class="slide" id="s07" data-title="We changed the interface" data-section="Drivetrain innovation">
- <p class="slide-kicker">DRIVETRAIN INNOVATION</p>
- <h2 class="slide-title">We changed the interface.</h2>
+<section class="slide" id="s07" data-title="We went back to the original tricycle" data-section="The design change">
+ <p class="slide-kicker">FOUR DESIGN STAGES · FROM THE VEHICLE TO THE INTERFACE</p>
+ <h2 class="slide-title">We went back to the original tricycle.</h2>
  <div class="drivetrain-grid">
   <div class="drivetrain-copy">
-   <p class="body-copy">E-bike conversions bolt cadence rings or bottom-bracket strain gauges beside the cranks. Each adds parts beside the crank.</p>
-   <p class="body-copy"><b>MRII replaces the driven sprocket itself.</b> It sits in the mechanical power path from pedal chain to live axle.</p>
-   <div class="drivetrain-path"><span>Pedal crank</span><b>→</b><span>Chain</span><b>→</b><span>MRII</span><b>→</b><span>Drive axle</span></div>
-   <p class="small-copy">MRII senses effort inside the torque-transmitting element, avoiding a separate crank-side sensing bracket.</p>
+   <p class="body-copy">We studied the actual axle, chain line and frame.</p>
+   <p class="body-copy">Instead of changing the whole vehicle, we focused on one part: the sprocket that sends power from the chain to the rear axle.</p>
+   <div class="drivetrain-path"><span>Pedals</span><b>→</b><span>Chain</span><b>→</b><span>MRII</span><b>→</b><span>Axle</span></div>
+   <div class="design-turning-point">Change the interface. Keep the vehicle.</div>
   </div>
   <div class="drivetrain-visuals">
    <div style="display:flex;flex-direction:column;gap:.55cqw;min-height:0">
     <div class="cad-selector" role="group" aria-label="Four CAD design stages">
-     <button type="button" data-cad-select="cad1">01 REALITY</button>
+     <button type="button" data-cad-select="cad1">01 TRICYCLE</button>
      <button type="button" data-cad-select="cad2">02 FIRST</button>
-     <button type="button" data-cad-select="cad3">03 CONSTRAINT</button>
+     <button type="button" data-cad-select="cad3">03 REVISION</button>
      <button type="button" data-cad-select="cad4" class="active">04 CURRENT</button>
     </div>
-    <div class="media-frame cad-hero-frame" data-media-slot="cad4" style="flex:1;min-height:0"><div class="slot-empty"><span class="slot-topline">CURRENT PLATFORM CAD</span><strong class="slot-title">The current drivetrain interface.</strong><span class="slot-desc">Select a CAD stage above to inspect the design evolution.</span><span class="slot-action">Drag to orbit when the model loads ↗</span></div></div>
+    <div class="media-frame cad-hero-frame" data-media-slot="cad4" style="flex:1;min-height:0"><div class="slot-empty"><span class="slot-topline">CURRENT PLATFORM CAD</span><strong class="slot-title">The MRII interface in the drivetrain.</strong><span class="slot-desc">Select the four stages above to see how the design changed.</span><span class="slot-action">Drag to inspect when loaded ↗</span></div></div>
    </div>
-   <div class="media-frame cover" data-media-slot="mountedMrii"><div class="slot-empty"><span class="slot-topline">USER ASSET 02 / MRII MOUNTED ON TRICYCLE</span><strong class="slot-title">Installed prototype view</strong><span class="slot-desc">Photograph showing compact integration on the intermediate hub shaft.</span><span class="slot-action">Load installed MRII photo ↗</span></div><div class="media-caption">MRII / INSTALLED VIEW</div></div>
+   <div class="media-frame cover" data-media-slot="mountedMrii"><div class="slot-empty"><span class="slot-topline">PHYSICAL SUBSYSTEM</span><strong class="slot-title">MRII mounted on the tricycle.</strong><span class="slot-desc">The actual installed interface photograph.</span><span class="slot-action">Loading prototype photograph ↗</span></div><div class="media-caption">MRII / INSTALLED VIEW</div></div>
   </div>
  </div>
- <div class="slide-footer"><span>CAD EVOLUTION · SELECT A STAGE TO INSPECT</span><span>07 / 22</span></div>
+ <div class="slide-footer"><span>CAD EVOLUTION · SELECT A STAGE</span><span>07 / 15</span></div>
 </section>
-
-<!-- 08 / MRII THREE JOBS -->
-<section class="slide" id="s08" data-title="The part that carries force also measures effort" data-section="MRII mechanism">
- <p class="slide-kicker">MRII / TRANSMIT · SENSE · OVERRUN</p>
- <h2 class="slide-title tight">The part that carries the force also measures the effort.</h2>
- <div class="mrii-grid">
-  <div class="media-frame mrii-hero-frame" data-media-slot="interfaceDetail"><div class="slot-empty"><span class="slot-topline">MRII EXPLODED CAD</span><strong class="slot-title">Inspect the mechanical interface.</strong><span class="slot-desc">Rotate the CAD model to examine the compliant coupling and one-way element.</span><span class="slot-action">Load MRII interface CAD ↗</span></div></div>
+<section class="slide" id="s08" data-title="MRII does three jobs at one point" data-section="The MRII reveal">
+ <p class="slide-kicker">THE MECHANICAL RIDER INTENT INTERFACE</p>
+ <h2 class="slide-title tight">MRII does three jobs at one point.</h2>
+ <div class="mrii-grid mrii-video-grid">
+  <div class="mrii-video-column">
+   <div class="youtube-embed-frame"><iframe src="https://www.youtube-nocookie.com/embed/4IOVUIjke8k?rel=0" title="Tirare MRII mechanism demonstration" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+   <div class="media-note"><span>MRII MECHANISM VIDEO · NARRATE LIVE</span><a href="https://youtu.be/4IOVUIjke8k" target="_blank" rel="noopener noreferrer">OPEN ON YOUTUBE ↗</a></div>
+   <p class="small-copy">The video explains the mechanism. The physical prototype demonstration shows the subsystem we have built.</p>
+  </div>
   <div class="mrii-side">
-   <div class="media-frame dark-frame" data-media-slot="oneway" style="height:34%;min-height:0"><div class="slot-empty"><span class="slot-topline">VIDEO / ONE-WAY BEHAVIOUR</span><strong class="slot-title">Rider drives. Motor overruns.</strong><span class="slot-desc">The powered side should rotate without forcing the pedals to follow.</span><span class="slot-action">Load one-way animation ↗</span></div></div>
+   <div class="media-frame mrii-detail-frame" data-media-slot="interfaceDetail"><div class="slot-empty"><span class="slot-topline">MRII CAD</span><strong class="slot-title">Inspect the mechanical parts.</strong><span class="slot-desc">Load the MRII interface model.</span><span class="slot-action">Loading CAD ↗</span></div></div>
    <div class="job-list">
-    <div class="job-item"><b>Transmit</b><div><strong>MRII replaces the driven sprocket.</strong><span>Rider torque passes through its compliant coupling toward the axle.</span></div></div>
-    <div class="job-item"><b>Sense</b><div><strong>Flexible elements twist slightly.</strong><span>AS5047P magnetic angle measurement and calibration estimate rider effort and inform the assist request.</span></div></div>
-    <div class="job-item"><b>Overrun</b><div><strong>The one-way element separates drive directions.</strong><span>The powered side is intended to rotate without forcing the pedals to follow.</span></div></div>
+    <div class="job-item"><b>01 · PASS POWER</b><div><strong>The rider's force passes through MRII.</strong><span>It continues towards the rear axle.</span></div></div>
+    <div class="job-item"><b>02 · MEASURE</b><div><strong>A flexible part twists slightly.</strong><span>A magnet and sensor measure that movement.</span></div></div>
+    <div class="job-item"><b>03 · ONE-WAY</b><div><strong>The motor can drive the axle.</strong><span>The pedals are not forced to turn with it.</span></div></div>
    </div>
-   <div class="mrii-bottom-note">Deflection exaggerated for clarity if shown. Manual pedalling with assistance switched off is a design requirement; vehicle-level validation remains pending.</div>
   </div>
  </div>
- <div class="slide-footer"><span>MECHANICAL INTERFACE · SENSOR · ONE-WAY ELEMENT</span><span>08 / 22</span></div>
+ <div class="mrii-bottom-note">Physical MRII subsystem built and demonstrated on the bench. Full-vehicle integration and validation are still required.</div>
+ <div class="slide-footer"><span>MRII · PASS POWER / MEASURE EFFORT / ONE-WAY DRIVE</span><span>08 / 15</span></div>
 </section>
-
-<!-- 09 / CONTROL LAW -->
-<section class="slide" id="s09" data-title="The rider contributes. The motor helps." data-section="Assistance control law">
- <p class="slide-kicker">ASSISTANCE CONTROL LAW</p>
- <h2 class="slide-title">The rider contributes. The motor helps.</h2>
+<section class="slide" id="s09" data-title="The rider pedals. The motor adds help" data-section="How assistance works">
+ <p class="slide-kicker">HOW THE ASSISTANCE IS INTENDED TO WORK</p>
+ <h2 class="slide-title">The rider pedals. The motor adds help.</h2>
  <div class="torque-equation">
-  <div class="torque-block"><div class="metric-value">10 N·m</div><div class="metric-label">RIDER TORQUE INPUT</div><div class="metric-caption">Estimated via MRII compliance</div></div>
+  <div class="torque-block"><div class="metric-value">10 N·m</div><div class="metric-label">RIDER EFFORT</div><div class="metric-caption">Estimated from MRII's measured movement</div></div>
   <div class="operator">+</div>
-  <div class="torque-block"><div class="metric-value">10 N·m</div><div class="metric-label">INTENDED MOTOR ASSIST</div><div class="metric-caption">1:1 proportional controller command</div></div>
+  <div class="torque-block"><div class="metric-value">10 N·m</div><div class="metric-label">MOTOR ASSIST REQUEST</div><div class="metric-caption">Intended 1:1 controller setting</div></div>
   <div class="operator">=</div>
-  <div class="torque-block"><div class="metric-value accent">20 N·m</div><div class="metric-label">ILLUSTRATIVE TARGET</div><div class="metric-caption">Not measured axle or wheel torque</div></div>
+  <div class="torque-block"><div class="metric-value accent">20 N·m</div><div class="metric-label">ILLUSTRATIVE TOTAL</div><div class="metric-caption">At the reference interface, before losses</div></div>
  </div>
- <p class="torque-note">Illustrative 1:1 command at the reference interface, not measured axle or wheel output. Gear ratio, drivetrain losses and operating limits matter.</p>
- <div class="slide-footer"><span>CONTROL LAW · ILLUSTRATIVE 1:1 COMMAND</span><span>09 / 22</span></div>
+ <div class="assist-explainer"><strong>The rider still contributes.</strong><span>MRII measures the rider's effort. The controller uses that signal to request motor assistance, within system limits.</span></div>
+ <p class="torque-note">Illustrative 1:1 command only. This is not a measured axle or wheel-torque result. Gear ratios, drivetrain losses and operating limits matter.</p>
+ <div class="slide-footer"><span>ILLUSTRATIVE CONTROL TARGET · NOT A MEASURED OUTPUT</span><span>09 / 15</span></div>
 </section>
-
-<!-- 10 / POWERTRAIN OPTIMIZATION -->
-<section class="slide" id="s10" data-title="Assistance changes the sizing question" data-section="Powertrain optimization">
- <p class="slide-kicker">POWERTRAIN OPTIMIZATION</p>
- <h2 class="slide-title">Assistance changes the sizing question.</h2>
+<section class="slide" id="s10" data-title="Assistance changes the battery question" data-section="Proposed system targets">
+ <p class="slide-kicker">PROPOSED PILOT TARGETS · NOT MEASURED SAVINGS</p>
+ <h2 class="slide-title">Assistance changes the battery question.</h2>
  <div class="power-grid">
   <article class="power-panel">
    <span class="power-title">EARLIER FULL-PROPULSION REFERENCE</span>
    <div class="power-spec">800 W motor<br>≈3.07 kWh battery</div>
-   <p class="small-copy">₹35,500 · 20 kg listed battery mass</p>
+   <p class="small-copy">One listed battery example: ₹35,500 and 20 kg.</p>
    <div class="power-stats"><div><span>MOTOR RATING</span><strong>800 W</strong></div><div><span>BATTERY</span><strong>3.07 kWh</strong></div></div>
   </article>
   <article class="power-panel target">
-   <span class="power-title">PROPOSED PILOT TARGETS</span>
+   <span class="power-title">PROPOSED RIDER-ASSIST PILOT</span>
    <div class="power-spec">500 W motor<br>1.44 kWh battery</div>
-   <p class="small-copy">₹9,500 supplier LFP battery reference for 50+ units; GST extra.</p>
+   <p class="small-copy">Pilot sizing target. Supplier reference for a battery pack is not a confirmed retail quote.</p>
    <div class="power-stats"><div><span>MOTOR TARGET</span><strong>500 W</strong></div><div><span>BATTERY TARGET</span><strong>1.44 kWh</strong></div></div>
   </article>
  </div>
  <div class="power-bottom">
-  <div class="media-frame dark-frame" data-media-slot="cartReturn"><div class="slot-empty"><span class="slot-topline">USER ASSET / RETURN TO ORIGINAL CART</span><strong class="slot-title">Keep the wooden cart. Reduce the added system.</strong><span class="slot-desc">Optional transition animation: remove the steel replacement cart and large battery; restore the original cart and smaller battery.</span><span class="slot-action">Load return-to-cart animation ↗</span></div></div>
-  <div class="power-reductions"><div><strong>−53%</strong><span>Nominal battery-capacity target</span></div><div><strong>−37.5%</strong><span>Motor-rating target</span></div></div>
+  <div class="media-frame dark-frame" data-media-slot="cartReturn"><div class="slot-empty"><span class="slot-topline">DESIGN DIRECTION</span><strong class="slot-title">Keep the original tricycle.</strong><span class="slot-desc">Optional animation showing the return to the original wooden cart and a smaller proposed battery.</span><span class="slot-action">Load transition animation ↗</span></div></div>
+  <div class="power-reductions"><div><strong>500 W</strong><span>Proposed motor target</span></div><div><strong>1.44 kWh</strong><span>Proposed battery target</span></div></div>
  </div>
- <p class="small-copy">Design comparisons, not measured performance. The 9.75 kg listing is unconfirmed for the ₹9,500 pack.</p>
- <div class="slide-footer"><span>POWERTRAIN · PROPOSED PILOT SIZING</span><span>10 / 22</span></div>
+ <p class="small-copy">The two columns describe different operating concepts. The proposed targets do not yet prove real-world energy, weight or cost savings.</p>
+ <div class="slide-footer"><span>POWERTRAIN · WORKING DESIGN TARGETS</span><span>10 / 15</span></div>
 </section>
-
-<!-- 11 / MARKET SIZING -->
-<section class="slide" id="s11" data-title="13 lakh operators narrow to 10,000 installations" data-section="Market sizing">
- <p class="slide-kicker">MARKET SIZING · INDIA · BOTTOM-UP MODEL</p>
- <h2 class="slide-title">13 lakh operators narrow to 10,000 installations.</h2>
- <div class="funnel-grid">
-  <article class="funnel-card"><div><span class="funnel-label">TAM · POTENTIAL OPERATORS</span><div class="funnel-number">13 lakh</div><div class="funnel-value">₹1,853 crore</div></div><p>One-time installed retrofit-package value at ₹14,250 per operator.</p></article>
-  <article class="funnel-card"><div><span class="funnel-label">SAM · SERVICEABLE</span><div class="funnel-number">3.25 lakh</div><div class="funnel-value">₹463 crore</div></div><p>25% of TAM, based on vehicle compatibility, launch geography and workshop reach.</p></article>
-  <article class="funnel-card"><div><span class="funnel-label">SOM · FIVE-YEAR TARGET</span><div class="funnel-number">10,000</div><div class="funnel-value">₹14.25 crore</div></div><p>Installations, about 3.1% of SAM; one-time installed-package value.</p></article>
- </div>
- <p class="funnel-source">The 13 lakh count is Tirare's internal working estimate, not an official audited national count. 25% SAM is a management assumption. 10,000 SOM is a five-year execution target—not current customers or proven demand. Values are one-time installed retrofit-package values; battery-service revenue is excluded.</p>
- <div class="slide-footer"><span>MARKET SIZING · INTERNAL WORKING ESTIMATE + MANAGEMENT TARGETS</span><span>11 / 22</span></div>
-</section>
-
-<!-- 12 / PRICING -->
-<section class="slide" id="s12" data-title="Electrify the cart from ₹14,250" data-section="Customer pricing">
- <p class="slide-kicker">CUSTOMER PRICING · PROPOSED LAUNCH PRICES</p>
- <h2 class="slide-title">Electrify the cart from ₹14,250.</h2>
+<section class="slide" id="s12" data-title="Make the upgrade easier to reach" data-section="Proposed pricing">
+ <p class="slide-kicker">PROPOSED CUSTOMER PRICING · NOT YET DEPLOYED</p>
+ <h2 class="slide-title">Make the upgrade easier to reach.</h2>
  <div class="pricing-grid">
   <div class="pricing-main">
-   <div><div class="metric-label">INITIAL CUSTOMER PAYMENT · BATTERY EXCLUDED</div><div class="big-number">₹14,250</div><p class="small-copy">Proposed retrofit payment before applicable taxes.</p></div>
+   <div><div class="metric-label">RETROFIT PACKAGE · BATTERY EXCLUDED</div><div class="big-number">₹14,250</div><p class="small-copy">Proposed starting price, before applicable taxes.</p></div>
    <div class="pricing-lines">
     <div class="pricing-line"><span>MRII interface package</span><strong>₹7,250</strong></div>
-    <div class="pricing-line"><span>500 W motor/controller/drive</span><strong>₹6,000 proposed selling price</strong></div>
-    <div class="pricing-line"><span>Installation & commissioning</span><strong>₹1,000 (₹700 to local workshop)</strong></div>
-    <div class="pricing-line"><span>Motor supply cost target</span><strong>₹4,500</strong></div>
+    <div class="pricing-line"><span>500 W motor / controller / drive</span><strong>₹6,000</strong></div>
+    <div class="pricing-line"><span>Installation and commissioning</span><strong>₹1,000</strong></div>
    </div>
   </div>
   <div class="pricing-options">
-   <article class="pricing-option"><h3>Own the battery</h3><strong>₹25,750</strong><p>Full installed conversion with battery, before applicable taxes. Proposed battery price ₹11,500. The ₹9,500 supplier reference (50+ units, before GST) is not a confirmed retail quote.</p></article>
-   <article class="pricing-option"><h3>Access the battery</h3><strong>₹350/week</strong><p>About ₹58 per active working day, based on six working days. Includes battery access, charging, swapping and routine service under the proposed model.</p></article>
+   <article class="pricing-option"><h3>Buy the battery</h3><strong>₹25,750</strong><p>Proposed full installed price including a battery, before applicable taxes.</p></article>
+   <article class="pricing-option"><h3>Access the battery</h3><strong>₹350 / week</strong><p>Proposed battery access, charging, swapping and routine service through local workshops.</p></article>
   </div>
  </div>
- <div class="slide-footer"><span>PROPOSED LAUNCH PRICES · NOT DEPLOYED CUSTOMER PRICES</span><span>12 / 22</span></div>
+ <div class="proposal-band"><b>THE IDEA</b><span>A worker may not need to buy the entire battery upfront. Local workshops could install and support the system close to where the tricycle already works.</span></div>
+ <div class="slide-footer"><span>PROPOSED PRICES · VALIDATION AND CUSTOMER TESTING AHEAD</span><span>11 / 15</span></div>
 </section>
-
-<!-- 13 / UNIT ECONOMICS -->
-<section class="slide" id="s13" data-title="Every installation must contribute to the next one" data-section="Unit economics">
+<section class="slide" id="s18" data-title="The mechanism is built. The vehicle is next" data-section="Progress and validation">
+ <p class="slide-kicker">PROGRESS · WHAT EXISTS / WHAT COMES NEXT</p>
+ <h2 class="slide-title">The mechanism is built. The vehicle is next.</h2>
+ <div class="progress-grid">
+  <div style="display:flex;flex-direction:column;gap:1cqw;min-height:0">
+   <div class="progress-metrics">
+    <div class="progress-metric"><strong>2 years</strong><span>of design work</span></div>
+    <div class="progress-metric"><strong>Built</strong><span>physical MRII subsystem</span></div>
+    <div class="progress-metric"><strong>Next</strong><span>complete-vehicle testing</span></div>
+   </div>
+   <div class="guidance-card"><h3>Technical guidance</h3><p>Professor Andy Ruina has provided guidance on the drivetrain design. We are grateful for that support, and we know the next step is careful testing.</p></div>
+   <div class="validation-checks"><b>WHAT WE NEED TO TEST</b><span>Torque transfer · sensing accuracy · one-way operation · reliability · safe manual pedalling · performance under load</span></div>
+  </div>
+  <div class="media-frame cover" data-media-slot="mountedMrii"><div class="slot-empty"><span class="slot-topline">PHYSICAL MRII SUBSYSTEM</span><strong class="slot-title">Built and demonstrated on the bench.</strong><span class="slot-desc">The next proof is on the complete tricycle.</span><span class="slot-action">Loading installed prototype photograph ↗</span></div></div>
+ </div>
+ <div class="slide-footer"><span>PROTOTYPE STATUS · COMPLETE VEHICLE VALIDATION REMAINS</span><span>12 / 15</span></div>
+</section>
+<section class="slide" id="s11" data-title="13 lakh potential operators" data-section="The opportunity">
+ <p class="slide-kicker">THE OPPORTUNITY · INTERNAL WORKING ESTIMATE</p>
+ <div class="opportunity-grid">
+  <div class="opportunity-number"><span class="metric-label">POTENTIAL OPERATORS IN TIRARE'S WORKING ESTIMATE</span><div class="opportunity-value">13 lakh</div><p>People who may use cargo tricycles that could be suitable for a retrofit.</p></div>
+  <div class="opportunity-copy"><h2 class="slide-title">We haven't reached them yet.</h2><p class="body-copy">This is an internal estimate, not an official national count and not a list of customers.</p><p class="body-copy">Before thinking about scale, we need to prove the system on the first vehicles.</p><div class="opportunity-next"><strong>First step</strong><span>25 monitored vehicles · 3 workshops · one focused pilot</span></div></div>
+ </div>
+ <div class="slide-footer"><span>13 LAKH · INTERNAL ESTIMATE, NOT AUDITED NATIONAL DATA</span><span>13 / 15</span></div>
+</section>
+<section class="slide" id="s17" data-title="₹15 lakh to test the first 25 vehicles" data-section="The pilot ask">
+ <p class="slide-kicker">THE PILOT ASK · THE NEXT PROOF</p>
+ <h2 class="slide-title">₹15 lakh to test the first 25 vehicles.</h2>
+ <div class="funding-grid">
+  <div class="funding-ask"><div><span class="metric-label" style="color:#d4d0c8">PILOT FUNDING REQUEST</span><div class="big-number">₹15 lakh</div><p>To complete engineering, build 25 MRII modules and monitor the first 25 vehicles.</p></div><p>We want to test the mechanism, the complete vehicle and the working model before claiming it is ready to scale.</p></div>
+  <div class="funding-detail pilot-deliverables">
+   <h3>What the pilot will deliver</h3>
+   <div class="pilot-deliverable"><b>01</b><div><strong>Complete the engineering</strong><span>Bench fixtures, sensing calibration, mounting and safety checks.</span></div></div>
+   <div class="pilot-deliverable"><b>02</b><div><strong>Build and install 25 modules</strong><span>Work with compatible cargo tricycles and three local workshops.</span></div></div>
+   <div class="pilot-deliverable"><b>03</b><div><strong>Measure what changes</strong><span>Reliability, energy use, vehicle uptime, operator effort and willingness to pay.</span></div></div>
+   <p class="small-copy">A controlled pilot, subject to engineering and safety gates. Detailed allocation is in the appendix.</p>
+  </div>
+ </div>
+ <div class="slide-footer"><span>₹15 LAKH · 25 VEHICLES · 3 WORKSHOPS</span><span>14 / 15</span></div>
+</section>
+<section class="slide" id="s19" data-title="The vehicle is already earning" data-section="The close">
+ <p class="slide-kicker">TIRARE · THE REASON WE STARTED</p>
+ <div class="close-grid">
+  <div>
+   <h2 class="close-title">The vehicle is<br>already earning.</h2>
+   <p class="close-lead">Let's make it work better for the person who depends on it.</p>
+   <div class="close-ask">Keep the vehicle.<br>Change the interface.</div>
+   <p class="body-copy" style="margin-top:1.1cqw">I'm Anurag Mishra. This is Tirare.</p>
+  </div>
+  <div class="media-frame cover" data-media-slot="manualWorker"><div class="slot-empty"><span class="slot-topline">THE PERSON BEHIND THE PROBLEM</span><strong class="slot-title">The work is already happening.</strong><span class="slot-desc">Close on the real worker or cargo-tricycle image.</span><span class="slot-action">Loading field photograph ↗</span></div><div class="media-caption">KEEP THE VEHICLE · CHANGE THE INTERFACE</div></div>
+ </div>
+ <div class="slide-footer"><span class="foot-mark"><i class="t-mark">T</i> TIRARE MOBILITY TECHNOLOGIES</span><span>THANK YOU</span></div>
+</section>
+<section class="slide" id="s13" data-title="Every installation must contribute to the next one" data-section="Appendix · jury reference">
  <p class="slide-kicker">UNIT ECONOMICS · TARGETS PER INSTALLATION</p>
  <h2 class="slide-title">Every installation must contribute to the next one.</h2>
  <div class="unit-top">
@@ -681,11 +804,9 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
    <p class="small-copy">Hardware earns the first contribution. Battery access builds recurring revenue. Weekly fee and service costs remain targets.</p>
   </div>
  </div>
- <div class="slide-footer"><span>UNIT ECONOMICS · TARGET FIGURES</span><span>13 / 22</span></div>
+ <div class="slide-footer"><span>APPENDIX · JURY REFERENCE</span><span>01 / 07</span></div>
 </section>
-
-<!-- 14 / BREAK EVEN -->
-<section class="slide" id="s14" data-title="500 active subscribers plus 41 installations" data-section="Break-even">
+<section class="slide" id="s14" data-title="500 active subscribers plus 41 installations" data-section="Appendix · jury reference">
  <p class="slide-kicker">BREAK-EVEN · ONE OPERATING CLUSTER · TARGET</p>
  <h2 class="slide-title tight">500 active subscribers + 41 installations = operating break-even.</h2>
  <div class="break-grid">
@@ -705,11 +826,9 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   </div>
  </div>
  <p class="small-copy">Target for one operating cluster, before central expansion overhead, tax and financing costs.</p>
- <div class="slide-footer"><span>BREAK-EVEN · MANAGEMENT TARGET</span><span>14 / 22</span></div>
+ <div class="slide-footer"><span>APPENDIX · JURY REFERENCE</span><span>02 / 07</span></div>
 </section>
-
-<!-- 15 / GO TO MARKET -->
-<section class="slide" id="s15" data-title="Start with one market. Build a repeatable network" data-section="Go to market">
+<section class="slide" id="s15" data-title="Start with one market. Build a repeatable network" data-section="Appendix · jury reference">
  <p class="slide-kicker">GO TO MARKET · MANAGEMENT TARGETS, NOT ACHIEVEMENTS</p>
  <h2 class="slide-title">Start with one market. Build a repeatable network.</h2>
  <div class="roadmap">
@@ -725,11 +844,9 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   <div class="soft-card"><span class="metric-label">ACQUISITION CHANNELS</span><div class="channel-list"><span>Local bicycle and cargo-tricycle workshops</span><span>Operator demonstrations</span><span>Referrals from installed operators</span><span>Institutional anchor sites</span><span>Local fleet and warehouse relationships</span></div></div>
  </div>
  <p class="small-copy">Every rollout number is a management target, not a current achievement. Generic social media is not the main acquisition strategy.</p>
- <div class="slide-footer"><span>GO TO MARKET · TARGET ROLLOUT</span><span>15 / 22</span></div>
+ <div class="slide-footer"><span>APPENDIX · JURY REFERENCE</span><span>03 / 07</span></div>
 </section>
-
-<!-- 16 / 90 DAY PLAN -->
-<section class="slide" id="s16" data-title="Days to mobilise. Weeks to validate" data-section="Implementation">
+<section class="slide" id="s16" data-title="Days to mobilise. Weeks to validate" data-section="Appendix · jury reference">
  <p class="slide-kicker">IMPLEMENTATION · FIRST 90 DAYS · TARGET PLAN</p>
  <h2 class="slide-title">Days to mobilise. Weeks to validate.</h2>
  <div class="ninety-day">
@@ -743,71 +860,9 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   <div class="success-card"><h3>Success measures · Part 2</h3><ul><li>Installation time</li><li>Vehicle uptime</li><li>Battery consumption and charging cost</li><li>Operator utilisation and willingness to pay</li></ul></div>
  </div>
  <p class="small-copy">Target timeline, subject to engineering and safety gates.</p>
- <div class="slide-footer"><span>IMPLEMENTATION · 90-DAY TARGET PLAN</span><span>16 / 22</span></div>
+ <div class="slide-footer"><span>APPENDIX · JURY REFERENCE</span><span>04 / 07</span></div>
 </section>
-
-<!-- 17 / FUNDING ASK -->
-<section class="slide" id="s17" data-title="₹15 lakh to reach the first 25 vehicles" data-section="Funding ask">
- <p class="slide-kicker">FUNDING ASK · NON-DILUTIVE CATALYTIC PILOT GRANT</p>
- <h2 class="slide-title">₹15 lakh to reach the first 25 vehicles.</h2>
- <div class="funding-grid">
-  <div class="funding-ask"><div><span class="metric-label" style="color:#d4d0c8">CATALYTIC PILOT GRANT</span><div class="big-number">₹15 lakh</div><p>To complete engineering, bench testing, build 25 MRII modules and monitor the first pilot vehicles.</p></div><p>We are not seeking permanent subsidy. We are seeking catalytic capital to prove a model that can sustain itself through revenue.</p></div>
-  <div class="funding-detail">
-   <div class="funding-table-wrap"><h3>Funding allocation</h3><table class="funding-table"><tbody>
-    <tr><td>Engineering completion and prototype revisions</td><td>₹1.50 lakh</td></tr>
-    <tr><td>Bench testing fixtures and instrumentation</td><td>₹1.50 lakh</td></tr>
-    <tr><td>25 MRII modules</td><td>₹1.09 lakh</td></tr>
-    <tr><td>25 motor/controller packages</td><td>₹1.13 lakh</td></tr>
-    <tr><td>30 battery packs (pilot procurement allowance)</td><td>₹3.45 lakh</td></tr>
-    <tr><td>Fabrication, mounting and workshop onboarding</td><td>₹1.00 lakh</td></tr>
-    <tr><td>Field operations and monitoring</td><td>₹1.50 lakh</td></tr>
-    <tr><td>Safety and independent validation</td><td>₹1.25 lakh</td></tr>
-    <tr><td>Project coordination and field team</td><td>₹1.00 lakh</td></tr>
-    <tr><td>Contingency and price variance</td><td>₹1.58 lakh</td></tr>
-    <tr style="font-weight:700"><td>Total</td><td>₹15 lakh</td></tr>
-   </tbody></table></div>
-   <div class="partner-wrap"><h3>Requested commitments</h3><p>25 vehicles, 3 workshops, 1 anchor market or warehouse, and testing support from an independent partner.</p><h3 style="margin-top:.7cqw">Partner needs</h3><div class="partner-pills"><span>Anchor market / warehouse</span><span>25 compatible vehicles</span><span>3 local workshops</span><span>Motor/controller supplier</span><span>Battery procurement</span><span>Charging support</span><span>Safety-validation partner</span></div><p style="margin-top:.7cqw">Target costs: ₹4,350 MRII build; ₹4,500 motor/controller supply; ₹11,500 pilot battery procurement allowance. ₹9,500 supplier reference is for 50+ units, before GST.</p></div>
-  </div>
- </div>
- <div class="slide-footer"><span>FUNDING ASK · PILOT ALLOCATION</span><span>17 / 22</span></div>
-</section>
-
-<!-- 18 / EXECUTION -->
-<section class="slide" id="s18" data-title="Why Tirare can execute" data-section="Execution">
- <p class="slide-kicker">EXECUTION · PROGRESS TO DATE</p>
- <h2 class="slide-title">Why Tirare can execute.</h2>
- <div class="progress-grid">
-  <div style="display:flex;flex-direction:column;gap:1cqw;min-height:0">
-   <div class="progress-metrics">
-    <div class="progress-metric"><strong>2 years</strong><span>Of development</span></div>
-    <div class="progress-metric"><strong>₹1 lakh</strong><span>IIIT Delhi grant</span></div>
-    <div class="progress-metric"><strong>Filed</strong><span>Patent application · 2 October 2026</span></div>
-   </div>
-   <div class="guidance-card"><h3>Guidance and support</h3><p>Technical guidance from Professor Andy Ruina on drivetrain design. Patent counsel support. The mechanical interface has been built and tested at prototype stage. Institutional support is not a formal partnership; the patent application has been filed, not granted.</p></div>
-   <p class="small-copy">Pilot roles: engineering completion, field operations and monitoring, workshop onboarding, safety validation and project coordination.</p>
-  </div>
-  <div class="media-frame" data-media-slot="mountedMrii"><div class="slot-empty"><span class="slot-topline">PROTOTYPE / INSTALLED MECHANICAL INTERFACE</span><strong class="slot-title">A built interface. The next step is vehicle-level validation.</strong><span class="slot-desc">Use the actual MRII mounted-on-tricycle photograph.</span><span class="slot-action">Load prototype photo ↗</span></div></div>
- </div>
- <div class="slide-footer"><span>EXECUTION · PROTOTYPE-STAGE PROGRESS</span><span>18 / 22</span></div>
-</section>
-
-<!-- 19 / CLOSING -->
-<section class="slide" id="s19" data-title="The vehicle is already earning" data-section="The invitation">
- <p class="slide-kicker">THE INVITATION</p>
- <div class="close-grid">
-  <div>
-   <h2 class="close-title">The vehicle is<br>already earning.</h2>
-   <p class="close-lead">Electrification should not require replacing it.</p>
-   <p class="body-copy">Help Tirare move from a built mechanical interface to a validated, affordable and self-sustaining retrofit business.</p>
-   <div class="close-ask">Help us put the first 25 MRII-equipped vehicles to work.</div>
-  </div>
-  <div class="media-frame cover" data-media-slot="manualWorker"><div class="slot-empty"><span class="slot-topline">THE PERSON BEHIND THE PROBLEM</span><strong class="slot-title">Keep the vehicle. Improve the working day.</strong><span class="slot-desc">Close with the real worker / cargo-tricycle field image or video.</span><span class="slot-action">Load worker media ↗</span></div><div class="media-caption">KEEP THE VEHICLE · RETHINK THE INTERFACE</div></div>
- </div>
- <div class="slide-footer"><span class="foot-mark"><i class="t-mark">T</i> TIRARE MOBILITY TECHNOLOGIES</span><span>THE INVITATION</span></div>
-</section>
-
-<!-- 20 / APPENDIX: MARKET SENSITIVITY -->
-<section class="slide" id="s20" data-title="SAM sensitivity and source status" data-section="Appendix · market sizing">
+<section class="slide" id="s20" data-title="SAM sensitivity and source status" data-section="Appendix · jury reference">
  <p class="slide-kicker">APPENDIX · MARKET SIZING AND SOURCES</p>
  <h2 class="slide-title">SAM sensitivity and source status.</h2>
  <p class="slide-subtitle">One retrofit per operator at the ₹14,250 installed-package price. Values are one-time installed retrofit-package values, not annual revenue; battery-service revenue is excluded.</p>
@@ -821,11 +876,9 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   </div>
   <div class="appendix-note"><b>Source status</b><br><br>The 13 lakh TAM is Tirare's internal working estimate, not an official national count. The 25% SAM share and 10,000 SOM are working assumptions and management targets. Rupee values use the ₹14,250 installed-package basis. Supplier and component figures without a documented source are excluded from this appendix.</div>
  </div>
- <div class="slide-footer"><span>APPENDIX · MARKET SENSITIVITY</span><span>20 / 22</span></div>
+ <div class="slide-footer"><span>APPENDIX · JURY REFERENCE</span><span>05 / 07</span></div>
 </section>
-
-<!-- 21 / APPENDIX: ECONOMICS -->
-<section class="slide" id="s21" data-title="Detailed business economics" data-section="Appendix · business economics">
+<section class="slide" id="s21" data-title="Detailed business economics" data-section="Appendix · jury reference">
  <p class="slide-kicker">APPENDIX · DETAILED BUSINESS ECONOMICS · TARGETS</p>
  <h2 class="slide-title">Detailed business economics.</h2>
  <div class="econ-grid">
@@ -843,11 +896,9 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   <div class="econ-panel" style="display:flex;flex-direction:column;gap:.75cqw"><h3>At 5,000 subscribers</h3><div class="appendix-note" style="padding:.75cqw"><span class="metric-label">ANNUALISED RECURRING REVENUE</span><div class="metric-value" style="font-size:clamp(22px,3cqw,51px);margin:.3cqw 0">₹9.1 crore</div><span class="small-copy">Approximate annualised revenue.</span></div><div class="appendix-note" style="padding:.75cqw"><span class="metric-label">ANNUALISED CONTRIBUTION</span><div class="metric-value" style="font-size:clamp(22px,3cqw,51px);margin:.3cqw 0">₹1.45 crore</div><span class="small-copy">After direct service costs (approx.).</span></div><div class="appendix-note" style="padding:.75cqw"><span class="metric-label">BATTERY ASSETS</span><div class="metric-value" style="font-size:clamp(22px,3cqw,51px);margin:.3cqw 0">₹5.7 crore</div><span class="small-copy">5,000 subscribers × 1.2 packs × ₹9,500.</span></div></div>
   <div class="econ-highlight"><span class="metric-label" style="color:#d4d0c8">CAPITAL NOTE</span><p>Assumes 50% battery-service attachment on 10,000 cumulative installations. Battery inventory at this scale needs asset finance, leasing, supplier credit or dedicated impact capital.</p><p>The ₹15 lakh pilot grant does not fund national expansion.</p></div>
  </div>
- <div class="slide-footer"><span>APPENDIX · ECONOMICS · PLANNING ASSUMPTIONS</span><span>21 / 22</span></div>
+ <div class="slide-footer"><span>APPENDIX · JURY REFERENCE</span><span>06 / 07</span></div>
 </section>
-
-<!-- 22 / APPENDIX: ROLLOUT + PILOT BUDGET -->
-<section class="slide" id="s22" data-title="Five-year rollout and full pilot budget" data-section="Appendix · rollout and budget">
+<section class="slide" id="s22" data-title="Five-year rollout and full pilot budget" data-section="Appendix · jury reference">
  <p class="slide-kicker">APPENDIX · FIVE-YEAR ROLLOUT AND PILOT BUDGET · TARGETS</p>
  <h2 class="slide-title">Five-year rollout and full pilot budget.</h2>
  <div class="rollout-grid">
@@ -858,10 +909,9 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
    <tr><td>Engineering completion and prototype revisions</td><td>₹1.50 lakh</td></tr><tr><td>Bench testing fixtures and instrumentation</td><td>₹1.50 lakh</td></tr><tr><td>25 MRII modules</td><td>₹1.09 lakh</td></tr><tr><td>25 motor/controller packages</td><td>₹1.13 lakh</td></tr><tr><td>30 battery packs (pilot procurement allowance)</td><td>₹3.45 lakh</td></tr><tr><td>Fabrication, mounting and workshop onboarding</td><td>₹1.00 lakh</td></tr><tr><td>Field operations and monitoring</td><td>₹1.50 lakh</td></tr><tr><td>Safety and independent validation</td><td>₹1.25 lakh</td></tr><tr><td>Project coordination and field team</td><td>₹1.00 lakh</td></tr><tr><td>Contingency and price variance</td><td>₹1.58 lakh</td></tr><tr style="font-weight:700"><td>Total</td><td>₹15 lakh</td></tr>
   </tbody></table></div>
  </div>
- <div class="slide-footer"><span>APPENDIX · MANAGEMENT TARGETS</span><span>22 / 22</span></div>
+ <div class="slide-footer"><span>APPENDIX · JURY REFERENCE</span><span>07 / 07</span></div>
 </section>
 </main>
-
 <nav id="chrome" aria-label="Presentation controls">
  <button type="button" id="prevBtn" aria-label="Previous slide">← <span class="wide-only">BACK</span></button>
  <span class="count" id="slideCount">01 / 22</span>
@@ -869,7 +919,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
  <span class="divider"></span>
  <button type="button" id="overviewBtn" aria-label="Slide overview">GRID</button>
  <button type="button" id="mediaBtn" aria-label="Open media library">MEDIA</button>
- <button type="button" id="timerBtn" aria-label="Start or pause five minute pitch timer">5:00</button>
+ <button type="button" id="timerBtn" aria-label="Start or pause seven minute pitch timer">7:00</button>
  <button type="button" id="fullscreenBtn" aria-label="Toggle fullscreen">FULL</button>
 </nav>
 
@@ -928,32 +978,33 @@ slides.forEach((slide,i)=>{
 
 // Media registry copied from the existing Tirare pitch site; relative paths remain valid beside this index.
 const assetDefs=[
- {id:'worker',title:'Worker footage',desc:'Opening field story and closing slide.',accept:'video/*,image/*',src:'assets/media/worker.mp4',staticType:'video/mp4'},
- {id:'hamidStory',title:'Hamid story animation',desc:'Website asset retained in the media library.',accept:'video/*',src:'assets/media/hamid-story-animation.mp4',staticType:'video/mp4'},
- {id:'hamidChimta',title:'Photo — the chimta',desc:'Tongs / chimta image from the website asset set.',accept:'image/*',src:'assets/media/hamid-chimta.jpg',staticType:'image/jpeg'},
- {id:'grandmotherHands',title:'Photo — grandmother’s hands',desc:'Story image from the existing website asset set.',accept:'image/*',src:'assets/media/grandmother-burnt-hands.jpg',staticType:'image/jpeg'},
- {id:'newCargoEv',title:'Photo — new electric cargo vehicle',desc:'Purpose-built cargo EV reference photo.',accept:'image/*',src:'assets/media/new-cargo-ev.jpg',staticType:'image/jpeg'},
- {id:'manualWorker',title:'Photo — manual cargo work',desc:'Real worker using a manually powered cargo tricycle.',accept:'image/*',src:'assets/media/manual-cargo-worker.webp',staticType:'image/webp'},
- {id:'freewheel',title:'Existing tricycle / freewheel animation',desc:'Current drivetrain and ratchet / freewheel behaviour.',accept:'video/*,image/*',src:'assets/media/existing-drivetrain.mp4',staticType:'video/mp4'},
- {id:'reactionTorque',title:'Reaction torque — motor / axle / frame',desc:'Newton’s third-law animation at the motor housing and mount.',accept:'video/*,image/*',src:'assets/media/tirare_motor_axle_motion_v3.mp4',staticType:'video/mp4'},
- {id:'batteryBuild',title:'Battery being added to the first trike build',desc:'Muted battery-fit animation from the early build scenario.',accept:'video/*,image/*',src:'assets/media/battery-being-added.mp4',staticType:'video/mp4'},
- {id:'cartReturn',title:'Return to original wooden cart + smaller battery',desc:'Transition animation from the website.',accept:'video/*,image/*',src:'assets/media/new%20animation%20v1.mp4',staticType:'video/mp4'},
- {id:'woodenTrikeCad',title:'Wooden cargo tricycle CAD',desc:'Actual wooden-trike model, if included in the site repository.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/wooden-trike.glb',staticType:'model/gltf-binary'},
- {id:'metalTrikeCad',title:'Steel-frame cargo tricycle CAD',desc:'Steel-frame cargo tricycle model from the website asset set.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/metal-trike.glb',staticType:'model/gltf-binary'},
- {id:'interfaceDetail',title:'MRII interface CAD',desc:'Interactive MRII mechanical-interface model.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/mrii-interface-detail.glb',staticType:'model/gltf-binary'},
- {id:'mountedMrii',title:'MRII mounted on the tricycle',desc:'Installed prototype photograph from the original site.',accept:'image/*',src:'assets/media/Untitled%20-%20October%2027,%202026%20at%2012.58.24.png',staticType:'image/png'},
- {id:'cad1',title:'CAD 01 — Reality',desc:'Cargo-tricycle baseline model / turntable render / still.',accept:'.glb,model/gltf-binary,video/*,image/*'},
- {id:'cad2',title:'CAD 02 — First attempt',desc:'First power-delivery concept model / render / still.',accept:'.glb,model/gltf-binary,video/*,image/*'},
- {id:'cad3',title:'CAD 03 — Constraint collision',desc:'Design iteration shaped by the one-way drivetrain constraint.',accept:'.glb,model/gltf-binary,video/*,image/*'},
- {id:'cad4',title:'CAD 04 — Current platform',desc:'Current Tirare platform / current drivetrain CAD.',accept:'.glb,model/gltf-binary,video/*,image/*'},
- {id:'install',title:'MRII installation animation',desc:'Assembly / installation animation from the original website.',accept:'video/*,image/*',src:'assets/media/mrii-installation.mov',staticType:'video/quicktime'},
- {id:'oneway',title:'MRII one-way animation',desc:'Pedals drive MRII; motor drives the axle while the rider side overruns.',accept:'video/*,image/*',src:'assets/media/mrii-oneway.mov',staticType:'video/quicktime'}
+ {id:'worker',title:'Worker footage',desc:'Opening field story and closing visual.',accept:'video/*,image/*',src:'assets/media/worker.mp4',staticType:'video/mp4'},
+ {id:'manualWorker',title:'Photo — manual cargo work',desc:'Worker using a manually powered cargo tricycle.',accept:'image/*',src:'assets/media/manual-cargo-worker.webp',staticType:'image/webp'},
+ {id:'heavyLoadWorker',title:'Photo — heavily loaded cargo tricycle',desc:'Additional field photograph from the existing media folder.',accept:'image/*',src:'assets/media/man-pushing-freight-tricycle-with-heavy-load-india-11285038996%20(1).webp',staticType:'image/webp'},
+ {id:'newCargoEv',title:'Photo — complete electric cargo vehicle',desc:'Market-reference image from the Tirare media folder.',accept:'image/*',src:'assets/media/new-cargo-ev.jpg',staticType:'image/jpeg'},
+ {id:'hamidStory',title:'Hamid story animation',desc:'Optional story asset retained for alternate presentation versions.',accept:'video/*',src:'assets/media/hamid-story-animation.mp4',staticType:'video/mp4'},
+ {id:'hamidChimta',title:'Photo — chimta',desc:'Optional story asset retained for alternate presentation versions.',accept:'image/*',src:'assets/media/hamid-chimta.jpg',staticType:'image/jpeg'},
+ {id:'grandmotherHands',title:'Photo — grandmother’s hands',desc:'Optional story asset retained for alternate presentation versions.',accept:'image/*',src:'assets/media/grandmother-burnt-hands.jpg',staticType:'image/jpeg'},
+ {id:'freewheel',title:'Existing drivetrain / one-way movement',desc:'Existing tricycle ratchet/freewheel behaviour.',accept:'video/*,image/*',src:'assets/media/existing-drivetrain.mp4',staticType:'video/mp4'},
+ {id:'reactionTorque',title:'Motor / axle reaction torque',desc:'Animation showing the motor-housing reaction and frame load path.',accept:'video/*,image/*',src:'assets/media/tirare_motor_axle_motion_v3.mp4',staticType:'video/mp4'},
+ {id:'batteryBuild',title:'Battery being added to the first build',desc:'Early battery-fit animation.',accept:'video/*,image/*',src:'assets/media/battery-being-added.mp4',staticType:'video/mp4'},
+ {id:'cartReturn',title:'Return to the original tricycle',desc:'Transition animation showing the original cart and smaller proposed battery.',accept:'video/*,image/*',src:'assets/media/new%20animation%20v1.mp4',staticType:'video/mp4'},
+ {id:'mountedMrii',title:'MRII mounted on the tricycle',desc:'Actual photograph of the physical MRII subsystem installed on the vehicle.',accept:'image/*',src:'assets/media/Untitled%20-%20October%2027,%202026%20at%2012.58.24.png',staticType:'image/png'},
+ {id:'woodenTrikeCad',title:'Wooden cargo tricycle CAD',desc:'Reference wooden tricycle CAD model.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/wooden-trike.glb',staticType:'model/gltf-binary'},
+ {id:'metalTrikeCad',title:'Steel-frame cargo tricycle CAD',desc:'Steel-frame comparison model.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/metal-trike.glb',staticType:'model/gltf-binary'},
+ {id:'interfaceDetail',title:'MRII interface CAD',desc:'Interactive model of the MRII mechanical interface.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/mrii-interface-detail.glb',staticType:'model/gltf-binary'},
+ {id:'cad1',title:'CAD 01 — Reference tricycle',desc:'The actual vehicle that sets the design constraints.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/reality.glb',staticType:'model/gltf-binary'},
+ {id:'cad2',title:'CAD 02 — First attempt',desc:'The early replacement / powertrain design.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/first-attempt.glb',staticType:'model/gltf-binary'},
+ {id:'cad3',title:'CAD 03 — Constraint revision',desc:'The design iteration after the drivetrain constraints became clear.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/constraint-collision.glb',staticType:'model/gltf-binary'},
+ {id:'cad4',title:'CAD 04 — Current platform',desc:'The current Tirare platform and MRII interface.',accept:'.glb,model/gltf-binary,video/*,image/*',src:'assets/cad/current-platform.glb',staticType:'model/gltf-binary'},
+ {id:'install',title:'MRII installation animation',desc:'Assembly and installation sequence. MOV playback depends on browser support.',accept:'video/*,image/*',src:'assets/media/mrii-installation.mov',staticType:'video/quicktime'},
+ {id:'oneway',title:'MRII one-way animation',desc:'Rider drives MRII; powered side is designed to overrun. MOV playback depends on browser support.',accept:'video/*,image/*',src:'assets/media/mrii-oneway.mov',staticType:'video/quicktime'}
 ];
 const cadData={
- cad1:{model:'https://raw.githubusercontent.com/Tirare-WebPage/Tirare-WebPage.github.io/main/public/cad/evolution/generic-trike.glb',local:'assets/cad/reality.glb',name:'01 / Reality'},
- cad2:{model:'https://raw.githubusercontent.com/Tirare-WebPage/Tirare-WebPage.github.io/main/public/cad/evolution/precision-drive.glb',local:'assets/cad/first-attempt.glb',name:'02 / First attempt'},
- cad3:{model:'https://raw.githubusercontent.com/Tirare-WebPage/Tirare-WebPage.github.io/main/public/cad/evolution/direct-motor-drive.glb',local:'assets/cad/constraint-collision.glb',name:'03 / Constraint collision'},
- cad4:{model:'https://raw.githubusercontent.com/Tirare-WebPage/Tirare-WebPage.github.io/main/public/cad/evolution/tirare.glb',local:'assets/cad/current-platform.glb',name:'04 / Current platform'}
+ cad1:{model:'assets/cad/reality.glb',local:'assets/cad/reality.glb',name:'01 / Tricycle'},
+ cad2:{model:'assets/cad/first-attempt.glb',local:'assets/cad/first-attempt.glb',name:'02 / First attempt'},
+ cad3:{model:'assets/cad/constraint-collision.glb',local:'assets/cad/constraint-collision.glb',name:'03 / Revision'},
+ cad4:{model:'assets/cad/current-platform.glb',local:'assets/cad/current-platform.glb',name:'04 / Current platform'}
 };
 const dbPromise=new Promise(resolve=>{
  if(!('indexedDB' in window)){resolve(null);return;}
@@ -1032,17 +1083,17 @@ function playCurrentVideos(){const active=slides[current];if(!active)return;acti
 // Four website CAD iterations are available inside the drivetrain slide.
 document.querySelectorAll('[data-cad-select]').forEach(btn=>btn.addEventListener('click',()=>{
  const id=btn.dataset.cadSelect;document.querySelectorAll('[data-cad-select]').forEach(b=>b.classList.toggle('active',b===btn));
- const slot=document.querySelector('#s07 [data-media-slot]');slot.dataset.mediaSlot=id;
+ const slot=document.querySelector('#s07 [data-media-slot=\"cad4\"]');slot.dataset.mediaSlot=id;
  if(activeAssets[id])renderAsset(slot,id,activeAssets[id]);else if(cadData[id])setSlot(id,{url:cadData[id].model,name:cadData[id].name+'.glb',type:'model/gltf-binary'});
 }));
 
-// Pitch timer: five-minute countdown, independent of slide navigation.
-let timerInterval=null,timerEnd=0,remaining=300;
+// Pitch timer: seven-minute countdown, independent of slide navigation.
+let timerInterval=null,timerEnd=0,remaining=420;
 function formatTime(sec){const n=Math.max(0,Math.ceil(sec));return Math.floor(n/60)+':'+String(n%60).padStart(2,'0')}
 function updateTimer(){const value=formatTime(remaining);$('timerBtn').textContent=value;}
 $('timerBtn').addEventListener('click',()=>{
  if(timerInterval){clearInterval(timerInterval);timerInterval=null;remaining=Math.max(0,(timerEnd-Date.now())/1000);updateTimer();showToast('Pitch timer paused');return;}
- if(remaining<=0)remaining=300;timerEnd=Date.now()+remaining*1000;showToast('Five-minute pitch timer started');
+ if(remaining<=0)remaining=420;timerEnd=Date.now()+remaining*1000;showToast('Seven-minute pitch timer started');
  timerInterval=setInterval(()=>{remaining=(timerEnd-Date.now())/1000;if(remaining<=0){remaining=0;clearInterval(timerInterval);timerInterval=null;showToast('Pitch time reached');}updateTimer();},250);updateTimer();
 });
 
