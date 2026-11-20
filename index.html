@@ -493,6 +493,17 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
  aspect-ratio:auto;
 }
 
+
+/* IMAGE-ONLY OPENING / FULL-BLEED GEMINI ASSET */
+#s00{padding:0;background:#0b0d0f}
+#s00 .splash-image{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#0b0d0f}
+#s00 .splash-image>img{display:block;width:100%;height:100%;object-fit:cover}
+#s00 .splash-image .media-output{position:absolute;inset:0;background:#0b0d0f}
+#s00 .splash-image .media-output img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;background:#0b0d0f}
+body.splash-mode #help,body.splash-mode #progressTrack{display:none}
+#chrome #musicBtn{min-width:58px}
+#chrome #musicBtn.music-active{background:var(--rose);color:var(--ink)}
+
 </style>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
@@ -500,7 +511,12 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
 <div id="progressTrack"><div id="progressFill"></div></div>
 <div id="help">← → NAVIGATE &nbsp; O OVERVIEW &nbsp; M MEDIA &nbsp; F FULLSCREEN</div>
 <main id="stage" aria-label="Tirare national pitch presentation">
-<section class="slide active" id="s01" data-title="A broken pedal should be a small problem" data-section="Opening">
+<section class="slide image-opener active" id="s00" data-title="Opening image" data-section="Opening">
+ <div class="splash-image" data-media-slot="openingSplash">
+  <img src="assets/media/Gemini_Generated_Image_eue6l8eue6l8eue6.png" alt="Opening image for the Tirare national pitch">
+ </div>
+</section>
+<section class="slide" id="s01" data-title="A broken pedal should be a small problem" data-section="Opening">
  <div class="cover-grid">
   <div class="cover-copy">
    <div class="cover-eyebrow">TIRARE MOBILITY TECHNOLOGIES · NATIONAL PITCH</div>
@@ -537,7 +553,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
    <div class="media-caption">FIELD FOOTAGE · CARGO-TRICYCLE WORK</div>
   </div>
  </div>
- <div class="slide-footer"><span>THE VEHICLE ALREADY EXISTS</span><span>02 / 14</span></div>
+ <div class="slide-footer"><span>THE VEHICLE ALREADY EXISTS</span><span>03 / 15</span></div>
 </section>
 <section class="slide" id="s03" data-title="A motor kit is not a complete solution" data-section="Why not just add a motor">
  <p class="slide-kicker">THE OBVIOUS FIRST IDEA</p>
@@ -586,7 +602,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
  </div>
  <div class="proposal-band"><b>THE GAP</b><span>We still need a battery, a way to drive the wheel, and a way for the motor to know when the rider is pedalling and how hard.</span></div>
  <p class="small-copy">Market listings are indicative references, not like-for-like quotations. Images are illustrative and do not necessarily show the exact priced product.</p>
- <div class="slide-footer"><span>MARKET REFERENCES · NOT A COMPLETE SYSTEM COMPARISON</span><span>03 / 14</span></div>
+ <div class="slide-footer"><span>MARKET REFERENCES · NOT A COMPLETE SYSTEM COMPARISON</span><span>04 / 15</span></div>
 </section>
 <section class="slide" id="s05" data-title="The motor pushes back on the frame" data-section="The mounting problem">
  <p class="slide-kicker">THE MECHANICAL PROBLEM</p>
@@ -604,7 +620,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
    <div class="slot-empty"><span class="slot-topline">REACTION-TORQUE ANIMATION</span><strong class="slot-title">Follow the force.</strong><span class="slot-desc">Watch the axle, motor housing, mount and frame.</span><span class="slot-action">Loading reaction-torque clip ↗</span></div>
   </div>
  </div>
- <div class="slide-footer"><span>STRUCTURAL LOAD PATH · TESTING REQUIRED</span><span>04 / 14</span></div>
+ <div class="slide-footer"><span>STRUCTURAL LOAD PATH · TESTING REQUIRED</span><span>05 / 15</span></div>
 </section>
 <section class="slide" id="s04" data-title="Our first build reached ₹63,300" data-section="The first design">
  <p class="slide-kicker">THE FIRST DESIGN · A LESSON</p>
@@ -628,7 +644,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
    <div class="media-frame dark-frame" data-media-slot="batteryBuild" data-autoplay="true"><div class="slot-empty"><span class="slot-topline">FIRST BUILD SEQUENCE</span><strong class="slot-title">Battery and hardware being added</strong><span class="slot-desc">The original battery-fit animation.</span><span class="slot-action">Loading build animation ↗</span></div></div>
   </div>
  </div>
- <div class="slide-footer"><span>EARLY DESIGN · WORKING COST SCENARIO</span><span>05 / 14</span></div>
+ <div class="slide-footer"><span>EARLY DESIGN · WORKING COST SCENARIO</span><span>06 / 15</span></div>
 </section>
 <section class="slide" id="s06" data-title="The tricycle already has a one-way mechanism" data-section="Understand the existing drivetrain">
  <p class="slide-kicker">START WITH HOW THE TRICYCLE ALREADY WORKS</p>
@@ -651,7 +667,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   <div class="media-frame dark-frame" data-media-slot="freewheel" data-autoplay="true"><div class="slot-empty"><span class="slot-topline">EXISTING DRIVETRAIN ANIMATION</span><strong class="slot-title">See the one-way movement.</strong><span class="slot-desc">The tricycle's existing ratchet/freewheel behaviour.</span><span class="slot-action">Loading drivetrain clip ↗</span></div></div>
   <div class="existing-drive-note"><strong>We needed to keep this behaviour.</strong><span>The motor should be able to turn the axle without dragging the pedals around.</span></div>
  </div>
- <div class="slide-footer"><span>EXISTING RATCHET / FREEWHEEL BEHAVIOUR</span><span>06 / 14</span></div>
+ <div class="slide-footer"><span>EXISTING RATCHET / FREEWHEEL BEHAVIOUR</span><span>07 / 15</span></div>
 </section>
 <section class="slide" id="s07" data-title="We went back to the original tricycle" data-section="The design change">
  <p class="slide-kicker">FOUR DESIGN STAGES · FROM THE VEHICLE TO THE INTERFACE</p>
@@ -676,7 +692,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
    <div class="media-frame cover" data-media-slot="mountedMrii"><div class="slot-empty"><span class="slot-topline">PHYSICAL SUBSYSTEM</span><strong class="slot-title">MRII mounted on the tricycle.</strong><span class="slot-desc">The actual installed interface photograph.</span><span class="slot-action">Loading prototype photograph ↗</span></div><div class="media-caption">MRII / INSTALLED VIEW</div></div>
   </div>
  </div>
- <div class="slide-footer"><span>CAD EVOLUTION · SELECT A STAGE</span><span>07 / 14</span></div>
+ <div class="slide-footer"><span>CAD EVOLUTION · SELECT A STAGE</span><span>08 / 15</span></div>
 </section>
 <section class="slide" id="s08" data-title="MRII does three jobs at one point" data-section="The MRII reveal">
  <p class="slide-kicker">THE MECHANICAL RIDER INTENT INTERFACE</p>
@@ -697,7 +713,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   </div>
  </div>
  <div class="mrii-bottom-note">Physical MRII subsystem built and demonstrated on the bench. Full-vehicle integration and validation are still required.</div>
- <div class="slide-footer"><span>MRII · PASS POWER / MEASURE EFFORT / ONE-WAY DRIVE</span><span>08 / 14</span></div>
+ <div class="slide-footer"><span>MRII · PASS POWER / MEASURE EFFORT / ONE-WAY DRIVE</span><span>09 / 15</span></div>
 </section>
 <section class="slide" id="s09" data-title="The rider pedals. The motor adds help" data-section="How assistance works">
  <p class="slide-kicker">HOW THE ASSISTANCE IS INTENDED TO WORK</p>
@@ -711,7 +727,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
  </div>
  <div class="assist-explainer"><strong>The rider still contributes.</strong><span>MRII measures the rider's effort. The controller uses that signal to request motor assistance, within system limits.</span></div>
  <p class="torque-note">Illustrative 1:1 command only. This is not a measured axle or wheel-torque result. Gear ratios, drivetrain losses and operating limits matter.</p>
- <div class="slide-footer"><span>ILLUSTRATIVE CONTROL TARGET · NOT A MEASURED OUTPUT</span><span>09 / 14</span></div>
+ <div class="slide-footer"><span>ILLUSTRATIVE CONTROL TARGET · NOT A MEASURED OUTPUT</span><span>10 / 15</span></div>
 </section>
 <section class="slide" id="s10" data-title="Assistance changes the battery question" data-section="Proposed system targets">
  <p class="slide-kicker">PROPOSED PILOT TARGETS · NOT MEASURED SAVINGS</p>
@@ -735,7 +751,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   <div class="power-reductions"><div><strong>500 W</strong><span>Proposed motor target</span></div><div><strong>1.44 kWh</strong><span>Proposed battery target</span></div></div>
  </div>
  <p class="small-copy">The two columns describe different operating concepts. The proposed targets do not yet prove real-world energy, weight or cost savings.</p>
- <div class="slide-footer"><span>POWERTRAIN · WORKING DESIGN TARGETS</span><span>10 / 14</span></div>
+ <div class="slide-footer"><span>POWERTRAIN · WORKING DESIGN TARGETS</span><span>11 / 15</span></div>
 </section>
 <section class="slide" id="s12" data-title="Make the upgrade easier to reach" data-section="Proposed pricing">
  <p class="slide-kicker">PROPOSED CUSTOMER PRICING · NOT YET DEPLOYED</p>
@@ -755,7 +771,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   </div>
  </div>
  <div class="proposal-band"><b>THE IDEA</b><span>A worker may not need to buy the entire battery upfront. Local workshops could install and support the system close to where the tricycle already works.</span></div>
- <div class="slide-footer"><span>PROPOSED PRICES · VALIDATION AND CUSTOMER TESTING AHEAD</span><span>11 / 14</span></div>
+ <div class="slide-footer"><span>PROPOSED PRICES · VALIDATION AND CUSTOMER TESTING AHEAD</span><span>12 / 15</span></div>
 </section>
 <section class="slide" id="s18" data-title="The mechanism is built. The vehicle is next" data-section="Progress and validation">
  <p class="slide-kicker">PROGRESS · WHAT EXISTS / WHAT COMES NEXT</p>
@@ -772,7 +788,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
   </div>
   <div class="media-frame cover" data-media-slot="mountedMrii"><div class="slot-empty"><span class="slot-topline">PHYSICAL MRII SUBSYSTEM</span><strong class="slot-title">Built and demonstrated on the bench.</strong><span class="slot-desc">The next proof is on the complete tricycle.</span><span class="slot-action">Loading installed prototype photograph ↗</span></div></div>
  </div>
- <div class="slide-footer"><span>PROTOTYPE STATUS · COMPLETE VEHICLE VALIDATION REMAINS</span><span>12 / 14</span></div>
+ <div class="slide-footer"><span>PROTOTYPE STATUS · COMPLETE VEHICLE VALIDATION REMAINS</span><span>13 / 15</span></div>
 </section>
 <section class="slide" id="s17" data-title="₹15 lakh to test the first 25 vehicles" data-section="The pilot ask">
  <p class="slide-kicker">THE PILOT ASK · THE NEXT PROOF</p>
@@ -787,7 +803,7 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
    <p class="small-copy">A controlled pilot, subject to engineering and safety gates. We will measure reliability, energy use, vehicle uptime and operator effort.</p>
   </div>
  </div>
- <div class="slide-footer"><span>₹15 LAKH · 25 VEHICLES · 3 WORKSHOPS</span><span>13 / 14</span></div>
+ <div class="slide-footer"><span>₹15 LAKH · 25 VEHICLES · 3 WORKSHOPS</span><span>14 / 15</span></div>
 </section>
 <section class="slide" id="s19" data-title="The vehicle is already earning" data-section="The close">
  <p class="slide-kicker">TIRARE · THE REASON WE STARTED</p>
@@ -803,13 +819,17 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
  <div class="slide-footer"><span class="foot-mark"><i class="t-mark">T</i> TIRARE MOBILITY TECHNOLOGIES</span><span>THANK YOU</span></div>
 </section>
 </main>
+<audio id="pitchMusic" preload="metadata" loop>
+ <source src="assets/media/La%20petite%20fille%20de%20la%20mer%20%28Remastered%29%28MP3_160K%29.mp3" type="audio/mpeg">
+</audio>
 <nav id="chrome" aria-label="Presentation controls">
  <button type="button" id="prevBtn" aria-label="Previous slide">← <span class="wide-only">BACK</span></button>
- <span class="count" id="slideCount">01 / 14</span>
+ <span class="count" id="slideCount">01 / 15</span>
  <button type="button" id="nextBtn" class="primary" aria-label="Next slide"><span class="wide-only">NEXT</span> →</button>
  <span class="divider"></span>
  <button type="button" id="overviewBtn" aria-label="Slide overview">GRID</button>
  <button type="button" id="mediaBtn" aria-label="Open media library">MEDIA</button>
+ <button type="button" id="musicBtn" aria-label="Play or pause the pitch soundtrack" aria-pressed="false">MUSIC</button>
  <button type="button" id="timerBtn" aria-label="Start or pause seven minute pitch timer">7:00</button>
  <button type="button" id="fullscreenBtn" aria-label="Toggle fullscreen">FULL</button>
 </nav>
@@ -836,11 +856,45 @@ let current=0;
 const $=id=>document.getElementById(id);
 const overview=$('overview'),mediaModal=$('mediaModal'),toast=$('toast');
 function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>toast.classList.remove('show'),2100)}
+const pitchMusic=$('pitchMusic'),musicBtn=$('musicBtn');
+pitchMusic.volume=0.28; // Keep the soundtrack underneath the live speaker.
+let musicAutoStartAttempted=false;
+function syncMusicButton(){
+ const playing=!pitchMusic.paused;
+ musicBtn.textContent=playing?'MUSIC ON':'MUSIC';
+ musicBtn.setAttribute('aria-pressed',String(playing));
+ musicBtn.classList.toggle('music-active',playing);
+}
+async function startPitchMusic(){
+ if(current===0)return false; // The image-only opening slide must remain silent.
+ try{await pitchMusic.play();syncMusicButton();return true;}
+ catch(e){syncMusicButton();showToast('Press MUSIC to start the soundtrack');return false;}
+}
+musicBtn.addEventListener('click',()=>{
+ if(current===0){showToast('The soundtrack starts on slide 2');return;}
+ musicAutoStartAttempted=true;
+ if(pitchMusic.paused)startPitchMusic();
+ else{pitchMusic.pause();syncMusicButton();}
+});
+pitchMusic.addEventListener('play',syncMusicButton);
+pitchMusic.addEventListener('pause',syncMusicButton);
+pitchMusic.addEventListener('error',()=>showToast('The soundtrack file could not be loaded'));
 function setSlide(index,updateHash=true){
  const next=Math.max(0,Math.min(slides.length-1,index));
  pauseAllVideos();
  slides[current]?.classList.remove('active');slides[current]?.setAttribute('aria-hidden','true');
  current=next;slides[current].classList.add('active');slides[current].setAttribute('aria-hidden','false');
+ document.body.classList.toggle('splash-mode',current===0);
+ if(current===0){
+  pitchMusic.pause();
+  try{pitchMusic.currentTime=0;}catch(e){}
+  musicAutoStartAttempted=false;
+  syncMusicButton();
+ }else if(current===1&&!musicAutoStartAttempted){
+  // This runs on the user action that advances from the silent opener.
+  musicAutoStartAttempted=true;
+  startPitchMusic();
+ }
  $('slideCount').textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
  $('prevBtn').disabled=current===0;$('nextBtn').disabled=current===slides.length-1;
  $('progressFill').style.width=((current+1)/slides.length*100)+'%';
@@ -869,6 +923,7 @@ slides.forEach((slide,i)=>{
 
 // Media registry copied from the existing Tirare pitch site; relative paths remain valid beside this index.
 const assetDefs=[
+ {id:'openingSplash',title:'Opening image — Gemini artwork',desc:'Full-screen image-only first slide.',accept:'image/*',src:'assets/media/Gemini_Generated_Image_eue6l8eue6l8eue6.png',staticType:'image/png'},
  {id:'coverBrokenPedal',title:'Opening photo — broken-pedal worker',desc:'Real cargo-tricycle photograph for the opening slide.',accept:'image/*',src:'assets/media/man-pushing-freight-tricycle-with-heavy-load-india-11285038996%20(4).jpg',staticType:'image/jpeg'},
  {id:'worker',title:'Worker footage',desc:'Opening field story and closing visual.',accept:'video/*,image/*',src:'assets/media/worker.mp4',staticType:'video/mp4'},
  {id:'manualWorker',title:'Photo — manual cargo work',desc:'Worker using a manually powered cargo tricycle.',accept:'image/*',src:'assets/media/manual-cargo-worker.webp',staticType:'image/webp'},
@@ -1010,7 +1065,7 @@ let touchX=0,touchY=0;
 $('stage').addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;touchY=e.changedTouches[0].clientY;},{passive:true});
 $('stage').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX,dy=e.changedTouches[0].clientY-touchY;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.25){dx<0?nextSlide():prevSlide();}},{passive:true});
 // Allow a direct link to open at a particular slide, e.g. #slide-8.
-const hashMatch=location.hash.match(/^#slide-(\d+)$/i);slides.forEach((s,i)=>s.setAttribute('aria-hidden',i===0?'false':'true'));if(hashMatch)setSlide(Number(hashMatch[1])-1,false);else setSlide(0,false);
+const hashMatch=location.hash.match(/^#slide-(\d+)$/i);slides.forEach((s,i)=>s.setAttribute('aria-hidden',i===0?'false':'true'));document.body.classList.toggle('splash-mode',!hashMatch||Number(hashMatch[1])===1);if(hashMatch)setSlide(Number(hashMatch[1])-1,false);else setSlide(0,false);syncMusicButton();
 </script>
 </body>
 </html>
