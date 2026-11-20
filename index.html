@@ -493,6 +493,10 @@ button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:fo
  aspect-ratio:auto;
 }
 
+#s08 .mrii-video-column .mrii-installation-frame{flex:1 1 0;min-height:0;width:100%;aspect-ratio:auto}
+#s08 .mrii-video-column .mrii-installation-frame .media-output video{object-fit:contain}
+#s08 .mrii-side .mrii-oneway-frame .media-output video{object-fit:contain}
+
 
 /* IMAGE-ONLY OPENING / FULL-BLEED GEMINI ASSET */
 #s00{padding:0;background:#0b0d0f}
@@ -699,11 +703,18 @@ body.splash-mode #help,body.splash-mode #progressTrack{display:none}
  <h2 class="slide-title tight">MRII does three jobs at one point.</h2>
  <div class="mrii-grid mrii-video-grid">
   <div class="mrii-video-column">
-   <div class="youtube-embed-frame"><iframe src="https://www.youtube-nocookie.com/embed/4IOVUIjke8k?rel=0" title="Tirare MRII mechanism demonstration" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-   <div class="media-note"><span>MRII MECHANISM VIDEO · NARRATE LIVE</span><a href="https://youtu.be/4IOVUIjke8k" target="_blank" rel="noopener noreferrer">OPEN ON YOUTUBE ↗</a></div>
-   <p class="small-copy">The video explains the mechanism. The physical prototype demonstration shows the subsystem we have built.</p>
+   <div class="media-frame dark-frame mrii-installation-frame" data-media-slot="install" data-autoplay="true" aria-label="Video showing installation of the new MRII sprocket">
+    <div class="slot-empty"><span class="slot-topline">PHYSICAL INSTALLATION · MRII</span><strong class="slot-title">The new sprocket, fitted to the existing drivetrain.</strong><span class="slot-desc">Installation footage showing the MRII sprocket in its actual position on the tricycle.</span><span class="slot-action">Loading installation sequence ↗</span></div>
+    <div class="media-caption">MRII / NEW SPROCKET INSTALLATION</div>
+   </div>
+   <div class="media-note"><span>THE NEW SPROCKET AT THE AXLE</span><a href="https://youtu.be/4IOVUIjke8k" target="_blank" rel="noopener noreferrer">FULL MECHANISM EXPLAINER ↗</a></div>
+   <p class="small-copy">This is the physical installation. Play the adjacent one-way clip to see how powered rotation is intended to avoid forcing the pedals to turn.</p>
   </div>
   <div class="mrii-side">
+   <div class="media-frame dark-frame mrii-oneway-frame" data-media-slot="oneway" aria-label="Animation showing the MRII one-way mechanism">
+    <div class="slot-empty"><span class="slot-topline">ONE-WAY MECHANISM</span><strong class="slot-title">Rider input and powered drive remain separate.</strong><span class="slot-desc">The intended overrun behaviour of the MRII interface.</span><span class="slot-action">Loading one-way animation ↗</span></div>
+    <div class="media-caption">MRII / ONE-WAY MOTION</div>
+   </div>
    <div class="media-frame mrii-detail-frame" data-media-slot="interfaceDetail"><div class="slot-empty"><span class="slot-topline">MRII CAD</span><strong class="slot-title">Inspect the mechanical parts.</strong><span class="slot-desc">Load the MRII interface model.</span><span class="slot-action">Loading CAD ↗</span></div></div>
    <div class="job-list">
     <div class="job-item"><b>01 · PASS POWER</b><div><strong>The rider's force passes through MRII.</strong><span>It continues towards the rear axle.</span></div></div>
@@ -966,6 +977,8 @@ function makeModelViewer(src,label){
  el.addEventListener('error',()=>{const parent=el.parentElement;if(!parent)return;parent.innerHTML='<div class="model-error"><b>CAD model could not be loaded.</b><br>Use MEDIA to choose the local .glb, a turntable video or a still render.</div>';},{once:true});return el;
 }
 function renderAsset(slot,id,asset){
+ const caption=slot.querySelector('.media-caption');
+ const captionCopy=caption?caption.cloneNode(true):null;
  slot.classList.add('has-media');slot.innerHTML='';
  const out=document.createElement('div');out.className='media-output';
  let el;const type=inferType(asset,id),url=asset.url||asset.blob&&URL.createObjectURL(asset.blob);
@@ -975,6 +988,7 @@ function renderAsset(slot,id,asset){
   if(slot.dataset.autoplay==='true'){el.autoplay=true;el.loop=true;el.dataset.autoplay='true';}
  }else{el=document.createElement('img');el.src=url;el.alt=asset.name||'Tirare project media';el.loading='eager';}
  out.appendChild(el);slot.appendChild(out);
+ if(captionCopy)slot.appendChild(captionCopy);
 }
 function setSlot(id,asset){
  if(activeAssets[id]?.url?.startsWith('blob:'))URL.revokeObjectURL(activeAssets[id].url);
